@@ -1,0 +1,106 @@
+site_name: ATL BIM Standards
+site_url: https://bim.atlstandards.com
+site_description: Atlanta BIM Standards and Templates for Consultants
+site_author: ATL P&D BIM Team
+
+copyright: Copyright &copy; 2026 ATL - All Rights Reserved
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/HJ_plane_White-300.png
+  favicon: assets/images/HJ_plane_Red-100.png
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+  - macros:
+      module_name: main
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Standards:
+    - DC-GN-001 File Naming: standards/dc-gn-001.md
+    - DC-GN-002 P&D BIM Standards: standards/dc-gn-002.md
+    - DC-GN-003 Revit Project Setup: standards/dc-gn-003.md
+  - Templates:
+    - templates/index.md
+    - BIM Execution Plan: templates/tp-gn-001.md
+    - Information Delivery Plan: templates/tp-gn-002.md
+  - Resources:
+    - Support & Contact: resources/support.md
+    - Recent Updates: resources/changelog.md
