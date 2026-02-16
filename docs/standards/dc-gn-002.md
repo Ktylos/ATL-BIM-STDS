@@ -51,7 +51,7 @@ The BIM P&D program will directly assume the following BIM roles:
 - __BIM Program Manager__: Establish and maintain BIM standards and workflows. Lead the overall BIM implementation strategy. Develop and update BIM guidelines, protocols, and best practices. Provide training and support to internal teams on BIM-related topics. Monitor and evaluate the effectiveness of BIM implementation. Stay abreast of industry trends and advancements in BIM technology. Coordinate with other departments and stakeholders to ensure BIM alignment. Oversee the development and maintenance of BIM templates and libraries. Manage BIM software and hardware resources. Act as the primary point of contact for BIM-related inquiries.
 - __BIM Program Coordinator__: Provide essential support to the Contractor/Consultant for the development of accurate and compliant BIM models. Review BIM submissions from the Contractor/Consultant to ensure accuracy and adherence to established standards. Offer technical guidance and support to the Contractor/Consultant regarding BIM-related issues. Ensure that models meet the required level of detail (LOD) and information requirements. Participate in Coordination and clash detection meetings to coordinate resolutions. Monitor the progress of BIM model development and identify potential issues. Document and track BIM-related issues and their resolutions. Assist in the creation of BIM training materials. Contribute to the ongoing improvement of BIM standards and workflows.
 
-  ![A diagram of bim program manager](../assets/images/dc-gn-002-image-01.png)
+  ![A diagram of bim program manager](../assets/images/dc-gn-002-image-18.png)
 
 #### 1.2.2 Designers of Record 
 
@@ -62,7 +62,7 @@ Roles assigned to the Designer of Record must be clearly outlined in the BIM Exe
 - __BIM Project Coordinator:__ Oversee the Contractor/Consultant's BIM submittals to ensure they comply with P&D standards. Act as the main point of contact for BIM-related communication with the P&D organization. Coordinate BIM activities within the Contractor/Consultant's team. Create and maintain the Contractor/Consultant's BIM Execution Plan (BEP) to align with P&D requirements. Manage the exchange of BIM models and data with the P&D organization. Organize and lead BIM coordination meetings. Track and address BIM-related issues and conflicts. Train all team members in BIM standards and procedures. Monitor the development progress of BIM models and identify potential risks. Report on BIM performance metrics.
 - __BIM Project Manager:__ Ensure that BIM models are updated, precise, and comply with established standards. Oversee the development and maintenance of BIM models by the Contractor/Consultant's team. Implement and enforce BIM standards and procedures within the team. Conduct quality control checks on BIM models. Provide technical guidance and support to the modeling team. Coordinate with other disciplines to ensure model integration. Manage the BIM model version control process. Identify and resolve modeling issues. Contribute to the development of BIM content and libraries. Stay informed about industry best practices in BIM modeling.
 
-![A diagram of bim project management](../assets/images/dc-gn-002-image-01.png)
+![A diagram of bim project management](../assets/images/dc-gn-002-image-10.png)
 
 NOTE: The requirement to have unique individuals assigned to each role will depend on the Contract and specified within the project scope. For projects with no dedicated BIM staff requirement specified, the responsibilities above can be performed by the same person, and that person may also be performing other duties on the project. 
 
@@ -80,15 +80,11 @@ P&D’s strategic objectives for BIM implementation include:
 4. __Ensuring long-term asset value__ through the delivery of clean, validated, and structured model data for seamless integration into P&D's Asset Management (AM) and facilities systems.
 5. __Driving innovation__ by encouraging the use of emerging technologies such as digital twins, laser scanning, and real-time collaboration platforms (ACC).
 
-![A screen shot of a pyramid](../assets/images/dc-gn-002-image-01.png)
-
-__Figure 1 - BIM maturity Levels__
-
 ## 2 BIM INTEGRATION
 
 This section outlines how P&D will utilize BIM across design, construction, and asset management. 
 
-![A diagram of a workflow](../assets/images/dc-gn-002-image-01.png)
+![A diagram of a workflow](../assets/images/dc-gn-002-image-22.png)
 
 ### 2.1 P&D Project Phases (DB / DBB)
 
@@ -828,10 +824,9 @@ The ACC platform will automatically log the submission’s date, time, and recip
 
 __Submission Timing:__ Revit model transmittals must follow project schedule milestones and BEP submission dates. Submissions outside these deadlines require written approval from P&D BIM Management.
 
-![A diagram of a design process
-](../assets/images/dc-gn-002-image-01.png)
+![A diagram of a design process](../assets/images/dc-gn-002-image-25.png)
 
-Figure 25\*\*\*\*NEEDS TO BE UPDATED\*\*\*\*\*\*
+Figure 25 __NEEDS TO BE UPDATED__
 
 # CONSTRUCTION MODEL REQUIREMENTS
 

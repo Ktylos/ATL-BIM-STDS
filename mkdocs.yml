@@ -98,9 +98,9 @@ nav:
     - DC-GN-002 P&D BIM Standards: standards/dc-gn-002.md
     - DC-GN-003 Revit Project Setup: standards/dc-gn-003.md
   - Templates:
-    - templates/index.md
-    - BIM Execution Plan: templates/tp-gn-001.md
-    - Information Delivery Plan: templates/tp-gn-002.md
+    - template-docs/index.md
+    - BIM Execution Plan: template-docs/tp-gn-001.md
+    - Information Delivery Plan: template-docs/tp-gn-002.md
   - Resources:
     - Support & Contact: resources/support.md
     - Recent Updates: resources/changelog.md

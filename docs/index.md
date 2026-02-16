@@ -40,7 +40,7 @@ These standards ensure consistency, quality, and efficiency across all project d
     
     Access Revit templates and Excel trackers
     
-    [:octicons-arrow-right-24: Templates](templates/)
+    [:octicons-arrow-right-24: Templates](template-docs/)
 
 - :material-update:{ .lg .middle } **Recent Updates**
     

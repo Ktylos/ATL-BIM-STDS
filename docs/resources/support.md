@@ -65,7 +65,7 @@ A: See [DC-GN-001 File Naming](../standards/dc-gn-001.md) for complete file nami
 ### Template Questions
 
 **Q: How do I use the BIM Execution Plan template?**  
-A: See [TP-GN-001 documentation](../templates/tp-gn-001.md) for instructions.
+A: See [TP-GN-001 documentation](../template-docs/tp-gn-001.md) for instructions.
 
 **Q: Can I modify the templates?**  
 A: Project-specific modifications are allowed, but core elements must remain compliant with standards.
