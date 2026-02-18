@@ -38,7 +38,7 @@ Information Containers, generally referred to as “filenames” should be forma
 
 An amended version of the naming convention for filenames is as follows: 
 
-__WBS – Originator – Level – Type – Role – Number __
+__WBS – Originator – Level – Type – Role – Number__
 
 Note that there are no special characters, spaces, or decimals in the name and the delineation utilizes hyphen-minus.
 
@@ -67,7 +67,7 @@ __NOTE:__
 - XX is used if there is no spatial elevation or level that could apply (e.g. details, notes, index, etc.)
 - ZZ is used for files that contain information that at multiple levels (e.g. whole facility Revit models or site civil plans)
 
-### 3.1 Role Codes
+#### 3.1.1 Role Codes
 
 Here are the disciplines you can apply to your project:
 
@@ -90,7 +90,7 @@ Here are the disciplines you can apply to your project:
 | SM | Site Model |
 | SU | Survey |
 
-### 3.2 Type Codes
+#### 3.1.2 Type Codes
 
 Here are the file types you can apply to your project:
 
@@ -109,7 +109,7 @@ Here are the file types you can apply to your project:
 | PR | PRESENTATION |
 | SU | SURVEY |
 
-### 3.3 Documents Naming Convention
+### 3.2 Documents Naming Convention
 
 For documents that belong to a specific project, filenames shall follow the naming convention for Revit files. 
 
@@ -127,7 +127,7 @@ Where:
 
 ATL-STD-XX-DC-GN-001.doc     Information Structure, Naming, and Format Standard
 
-### 3.4 ACC Projects Naming Standard
+### 3.3 ACC Projects Naming Standard
 
 Projects created within Autodesk Construction Cloud (ACC) shall follow a consistent and structured naming convention to ensure clarity, searchability, and alignment with ATL BIM Standards and ISO-based information management practices.
 
@@ -148,7 +148,7 @@ __ATL-WBS-ProjectName-Phase__
 
 ATL-F1021014-ConcourseAExpansion-SD
 
-1. Alternate Format (When No WBS Exists)
+2. Alternate Format (When No WBS Exists)
 
 __ATL-ProjectName-Phase__
 
@@ -158,7 +158,7 @@ Use this format when a WBS code has not yet been assigned or is not applicable.
 
 ATL-LagardereRetail-Concessions-DD
 
-1. Alternate Format (When No WBS or Phase)
+3. Alternate Format (When No WBS or Phase)
 
 __ATL-ProjectName__
 
@@ -168,7 +168,7 @@ Use this format when a WBS code has not yet been assigned or is not applicable a
 
 ATL-PowerDistReplacement-B
 
-### 3.5 Site Models
+### 3.4 Site Models
 
 Site Models are used to stablish consistent project-wide topography, civil features, grid systems, and spatial context across all concourses and project areas. These models ensure alignment of geometry and location data for all design disciplines working with the airport campus.
 
@@ -191,7 +191,7 @@ Where:
 
 A-ATL-ZZ-M3-SM-001.rvt
 
-### 3.6 3D Asset Models
+### 3.5 3D Asset Models
 
 Asset Models created for facilities across Hartsfield-Jackson Atlanta International Airport shall follow a consistent naming standard to support clarity, asset traceability, and alignment with ATL BIM Standards and ISO-based information management practices.
 
@@ -214,7 +214,7 @@ Where:
 
 A-ATL-ZZ-M3-AR-001.rvt
 
-### 3.7 3D Model Families Naming Convention
+### 3.6 3D Model Families Naming Convention
 
 The filename format is: __CATEGORY-MANUFACTURER-DESCRIPTION.rfa__
 
@@ -228,7 +228,7 @@ The filename format is: __CATEGORY-MANUFACTURER-DESCRIPTION.rfa__
 
 • WINDOWS-MILGARD-DOUNBLEHUNG400.rfa
 
-#### 3.7.1 Family Types
+#### 3.6.1 Family Types
 
 Family types should highlight the key differences among options.
 
@@ -242,7 +242,7 @@ Family types should highlight the key differences among options.
 
 • 30inx20in
 
-### 3.8 Annotation Families Naming Convention
+### 3.7 Annotation Families Naming Convention
 
 Each P&D project template includes various standardized Annotation Families, whose names must remain unchanged. The annotation family name should be formatted as: 
 
@@ -271,7 +271,7 @@ CI: Company Initials (Originator) > ATL
 
 • ATL-SYM-NORTHARROW.rfa
 
-### 3.9 Worksets Naming Convention
+### 3.8 Worksets Naming Convention
 
 All models are required to be workshared, and each model must utilize at least Workset 1 and Shared Levels and Grids. When creating new Worksets, P&D BIM Standard naming convention should be adhered to, with different approaches applied based on the project's size and complexity. Workset names should be designated according to their intended purpose.
 
@@ -305,7 +305,7 @@ __LINK-DESCRIPTION__
 - LINK-STRUCTURAL
 - LINK-POINTCLOUD
 
-#### 3.9.1 Workset Properties
+#### 3.8.1 Workset Properties
 
 __Active Workset:__
 
@@ -323,7 +323,7 @@ __Visibility:__
 
 Worksets can be shown in all or selected views to enhance model performance.
 
-### 3.10 View Naming Convention
+### 3.9 View Naming Convention
 
 The views should be formatted as follows: __TC-LEVEL/LOCATION/SEQUENCE-DESCRIPTION__
 
@@ -369,13 +369,13 @@ The views should be formatted as follows: __TC-LEVEL/LOCATION/SEQUENCE-DESCRIPTI
 | SQ | Schedule/Quantities |
 | VL | View List |
 
-### 3.11 Level Naming Convention
+### 3.10 Level Naming Convention
 
 At the start of each project, the Architecture team or lead discipline will determine the master level to be used consistently across all disciplines. These levels should follow the format: "DESCRIPTION-LEVEL".
 
 Once master levels are established, all disciplines need to copy/monitor them, particularly those essential to their models. Architecture usually defines TOFF (Top of Finish Floor) levels, while Structure sets TOS (Top of Slab) levels; these should be copied/monitored by other disciplines as required. Additional discipline-specific levels can be created in individual Revit models after primary levels are successfully copied and monitored.
 
-### 3.12 Sheet Naming Convention
+### 3.11 Sheet Naming Convention
 
 The sheet names should be formatted as follows: 
 
@@ -386,13 +386,13 @@ __"SHEET NUMBER - SHEET TITLE"__
 | SHEET NUMBER | Sheet type code \+ Sheet number/s |
 | SHEET TITLE | Title or description |
 
-#### 3.12.1 Drawing Types
+#### 3.11.1 Drawing Types
 
 Drawing Types are categories used to organize the Contract Set of Drawings and refer to either one or two letters that appear before the Sheet Number in the lower right-hand corner of each sheet.
 
 The image shows an example of an Architectural drawing: 
 
-![A diagram of a number of text](../assets/images/dc-gn-001-image-01.png)
+![A diagram of a number of text](../assets/images/dc-gn-001-image-04.png)
 
 The following table shows the Drawing Types Convention to be used on Projects.
 
@@ -523,13 +523,13 @@ The following table shows the Drawing Types Convention to be used on Projects.
 | MC | Series | Master Clock System |
 | - | Series | Other Agency Drawings (ex. GDOT) |
 
-#### 3.12.2 Drawing Number
+#### 3.11.2 Drawing Number
 
 The Drawing Number Convention refers to the numbers that appear right after the Drawing Type and are used to organize the Contract Drawings in order. 
 
 The same sheet numbering scheme type should be used for the entire project.  An example of the drawing sequence format is as follows:  A2.1.1, A2.2.1, A2.3.1…  The last number in the sequence should be used to insert new sheets after the release for bid set is released. For example, A2.1.1, A2.1.2 (new sheet), A2.2.1, A2.3.1. 
 
-#### 3.12.3 Sheet Classification
+#### 3.11.3 Sheet Classification
 
 Sheets should also be organized and controlled via parameters. The following Shared Parameters are being used to properly classify sheets in the browser: 
 
@@ -537,7 +537,7 @@ Sheets should also be organized and controlled via parameters. The following Sha
 
 • ATL-SHEET SERIES: Defines the sheet type.
 
-![A screenshot of a computer](../assets/images/dc-gn-001-image-01.png)
+![A screenshot of a computer](../assets/images/dc-gn-001-image-03.png)
 
 Figure 2 - Sheet Classification Parameters
 
@@ -561,7 +561,7 @@ Cluster rooms in a suite use an alpha character plus a number from 1 to 200 (e.g
 
 Room Number (up to 9 alpha – numeric characters) 
 
- ![A number on a white background](../assets/images/dc-gn-001-image-01.png)
+ ![A number on a white background](../assets/images/dc-gn-001-image-02.png)
 
 Figure 3 - Room Number Sequence
 
