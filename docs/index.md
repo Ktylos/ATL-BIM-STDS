@@ -12,7 +12,7 @@ These standards ensure consistency, quality, and efficiency across all project d
 
 {{ download_button('ATL-BIM-Standards-v1.0.zip', 'Download Complete Package') }}
 
-*Includes all standards PDFs, templates, and family libraries*
+*Includes all main standards only*
 
 ---
 
@@ -36,9 +36,9 @@ These standards ensure consistency, quality, and efficiency across all project d
     
     [:octicons-arrow-right-24: View Standards](standards/dc-gn-001.md)
 
-- :material-download:{ .lg .middle } **Download Templates**
+- :material-download:{ .lg .middle } **Review Templates**
     
-    Access Revit templates and Excel trackers
+    Read about Revit templates and Excel trackers
     
     [:octicons-arrow-right-24: Templates](template-docs/)
 
@@ -64,4 +64,3 @@ Contact the ATL BIM Standards Team:
 
 - **Email:** {{ contact.email }}
 - **Phone:** {{ contact.phone }}
-- **Hours:** Monday-Friday, 8:00 AM - 5:00 PM EST
