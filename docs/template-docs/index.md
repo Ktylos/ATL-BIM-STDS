@@ -32,9 +32,9 @@ Download the complete standards package including all documentation and template
 ```
 ATL-BIM-Standards-v1.0/
 ├─📁 Documentation/
-│ ├─ ATL-STD-XX-DC-GN-001.pdf - Not Included (Available to Project Teams)
+│ ├─ ATL-STD-XX-DC-GN-001.pdf
 │ ├─ ATL-STD-XX-DC-GN-002.pdf
-│ └─ ATL-STD-XX-DC-GN-003.pdf
+│ └─ ATL-STD-XX-DC-GN-003.pdf - Not Included (Available to Project Teams)
 ├─📁 Templates/
 │ ├─📁 Revit/
 │ │ └─ ATL-STD-XX-TP-GN-001.rte - Not Included (Available to Project Teams)

@@ -1,0 +1,29 @@
+/* Print-specific styles for MkDocs Material */
+@media print {
+  /* Hide header, sidebar, and navigation */
+  .md-header, .md-sidebar, .md-nav, .md-footer, .md-search, .md-banner {
+    display: none !important;
+  }
+  .md-main, .md-content {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  /* Expand content area */
+  .md-content__inner {
+    max-width: 100% !important;
+  }
+  /* Show TOC at top if present */
+  .md-toc {
+    display: block !important;
+    margin-bottom: 2em;
+  }
+  /* Remove box shadows and backgrounds */
+  .md-content, .md-main {
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+  /* Hide print button itself */
+  .print-button {
+    display: none !important;
+  }
+}

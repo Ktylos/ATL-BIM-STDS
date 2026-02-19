@@ -2,10 +2,14 @@
 
 !!! info "Document Information"
     **Standard ID**: ATL-STD-XX-DC-GN-001  
-    **Version**: 2.0  
+    **Version**: 1.0  
     **Last Updated**: 2026-01-30  
     **Status**: Active
 
+    <button class="print-button" onclick="window.print()" style="margin-top:10px;">🖨️ Print This Standard</button>
+
+## 1 Table of Contents
+{{ toc }}
 ---
 
 ## 2 INTRODUCTION

@@ -6,6 +6,10 @@
     **Last Updated**: 2026-01-30  
     **Status**: Active
 
+  <button class="print-button" onclick="window.print()" style="margin-top:10px;">🖨️ Print This Standard</button>
+
+## 1 Table of Contents
+{{ toc }}
 ---
 
 ## 2 INTRODUCTION
