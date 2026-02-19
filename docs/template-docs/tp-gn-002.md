@@ -7,6 +7,13 @@
     **Excel Version:** 2019+ (Microsoft 365 compatible)  
     **Last Updated:** January 30, 2026
 
+    <button class="print-button" onclick="window.print()" style="margin-top:10px;">🖨️ Print This Template</button>
+
+## Overview
+
+## 1 Table of Contents
+{{ toc }}
+
 ## Overview
 
 Information Delivery Plan Template. The IDP defines what information must be delivered, when it must be delivered, by whom, and in what format.
