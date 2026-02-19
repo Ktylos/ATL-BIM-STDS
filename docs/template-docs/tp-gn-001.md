@@ -10,7 +10,7 @@
 
 
 ## 1 Table of Contents
-{{ toc }}
+[[ toc ]]
 ---
 
 ## 2 Purpose

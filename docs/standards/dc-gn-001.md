@@ -9,7 +9,7 @@
     <button class="print-button" onclick="window.print()" style="margin-top:10px;">🖨️ Print This Standard</button>
 
 ## 1 Table of Contents
-{{ toc }}
+[[ toc ]]
 ---
 
 ## 2 INTRODUCTION
