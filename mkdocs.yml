@@ -8,6 +8,10 @@ copyright: Copyright &copy; 2026 ATL - All Rights Reserved
 extra_css:
   - stylesheets/extra.css
   - stylesheets/print.css
+
+extra_javascript:
+  - javascripts/print-toc.js
+
 theme:
   name: material
   language: en
@@ -90,9 +94,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-extra_css:
-  - stylesheets/extra.css
 
 nav:
   - Home: index.md

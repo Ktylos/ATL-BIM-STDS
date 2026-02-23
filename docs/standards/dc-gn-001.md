@@ -6,10 +6,8 @@
     **Last Updated**: 2026-01-30  
     **Status**: Active
 
-    <button class="print-button" onclick="window.print()" style="margin-top:10px;">🖨️ Print This Standard</button>
+    <a href="../standards/dc-gn-001-print/" target="_blank" class="print-button" style="display:inline-block; margin-top:10px; padding:8px 16px; background:#0066cc; color:white; text-decoration:none; border-radius:4px; cursor:pointer;">🖨️ View Print Version</a>
 
-## 1 Table of Contents
-[[ toc ]]
 ---
 
 ## 2 INTRODUCTION

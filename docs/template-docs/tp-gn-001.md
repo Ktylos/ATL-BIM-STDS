@@ -6,11 +6,8 @@
     **Last Updated**: 2026-01-30  
     **Status**: Active
 
-    <button class="print-button" onclick="window.print()" style="margin-top:10px;">🖨️ Print This Template</button>
+    <button class="print-button" style="margin-top:10px; cursor:pointer;">🖨️ Print This Template</button>
 
-
-## 1 Table of Contents
-[[ toc ]]
 ---
 
 ## 2 Purpose

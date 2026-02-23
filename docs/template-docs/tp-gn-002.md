@@ -7,12 +7,7 @@
     **Excel Version:** 2019+ (Microsoft 365 compatible)  
     **Last Updated:** January 30, 2026
 
-    <button class="print-button" onclick="window.print()" style="margin-top:10px;">🖨️ Print This Template</button>
-
-## Overview
-
-## 1 Table of Contents
-[[ toc ]]
+    <button class="print-button" style="margin-top:10px; cursor:pointer;">🖨️ Print This Template</button>
 
 ## Overview
 
