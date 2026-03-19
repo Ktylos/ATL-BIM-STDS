@@ -6,8 +6,6 @@
     **Last Updated**: 2026-01-30  
     **Status**: Active
 
-    <a href="../standards/dc-gn-001-print/" target="_blank" class="print-button" style="display:inline-block; margin-top:10px; padding:8px 16px; background:#0066cc; color:white; text-decoration:none; border-radius:4px; cursor:pointer;">🖨️ View Print Version</a>
-
 ---
 
 ## 2 INTRODUCTION

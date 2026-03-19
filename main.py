@@ -66,25 +66,4 @@ def define_env(env):
         'release_date': 'February 2026'
     }
         
-    @env.macro
-    def download_button(file, text='Download'):
-        return f'[{text}](/downloads/{file}){{ .md-button .md-button--primary }}'
-    
-    @env.macro
-    def release_widget(version=None):
-        """Generate latest release widget"""
-        release = env.variables['release']
-        
-        display_version = version or release['current_version']
-        download_file = f"ATL-BIM-Standards-v{display_version}.zip"
-        
-        return f"""
-<div class="release-widget">
-  <h3>📦 Latest Release</h3>
-  <p><strong>Version {display_version}</strong> - {release['release_date']}</p>
-  <p>
-    <a href="/downloads/{download_file}" class="md-button md-button--primary" download>Download Complete Package</a>
-  </p>
-  <p><small>Download standards PDFs, templates, and libraries from the release package.</small></p>
-</div>
-"""
+

@@ -6,8 +6,6 @@
     **Last Updated**: 2026-01-30  
     **Status**: Active
 
-    <button class="print-button" style="margin-top:10px; cursor:pointer;">🖨️ Print This Standard</button>
-
 ---
 
 ## Purpose

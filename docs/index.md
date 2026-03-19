@@ -6,16 +6,6 @@ Welcome to the ATL Planning and Development BIM Standards documentation portal. 
 
 These standards ensure consistency, quality, and efficiency across all project deliverables. All consultants are required to adhere to these standards for their BIM project deliverables.
 
-## Download Full Release Package
-
-**Current Release:** Version {{ release.current_version }} ({{ release.release_date }})
-
-{{ download_button('ATL-BIM-Standards-v1.0.zip', 'Download Complete Package') }}
-
-*Includes all main standards only*
-
----
-
 ## Standards Documentation
 
 | Standard | Title | Description |
@@ -60,7 +50,4 @@ These standards ensure consistency, quality, and efficiency across all project d
 
 ## Need Help?
 
-Contact the ATL BIM Standards Team:
-
-- **Email:** {{ contact.email }}
-- **Phone:** {{ contact.phone }}
+Contact the ATL BIM Standards Team at [Support & Contact](resources/support.md).

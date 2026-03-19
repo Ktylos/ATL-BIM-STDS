@@ -7,10 +7,6 @@ copyright: Copyright &copy; 2026 ATL - All Rights Reserved
 
 extra_css:
   - stylesheets/extra.css
-  - stylesheets/print.css
-
-extra_javascript:
-  - javascripts/print-toc.js
 
 theme:
   name: material

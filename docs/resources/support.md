@@ -42,8 +42,8 @@ For urgent issues, call {{ contact.phone }} during business hours.
 
 ### General Questions
 
-**Q: Where do I download the latest standards?**  
-A: Visit the [home page](../index.md) and click 'Download Complete Package' for the full release zip file.
+**Q: Where do I find the latest standards?**  
+A: Visit the [home page](../index.md) to browse all current standards documentation.
 
 **Q: How often are standards updated?**  
 A: Standards are reviewed quarterly. Check the [Recent Updates](changelog.md) page for the latest changes.
