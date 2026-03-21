@@ -26,11 +26,11 @@ These standards ensure consistency, quality, and efficiency across all project d
     
     [:octicons-arrow-right-24: View Standards](standards/dc-gn-001.md)
 
-- :material-download:{ .lg .middle } **Review Templates**
-    
-    Read about Revit templates and Excel trackers
-    
-    [:octicons-arrow-right-24: Templates](template-docs/)
+- :material-message-plus-outline:{ .lg .middle } **Provide Feedback**
+
+    Report errors, ask questions, or propose amendments
+
+    [:octicons-arrow-right-24: Open an Issue](https://github.com/Ktylos/ATL-BIM-STDS/issues/new/choose)
 
 - :material-update:{ .lg .middle } **Recent Updates**
     

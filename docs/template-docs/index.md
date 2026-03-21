@@ -1,4 +1,4 @@
-# Templates & Downloads
+# Templates
 
 Access all ATL BIM templates and resources from this page.
 

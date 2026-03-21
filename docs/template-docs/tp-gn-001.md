@@ -58,7 +58,7 @@ Consultant-Team
 
 - Model Authoring Software: Autodesk Suite
 - Coordination Software: Navisworks Manage, BIM Collaborate
-- LOD/LOI: Based on the [Information Delivery Plan](docs\template-docs\tp-gn-002.md)
+- LOD/LOI: Based on the [Information Delivery Plan](tp-gn-002.md)
 - Model Discipline Breakdown: 
 
 List of all the disciplines to be filled in this table:
@@ -88,7 +88,7 @@ BIM Execution Plan Submission|Submit and approve the BIM Execution Plan outlinin
 
 ## 10 Modeling Standards
 
-- File Naming Convention, Revit Templates, Coordinate System, Model Setup, and Object Naming documented in the [Revit Project Setup](docs\standards\dc-gn-003.md) Standard
+- File Naming Convention, Revit Templates, Coordinate System, Model Setup, and Object Naming documented in the [Revit Project Setup](../standards/dc-gn-003.md) Standard
 
 ## 11 Model Exchange and Collaboration
 

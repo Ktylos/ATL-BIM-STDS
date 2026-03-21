@@ -5,6 +5,11 @@ site_author: ATL P&D BIM Team
 
 copyright: Copyright &copy; 2026 ATL - All Rights Reserved
 
+extra:
+  version:
+    provider: mike
+    default: latest
+
 extra_css:
   - stylesheets/extra.css
 
@@ -47,6 +52,9 @@ theme:
     - search.share
     - content.code.copy
     - toc.follow
+
+hooks:
+  - hooks/toc_section.py
 
 plugins:
   - search

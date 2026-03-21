@@ -2,47 +2,64 @@ name: Deploy to bim.atlstandards.com
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    tags:
+      - 'v*'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
+
       - name: Install dependencies
         run: pip install -r requirements.txt
-      
+
+      - name: Configure git identity
+        run: |
+          git config user.name "ATL BIM Team"
+          git config user.email "dev@ktylos.com"
+
+      - name: Extract version from tag
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
       - name: Generate changelog
         run: python generate_changelog.py
-      
-      - name: Build MkDocs site
-        run: mkdocs build --clean
-      
+
+      - name: Deploy version with Mike
+        run: mike deploy --push --update-aliases ${{ env.VERSION }} latest
+
+      - name: Set default version
+        run: mike set-default --push latest
+
+      - name: Checkout gh-pages for FTP deploy
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: versioned-site
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: atlstandards.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./site/
+          local-dir: ./versioned-site/
           server-dir: ./
           port: 21
           protocol: ftp
-      
+
       - name: Deployment complete
         if: success()
-        run: echo "✓ Deployed to https://bim.atlstandards.com"
+        run: echo "✓ Deployed version ${{ env.VERSION }} to https://bim.atlstandards.com"
