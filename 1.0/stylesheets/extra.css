@@ -223,10 +223,14 @@
   color: white;
 }
 
-/* Version selector enhancement */
+/* Version selector — white text to read against red header */
 .md-version__current {
   font-weight: 600;
-  color: var(--atl-blue);
+  color: white;
+}
+
+.md-version__list {
+  color: var(--atl-black);
 }
 
 /* Footer customization */
