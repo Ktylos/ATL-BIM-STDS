@@ -25,8 +25,8 @@ The purpose of this document is to outline the procedures and requirements for s
 | Plumbing | ATL-TP-RVT-P.rte |
 | Structural | ATL-TP-RVT-S.rte |
 
-1. Download the latest file version from ACC
-2. Click New> Browse> 2026 BIM Program>BIM Content> Template File (e.g. - ATL-TP-RVT-A-2025-v1.rte) > OK (Fig:1) 
+1. Revit template files are provided by the ATL BIM Team at project kickoff. Contact the BIM Team if you have not received your templates.
+2. Click New> Browse> 2026 BIM Program>BIM Content> Template File (e.g. - ATL-TP-RVT-A-2025-v1.rte) > OK (Fig:1)
 3. If you have the file in any other folder of your device Browse>navigate to that file and click OK
 
 ![](../assets/images/dc-gn-003-image-30.png)

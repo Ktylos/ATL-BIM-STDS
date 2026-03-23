@@ -1,0 +1,46 @@
+name: Technical Error Report
+description: Report a factual error, broken link, or inconsistency in the published standards.
+title: "[Error] "
+labels: ["error-report"]
+body:
+  - type: dropdown
+    id: standard
+    attributes:
+      label: Standard
+      description: Which standard contains the error?
+      options:
+        - DC-GN-001 — File Naming and Organization
+        - DC-GN-002 — BIM Modeling Best Practices
+        - DC-GN-003 — Revit Project Setup
+        - TP-GN-001 — BIM Execution Plan Template
+        - TP-GN-002 — Information Delivery Plan
+        - General / Multiple Standards
+    validations:
+      required: true
+
+  - type: input
+    id: section
+    attributes:
+      label: Section
+      description: Which section contains the error?
+      placeholder: e.g., "Section 2.3 — Model File Naming"
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_description
+    attributes:
+      label: Error Description
+      description: Describe the error clearly. Quote the incorrect text if applicable.
+      placeholder: "The standard states X, but..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_correction
+    attributes:
+      label: Suggested Correction
+      description: If you know the correct information, provide it here.
+      placeholder: "The correct information is..."
+    validations:
+      required: false

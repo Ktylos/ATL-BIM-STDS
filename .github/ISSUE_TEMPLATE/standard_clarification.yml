@@ -1,0 +1,46 @@
+name: Standard Clarification
+description: Ask a question about the intent or application of a published standard.
+title: "[Clarification] "
+labels: ["clarification"]
+body:
+  - type: dropdown
+    id: standard
+    attributes:
+      label: Standard
+      description: Which standard does your question relate to?
+      options:
+        - DC-GN-001 — File Naming and Organization
+        - DC-GN-002 — BIM Modeling Best Practices
+        - DC-GN-003 — Revit Project Setup
+        - TP-GN-001 — BIM Execution Plan Template
+        - TP-GN-002 — Information Delivery Plan
+        - General / Multiple Standards
+    validations:
+      required: true
+
+  - type: input
+    id: section
+    attributes:
+      label: Section or Topic
+      description: Which section or topic within the standard does your question relate to?
+      placeholder: e.g., "Section 3.2 — File Naming for BIM Models"
+    validations:
+      required: false
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Clarification Needed
+      description: Describe what you need clarified. Include the specific requirement or wording you are unsure about.
+      placeholder: "I need clarification on..."
+    validations:
+      required: true
+
+  - type: input
+    id: project
+    attributes:
+      label: Project Name (optional)
+      description: If this question relates to a specific ATL project, provide the project name or number.
+      placeholder: e.g., "Concourse T Expansion — 2026-ATL-0042"
+    validations:
+      required: false

@@ -12,25 +12,7 @@
 
 ### 2.1 Purpose
 
-This BIM Standard outlines the format, structure and naming of the information. Includes naming standards for documents and plans as well as rooms, doors, and spaces. Refer to the table below for related documents.
-
-| DOCUMENT TITLE | DESCRIPTION | VERSION | DATE |
-|----------------|-------------|---------|-------|
-| ATL-STD-XX-DC-GN-001 | Information Structure, Naming, and Format Standard. Outlines the format, structure and naming of the information. Includes naming standards for documents and plans as well as rooms, doors, and spaces. | 2.0 | Jan 2026 |
-| ATL-STD-XX-DC-GN-002 | P&D BIM Standards. Outlines the information requirements, project workflows, and technical guidelines for BIM implementation. | 2.0 | Jan 2026 |
-| ATL-STD-XX-DC-GN-003 | Revit Project Setup with Custom Coordinates. Describe the procedure for initiating a new project utilizing the provided templates. | 2.0 | Jan 2026 |
-| ATL-STD-XX-TP-GN-001 | BIM Execution Plan Template. Outlines the project specific BIM strategies and workflows. | 1.0 | July 2025 |
-| ATL-STD-XX-TP-GN-002 | Information Delivery Plan Template. The IDP defines what information must be delivered, when it must be delivered, by whom, and in what format. | 1.0 | July 2025 |
-
-In addition to the document, we provide:
-
-| FILE NAME | DESCRIPTION | VERSION | DATE |
-|-----------|-------------|---------|------|
-| ATL Revit Templates | Standardize project documentation, offer pre-configured environment with standardized settings, views, and sheets | 1.0 | July 2025 |
-| ATL Site Model | Allow users to acquire the correct location for the project | 1.0 | July 2025 |
-| ATL Concourse Models | This model is a section of the site model, including the grids corresponding to each of the concourses. | 1.0 | July 2025 |
-| ATL Border Families | Ensures uniformity in project documents, crucial for P&D's BIM implementation, promoting consistent standards and efficient project delivery | 1.0 | July 2025 |
-| P&D Standard Details Library | A library offering standardized construction details across all disciplines for consistency. | 1.0 | July 2025 |
+This BIM Standard outlines the format, structure and naming of the information. Includes naming standards for documents and plans as well as rooms, doors, and spaces.
 
 ## 3 FILE NAMING CONVENTION 
 

@@ -14,27 +14,7 @@
 
 The purpose of these standards is to provide Designers of Record with procedures for submitting a project to the Department of Aviation’s Planning & Development (P&D) for technical review and acceptance. All new construction and modifications to any airport’s facilities at Hartsfield-Jackson Atlanta International Airport (ATL) shall follow these standards. 
 
-This BIM Standard outlines the information requirements, project workflows, and technical guidelines for BIM implementation for P&D. It covers the requirements specified by a range of airport stakeholders across the entire project lifecycle—from planning and design to construction, commissioning, and operations—while promoting collaboration, data consistency, and asset management. 
-
-Refer to the table below for related documents.
-
-| DOCUMENT TITLE | DESCRIPTION | VERSION | DATE |
-|----------------|-------------|---------|------|
-| ATL-STD-XX-DC-GN-002 __(THIS DOCUMENT)__ | P&D BIM Standards. Outlines the information requirements, project workflows, and technical guidelines for BIM implementation. | 1.0 | Jan 2026 |
-| ATL-STD-XX-DC-GN-001 | Information Structure, Naming, and Format Standard. Outlines the format, structure and naming of the information. Includes naming standards for documents and plans as well as rooms, doors, and spaces. | 1.0 | Jan 2026 |
-| ATL-STD-XX-DC-GN-003 | Revit Project Setup with Custom Coordinates. Describe the procedure for initiating a new project utilizing the provided templates. | 1.0 | Jan 2026 |
-| ATL-STD-XX-TP-GN-001 | BIM Execution Plan Template. Outlines the project specific BIM strategies and workflows. | 1.0 | July 2025 |
-| ATL-STD-XX-TP-GN-002 | Information Delivery Plan Template. The IDP defines what information must be delivered, when it must be delivered, by whom, and in what format. | 1.0 | July 2025 |
-
-In addition to the document, we provide:
-
-|FILE NAME|DESCRIPTION|VERSION|DATE|
-|---------|-----------|-------|----|
-|ATL Revit Templates|Standardize project documentation, offer pre-configured environment with standardized settings, views, and sheets|1.0|July 2025|
-|ATL Site Model|Allow users to acquire the correct location for the project|1.0|July 2025|
-|ATL Asset Information Models|The P&D BIM Team maintains a set of asset information models for each facility across the entire airport. These models are a continued work-in-progress, and they will be updated as new projects are completed, and additional information is received. These models serve as a starting point for new P&D projects and are provided for information to project teams at contract initiation.|Varies|July 2025|
-|ATL Border Families|Ensures uniformity in project documents, crucial for P&D's BIM implementation, promoting consistent standards and efficient project delivery.|1.0|July 2025|
-|P&D Standard Details Library|A library offering standardized construction details across all disciplines for consistency.|Varies|July 2025|
+This BIM Standard outlines the information requirements, project workflows, and technical guidelines for BIM implementation for P&D. It covers the requirements specified by a range of airport stakeholders across the entire project lifecycle—from planning and design to construction, commissioning, and operations—while promoting collaboration, data consistency, and asset management.
 
 ### 2.2 Roles and Responsibilities 
 
@@ -51,7 +31,7 @@ The BIM P&D program will directly assume the following BIM roles:
 - __BIM Program Manager__: Establish and maintain BIM standards and workflows. Lead the overall BIM implementation strategy. Develop and update BIM guidelines, protocols, and best practices. Provide training and support to internal teams on BIM-related topics. Monitor and evaluate the effectiveness of BIM implementation. Stay abreast of industry trends and advancements in BIM technology. Coordinate with other departments and stakeholders to ensure BIM alignment. Oversee the development and maintenance of BIM templates and libraries. Manage BIM software and hardware resources. Act as the primary point of contact for BIM-related inquiries.
 - __BIM Program Coordinator__: Provide essential support to the Contractor/Consultant for the development of accurate and compliant BIM models. Review BIM submissions from the Contractor/Consultant to ensure accuracy and adherence to established standards. Offer technical guidance and support to the Contractor/Consultant regarding BIM-related issues. Ensure that models meet the required level of detail (LOD) and information requirements. Participate in Coordination and clash detection meetings to coordinate resolutions. Monitor the progress of BIM model development and identify potential issues. Document and track BIM-related issues and their resolutions. Assist in the creation of BIM training materials. Contribute to the ongoing improvement of BIM standards and workflows.
 
-  ![A diagram of bim program manager](../assets/images/dc-gn-002-image-18.png)
+  ![A diagram of bim program manager org structure](../assets/images/dc-gn-002-image-18.png)
 
 #### 2.2.2 Designers of Record 
 
@@ -62,7 +42,7 @@ Roles assigned to the Designer of Record must be clearly outlined in the BIM Exe
 - __BIM Project Coordinator:__ Oversee the Contractor/Consultant's BIM submittals to ensure they comply with P&D standards. Act as the main point of contact for BIM-related communication with the P&D organization. Coordinate BIM activities within the Contractor/Consultant's team. Create and maintain the Contractor/Consultant's BIM Execution Plan (BEP) to align with P&D requirements. Manage the exchange of BIM models and data with the P&D organization. Organize and lead BIM coordination meetings. Track and address BIM-related issues and conflicts. Train all team members in BIM standards and procedures. Monitor the development progress of BIM models and identify potential risks. Report on BIM performance metrics.
 - __BIM Project Manager:__ Ensure that BIM models are updated, precise, and comply with established standards. Oversee the development and maintenance of BIM models by the Contractor/Consultant's team. Implement and enforce BIM standards and procedures within the team. Conduct quality control checks on BIM models. Provide technical guidance and support to the modeling team. Coordinate with other disciplines to ensure model integration. Manage the BIM model version control process. Identify and resolve modeling issues. Contribute to the development of BIM content and libraries. Stay informed about industry best practices in BIM modeling.
 
-![A diagram of bim project management](../assets/images/dc-gn-002-image-10.png)
+![A diagram of bim project management org structure](../assets/images/dc-gn-002-image-10.png)
 
 NOTE: The requirement to have unique individuals assigned to each role will depend on the Contract and specified within the project scope. For projects with no dedicated BIM staff requirement specified, the responsibilities above can be performed by the same person, and that person may also be performing other duties on the project. 
 
@@ -84,7 +64,7 @@ P&D’s strategic objectives for BIM implementation include:
 
 This section outlines how P&D will utilize BIM across design, construction, and asset management. 
 
-![A diagram of a workflow](../assets/images/dc-gn-002-image-01.png)
+![A diagram of BIM workflow](../assets/images/dc-gn-002-image-01.png)
 
 ### 3.1 P&D Project Phases (DB / DBB)
 

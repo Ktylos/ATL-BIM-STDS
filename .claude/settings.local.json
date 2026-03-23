@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -f MIGRATION-GUIDE.md QUICK-START.md)",
+      "Bash(rm -rf docs/downloads)"
+    ]
+  }
+}

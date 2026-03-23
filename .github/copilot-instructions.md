@@ -2,71 +2,69 @@
 
 ## Project Overview
 
-This is a **MkDocs-based documentation site** for BIM (Building Information Modeling) standards currently focused on **staging deployment** for internal review via GitHub Pages, with production deployment planned for future. The site is built with MkDocs Material theme and uses a custom macro system for reusable content.
+This is a **MkDocs-based documentation site** for BIM (Building Information Modeling) standards at Hartsfield-Jackson Atlanta International Airport. The site is the sole authoritative source for ATL BIM standards — there are no Word document or PDF downloads. Versioning is managed with **Mike**, so consultants can access any historical version of the standards that was current at their project's contract date.
+
+**Repo:** `https://github.com/Ktylos/ATL-BIM-STDS`
+**Live site:** `https://bim.atlstandards.com`
 
 **Key Architecture:**
-- **Content**: Markdown files in `docs/` (originally converted from Word documents)
+- **Content**: Markdown files in `docs/`
 - **Configuration**: `mkdocs.yml` for site structure and theme
 - **Reusable Content**: Centralized in `main.py` using mkdocs-macros-plugin
-- **Native Assets**: `Source/` folder contains native files (.RTE, .docx, etc.) for release packaging - **DO NOT MODIFY**
-- **Deployment**: Currently GitHub Pages staging; production workflow planned for future
+- **Versioning**: Mike (`mike>=2.0.0`) manages versioned output on the `gh-pages` branch
+- **Deployment**: FTP to `bim.atlstandards.com` via GitHub Actions, triggered on version tags only
 
-## Critical Workflows
+## Branch Strategy
 
-### Local Development
+| Branch | Purpose |
+|---|---|
+| `develop` | Active development, edits, drafts — work here |
+| `main` | Stable, release-ready content. Merge from `develop` via PR. Version tags created here. |
+| `gh-pages` | Mike-managed versioned output — **never edit manually** |
+
+## Release Workflow
+
+1. Edit content on `develop`
+2. Test locally: `mkdocs serve`
+3. Open PR: `develop` → `main`, review, merge
+4. Tag the release on `main`: `git tag v1.1 && git push origin v1.1`
+5. GitHub Actions deploys automatically (Mike + FTP)
+
+**Do not push directly to `main`.** Use PRs from `develop`.
+
+## Local Development
+
 ```powershell
-# Activate virtual environment (if using)
-.\venv\Scripts\activate
-
-# Install dependencies
+# Install dependencies (run once or after requirements changes)
 pip install -r requirements.txt
 
 # Preview site locally
 mkdocs serve  # Opens at http://localhost:8000
 
-# Build static site
-mkdocs build  # Outputs to site/
+# Test versioning locally
+mike deploy 1.0 --config-file mkdocs.yml
+mike serve    # Opens versioned preview at http://localhost:8000
+
+# Build static site (sanity check before tagging)
+mkdocs build
 ```
 
-### Deployment Flow (Current Focus: Staging)
-1. **Feature Branch** → PR → **Main Branch** → Auto-deploys to **Staging** (GitHub Pages)
-2. PRs trigger preview builds via `pr-preview.yml` workflow
-3. **Production workflow** (planned): Main → Production Branch → External deployment (not yet implemented)
-
-**Important**: 
-- Never commit the `site/` directory - it's build output (excluded in .gitignore)
-- Never modify files in `Source/` folder - these are native assets for release packaging
+Always run `mkdocs build` before opening a PR to catch configuration errors. Workflows use `mkdocs build` (not `--strict`) to allow warnings.
 
 ## Project-Specific Conventions
 
-### Reusable Content System (Key Pattern!)
+### Reusable Content System
 
-**All content definitions live in `main.py`** - this is the single source of truth for:
+**All content definitions live in `main.py`** — single source of truth for:
 - Standards metadata (GN-001, GN-002, GN-003, etc.)
 - Template definitions (TP-GN-001, TP-GN-002)
-- Family library information
-- GitHub URLs (auto-adapts between enterprise/public repos)
+- Contact information
 - Release information
 
 **When editing content:**
-1. ✅ Update `main.py` - changes propagate to ALL pages
-2. ❌ Don't edit content inline in Markdown files
+1. Update `main.py` — changes propagate to ALL pages that use macros
+2. Do not edit content inline in Markdown files when a macro exists for it
 3. Use macros in Markdown: `{{ standards_table() }}`, `{{ standard_card('GN-001') }}`, `{{ standards['GN-001'].title }}`
-
-**Example pattern:**
-```python
-# main.py
-env.variables['standards'] = {
-    'GN-001': {
-        'title': 'File Naming and Organization',
-        'version': '1.0',  # ← Update here, not in individual pages
-        'date': 'January 2026',
-        'pdf': 'ATL-STD-XX-DC-GN-001.pdf'
-    }
-}
-```
-
-See [REUSABLE-CONTENT-GUIDE.md](../REUSABLE-CONTENT-GUIDE.md) for complete macro reference.
 
 ### Document Naming Convention
 
@@ -76,59 +74,55 @@ Standards follow **3-part prefix format**: `ATL-STD-XX-{DC|TP}-{CATEGORY}-{NUMBE
 - **GN**: General category
 - Examples: `DC-GN-001`, `TP-GN-001`
 
-Markdown files use shortened na (Rarely Used)
+### Template Distribution
 
-`convert_word_to_md.py` was used for initial document conversion and is **rarely needed** going forward:
-```powershell
-python convert_word_to_md.py
-```
+Templates (Revit `.rte`, Excel `.xlsx`, etc.) are **not distributed through this site**. They are provided directly to consultant teams at project scoping/kickoff by the ATL BIM Team. Do not add download links or file attachments to the site.
 
-**What it does:**
-- Extracts images to `docs/assets/images/` with descriptive names (`{doc}-image-{num}.{ext}`)
-- Converts Word content to Markdown with proper image paths
-- Removes HTML TOC anchor links (MkDocs auto-generates navigation)
+### No PDF Generation
 
-**Note**: This script may be moved out of the workspace in the future. For new content, edit Markdown directly in `docs/`
+Standards are web-only. Do not add PDF generation, export links, or references to PDF versions of any standard.
 
-**Add new documents** by updating `DOC_MAPPINGS` in the script before converting.
+## GitHub Actions Workflow
 
-### GitHub Actions Workflows
+**File:** `.github/workflows/deploy.yml`
 
-Located in `.github/workflows/`:
-- **`deploy-staging.yml`**: Auto-deploys to GitHub Pages on push to `main` - adds staging banner
-- **`deploy-production.yml`***[ACTIVE]** Auto-deploys to GitHub Pages on push to `main` - adds staging banner
-- **`pr-preview.yml`**: **[ACTIVE]** Builds preview for pull requests
-- **`pr-check.yml`**: **[ACTIVE]** Validates build on PRs before merge
-- **`deploy-production.yml`**: **[PLANNED]** Future production deployment (not yet implemented)
-- **`deploy.yml`**: Legacy workflow (may be unused)
+- **Trigger:** Push of a version tag (`v1.0`, `v1.1`, `v2.0`, etc.) to `main`
+- **Process:** Install deps → Generate changelog → Mike deploy version → FTP deploy `gh-pages` branch
+- **Secrets required:** `FTP_USERNAME`, `FTP_PASSWORD` (configured in repo Settings → Secrets)
+- **Git identity for Mike commits:** `ATL BIM Team <dev@ktylos.com>`
 
-**Python version**: 3.11 (specified in all workflows
-### MkDocs Configuration Patterns
+## MkDocs Configuration
 
-**Environment-aware GitHub URLs** (`mkdocs.yml`):
+**Version selector** (Mike) is configured in `mkdocs.yml`:
 ```yaml
 extra:
-  github:
-    enterprise_repo: https://github.com/EMU-WSP-Internal-Repos/...
-    public_repo: https://github.com/YOUR-USERNAME/...
-    environment: enterprise  # 'enterprise' for staging, 'public' for production
+  version:
+    provider: mike
+    default: latest
 ```
 
-The `main.py` macros system reads this to serve correct GitHub links (issues, discussions, releases).
+**Navigation structure** is defined in `mkdocs.yml` under `nav:` — update here when adding pages.
 
-**Navigation structure** is defined in `mkdocs.yml` under `nav:` - update here when adding pages.
+## Consultant Feedback
+
+Consultants file feedback via **GitHub Issues** using structured templates:
+- **Standard Clarification** — questions about intent or application
+- **Standard Amendment Proposal** — suggested changes with justification
+- **Technical Error Report** — factual errors in the published standards
+
+Blank issues are disabled. Direct consultants to `github.com/Ktylos/ATL-BIM-STDS/issues/new/choose`.
 
 ## Integration Points
 
-### External Dependencies (requirements.txt)
+### External Dependencies (`requirements.txt`)
 - `mkdocs>=1.5.0` + `mkdocs-material>=9.5.0`: Core site generation
 - `mkdocs-macros-plugin`: Powers reusable content system
 - `mkdocs-git-revision-date-localized-plugin`: Shows last-updated timestamps
 - `pymdown-extensions`: Enables admonitions, tabs, diagrams (Mermaid)
+- `mike>=2.0.0`: Versioned documentation deployment
 
 ### Custom Assets
 - **CSS**: `docs/stylesheets/extra.css` for theme customization
-- **JavaScript**: `docs/javascripts/mathjax.js` for math equations (KaTeX/MathJax support)
 
 ## Documentation Structure
 
@@ -136,54 +130,33 @@ The `main.py` macros system reads this to serve correct GitHub links (issues, di
 docs/
 ├── index.md                    # Home page (uses macros)
 ├── standards/                  # BIM standards (DC-GN-XXX)
-│   ├── dc-gn-001.md           # File naming & organization
-│   ├── dc-gn-002.md           # Modeling best practices
-│   └── dc-gn-003.md           # Coordination workflows
-├── templates/                  # Template documentation (TP-GN-XXX)
-├── resources/                  # FAQs, support, downloads
-├── contributing/               # How to contribute
-└── assets/images/             # Extracted images from Word docs
+│   ├── dc-gn-001.md
+│   ├── dc-gn-002.md
+│   └── dc-gn-003.md
+├── template-docs/              # Template documentation (TP-GN-XXX)
+│   ├── index.md
+│   ├── tp-gn-001.md
+│   └── tp-gn-002.md
+├── resources/
+│   ├── support.md
+│   └── changelog.md            # Generated by generate_changelog.py
+└── assets/images/              # Branding and content images
 ```
 
 ## Common Tasks
 
-Source/                         # Native format files - DO NOT MODIFY
-├── *.docx                     # Original Word documents
-├── *.RTE                      # Revit template files
-└── *.xlsx                     # Excel templates
-                               # Used for release packaging only
-
 ### Adding a New Standard
 1. Update `main.py` → add to `standards` dictionary
-2. Create `docs/standards/dc-gn-XXX.md` (or convert from Word)
+2. Create `docs/standards/dc-gn-XXX.md`
 3. Update `mkdocs.yml` navigation
 4. Test locally: `mkdocs serve`
-5. Commit and push to trigger staging deployment
+5. Commit to `develop`, open PR to `main`, tag when ready
 
 ### Updating Standard Metadata
-Edit `main.py` only - changes cascade automatically to all pages using macros.
-
-### Testing Before Deployment
-Always run `mkdocs build` to catch configuration errors before pushing. Workflows use `mkdocs build` (not `mkdocs build --strict`) to allow warnings.
+Edit `main.py` only — changes cascade automatically to all pages using macros.
 
 ### Troubleshooting Build Errors
 - Check `mkdocs.yml` syntax (YAML is whitespace-sensitive)
 - Verify all referenced files in `nav:` exist
-- Ensure image paths in Markdown use relative paths: `../assets/images/filename.ext`
+- Ensure image paths use relative paths: `../assets/images/filename.ext`
 - Check macro syntax: `{{ variable }}` or `{{ function() }}`
-
-## W`Source/` folder**: Contains native format files for release packaging - never modify
-- **Plugin configurations** in `mkdocs.yml`: Material theme features are tightly coupled
-- **Workflow Python version**: 3.11 is tested and stable across all workflows
-- **Base template structure**: MkDocs Material conventions (don't fight the framework)
-- **`azure-pipelines.yml`**: Deprecated Azure Static Web Apps deployment (no longer used
-- **Plugin configurations** in `mkdocs.yml`: Material theme features are tightly coupled
-- **Workflow Python version**: 3.11 is tested and stable across all pipelines
-- **Base template structure**: MkDocs Material conventions (don't fight the framework)
-
-## Documentation References
-
-- [DEPLOYMENT.md](../DEPLOYMENT.md): Complete deployment guide
-- [REUSABLE-CONTENT-GUIDE.md](../REUSABLE-CONTENT-GUIDE.md): Macro system reference
-- [GETTING-STARTED.md](../GETTING-STARTED.md): Quick start for new contributors
-- [MACROS-EXAMPLES.md](../MACROS-EXAMPLES.md): Live examples of macro usage

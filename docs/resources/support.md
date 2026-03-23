@@ -2,6 +2,24 @@
 
 Need help with ATL BIM Standards? Here's how to get support.
 
+## Provide Feedback via GitHub Issues
+
+The preferred way to submit feedback, report errors, or propose changes is through **GitHub Issues**. All submissions are reviewed by the ATL BIM Team and incorporated into the quarterly release cycle.
+
+[Open a New Issue :octicons-arrow-right-24:](https://github.com/Ktylos/ATL-BIM-STDS/issues/new/choose){ .md-button .md-button--primary }
+
+Three issue types are available:
+
+| Issue Type | Use For |
+| --- | --- |
+| **Standard Clarification** | Questions about the intent or application of a requirement |
+| **Standard Amendment Proposal** | Suggesting a change, addition, or removal |
+| **Technical Error Report** | Reporting a factual error or inconsistency |
+
+Not sure which to use? See the [Contributing Guide](https://github.com/Ktylos/ATL-BIM-STDS/blob/main/CONTRIBUTING.md) for guidance.
+
+---
+
 ## Contact Information
 
 !!! info 'BIM Standards Team'
