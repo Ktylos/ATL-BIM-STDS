@@ -197,11 +197,11 @@ The current version utilized for all Autodesk products is 2026.
 
 | CATEGORY | SOFTWARES |
 |----------|------------|
-| Data Authoring | Autodesk Revit Autodesk Civil 3D Autodesk AutoCAD |
+| Data Authoring | Autodesk Revit, Autodesk Civil 3D, Autodesk AutoCAD |
 | Data Exchange | Autodesk Construction Cloud |
-| Data Analysis | Autodesk Navisworks Manage Primavera P6 |
+| Data Analysis | Autodesk Navisworks Manage, Primavera P6 |
 | Data Visualization | Microsoft Power BI |
-| Asset Information Management | Autodesk Tandem Cityworks |
+| Asset Information Management | Autodesk Tandem, Cityworks |
 
 ### 6.1 Files Ownership
 
