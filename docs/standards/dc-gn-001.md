@@ -115,7 +115,7 @@ Projects created within Autodesk Construction Cloud (ACC) shall follow a consist
 
 ACC Project Names must use the following format:
 
-__Facility-ATL-ProjectName__
+__Concourse-ATL-ProjectName__
 
 | ITEM | DESCRIPTION |
 |------|-------------|
