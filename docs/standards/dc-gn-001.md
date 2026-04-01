@@ -113,42 +113,19 @@ ATL-STD-XX-DC-GN-001.doc     Information Structure, Naming, and Format Standard
 
 Projects created within Autodesk Construction Cloud (ACC) shall follow a consistent and structured naming convention to ensure clarity, searchability, and alignment with ATL BIM Standards and ISO-based information management practices.
 
-ACC Project Names must use one of the following formats:
+ACC Project Names must use the following format:
 
-1. Standard Format. (Preferred when WBS Exists)
-
-__ATL-WBS-ProjectName-Phase__
+__Facility-ATL-ProjectName__
 
 | ITEM | DESCRIPTION |
 |------|-------------|
+| Concourse | Identifies the facility or concourse the asset belongs to. This is always the first character or set of character. Examples: A, B, C, D, E, F, T, M, etc. |
 | ATL | Originator/Organization Identifier (Atlanta Airport) |
-| WBS | The project's work breakdown structure or contract/project code (Example: F1021014, P1234567) |
 | ProjectName | A concise, descriptive name using TitleCase with no spaces Hyphens may be used to separate major components (Example: AHUReplacement, ConcourseBExpansion) |
-| Phase | The primary project phase or deliverable stage (SD=Schematic Design, DD=Design Development, CD=Construction Document, CA=Construction Administration, Study, AsBuilt, etc.) |
 
 *Example:* 
 
-ATL-F1021014-ConcourseAExpansion-SD
-
-2. Alternate Format (When No WBS Exists)
-
-__ATL-ProjectName-Phase__
-
-Use this format when a WBS code has not yet been assigned or is not applicable.
-
-*Example:*
-
-ATL-LagardereRetail-Concessions-DD
-
-3. Alternate Format (When No WBS or Phase)
-
-__ATL-ProjectName__
-
-Use this format when a WBS code has not yet been assigned or is not applicable and/or there isn’t a single phase.
-
-*Example:*
-
-ATL-PowerDistReplacement-B
+A-ATL-ConcourseAExpansion
 
 ### 3.4 Site Models
 
