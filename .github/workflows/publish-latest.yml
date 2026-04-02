@@ -40,7 +40,7 @@ jobs:
         run: python generate_changelog.py
 
       - name: Update latest with Mike
-        run: mike deploy --push latest
+        run: mike deploy --push --update-aliases --title "Latest" latest
 
       - name: Set latest as default
         run: mike set-default --push latest
