@@ -13,6 +13,9 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/version-banner.js
+
 theme:
   name: material
   language: en
