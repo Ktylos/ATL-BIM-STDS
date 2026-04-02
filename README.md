@@ -85,6 +85,20 @@ Always run `mkdocs build` before opening a PR to catch configuration errors.
 
 ---
 
+## Commit Convention (BIM Team)
+
+Only commits prefixed `[CONTENT]` appear in the public changelog. Use this prefix for any commit that changes the *substance* of a standard — wording, requirements, tables, diagrams. Omit it for dev, CI, or formatting changes.
+
+| Commit message | Shows in changelog? |
+| --- | --- |
+| `[CONTENT] Updated DC-GN-001 Section 3.2 MEP naming convention` | Yes |
+| `[CONTENT] Added LOD requirements table to DC-GN-002 Section 7` | Yes |
+| `Fix TOC hook position` | No |
+| `Update glightbox plugin` | No |
+| `Merge develop into main` | No |
+
+---
+
 ## Tech Stack
 
 | Component | Technology |
