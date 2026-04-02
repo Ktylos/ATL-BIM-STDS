@@ -1,0 +1,67 @@
+name: Publish to Latest
+
+# Triggers on every push to main that is NOT a version tag.
+# Version tags (v1.0, v1.1, etc.) are handled by deploy.yml which
+# creates a numbered snapshot. This workflow updates the rolling
+# "latest" build — resources, training, layout fixes — without
+# creating a new version entry in the selector.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish-latest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git identity
+        run: |
+          git config user.name "ATL BIM Team"
+          git config user.email "dev@ktylos.com"
+
+      - name: Generate changelog
+        run: python generate_changelog.py
+
+      - name: Update latest with Mike
+        run: mike deploy --push latest
+
+      - name: Set latest as default
+        run: mike set-default --push latest
+
+      - name: Checkout gh-pages for FTP deploy
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: versioned-site
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: atlstandards.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./versioned-site/
+          server-dir: ./
+          port: 21
+          protocol: ftp
+
+      - name: Done
+        if: success()
+        run: echo "Latest updated at https://bim.atlstandards.com/latest/"
