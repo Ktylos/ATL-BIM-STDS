@@ -1,0 +1,356 @@
+/* Custom CSS for ATL BIM Standards */
+/* Hartsfield-Jackson Atlanta International Airport Branding */
+
+/* Root variables for airport brand theming */
+:root {
+  /* Airport Brand Colors */
+  --atl-red: #ba0c2f;        /* Primary brand color */
+  --atl-blue: #074A75;       /* Secondary brand color */
+  --atl-gray: #53565a;       /* Neutral gray */
+  --atl-black: #000000;      /* Black */
+  
+  /* Derived colors for UI states */
+  --atl-red-light: rgba(186, 12, 47, 0.1);
+  --atl-red-dark: #8a0923;
+  --atl-blue-light: rgba(7, 74, 117, 0.1);
+  --atl-blue-dark: #053757;
+}
+
+/* Material Design custom primary color overrides */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--atl-red);
+  --md-primary-fg-color--light: var(--atl-red-light);
+  --md-primary-fg-color--dark: var(--atl-red-dark);
+  --md-accent-fg-color: var(--atl-blue);
+  --md-accent-fg-color--transparent: var(--atl-blue-light);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--atl-red);
+  --md-primary-fg-color--light: var(--atl-red-light);
+  --md-primary-fg-color--dark: var(--atl-red-dark);
+  --md-accent-fg-color: var(--atl-blue);
+  --md-accent-fg-color--transparent: var(--atl-blue-light);
+}
+
+/* Custom admonition colors - Airport brand */
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-color: var(--atl-blue);
+}
+
+.md-typeset .success > .admonition-title,
+.md-typeset .success > summary {
+  background-color: var(--atl-blue-light);
+  border-color: var(--atl-blue);
+}
+
+.md-typeset .admonition.important,
+.md-typeset details.important {
+  border-color: var(--atl-red);
+}
+
+.md-typeset .important > .admonition-title,
+.md-typeset .important > summary {
+  background-color: var(--atl-red-light);
+  border-color: var(--atl-red);
+}
+
+/* Enhance code blocks */
+.md-typeset code {
+  font-size: 0.85em;
+  padding: 0.1em 0.4em;
+}
+
+/* Custom button styling - Airport brand */
+.md-button {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.md-button--primary {
+  background-color: var(--atl-red) !important;
+  border-color: var(--atl-red) !important;
+  color: white !important;
+}
+
+.md-button--primary:hover {
+  background-color: var(--atl-red-dark) !important;
+  border-color: var(--atl-red-dark) !important;
+}
+
+.md-button--secondary {
+  background-color: var(--atl-blue) !important;
+  border-color: var(--atl-blue) !important;
+  color: white !important;
+}
+
+.md-button--secondary:hover {
+  background-color: var(--atl-blue-dark) !important;
+  border-color: var(--atl-blue-dark) !important;
+}
+
+/* Table enhancements - Airport brand */
+.md-typeset table:not([class]) {
+  font-size: 0.85em;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--atl-red-light);
+  font-weight: 600;
+  color: var(--atl-black);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: var(--atl-blue-light);
+}
+
+/* Grid cards enhancement */
+.md-typeset .grid.cards > ol > li,
+.md-typeset .grid.cards > ul > li {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.md-typeset .grid.cards > ol > li:hover,
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom heading underlines - Airport brand */
+.md-typeset h2 {
+  border-bottom: 2px solid var(--atl-red-light);
+  padding-bottom: 0.3em;
+}
+
+.md-typeset h1 {
+  color: var(--atl-red);
+}
+
+/* Badge styling for standards IDs - Airport brand */
+.md-typeset code.standard-id {
+  background-color: var(--atl-red);
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Secondary badge style */
+.md-typeset code.badge-blue {
+  background-color: var(--atl-blue);
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Download link styling */
+.md-typeset a[href*="download"] {
+  text-decoration: none;
+}
+
+.md-typeset a[href*="download"]:before {
+  content: "⬇ ";
+  font-weight: bold;
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-footer,
+  .md-sidebar {
+    display: none !important;
+  }
+  
+  .md-content {
+    max-width: 100% !important;
+  }
+  
+  .md-typeset a {
+    text-decoration: underline;
+  }
+  
+  .md-typeset a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+/* Responsive enhancements */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset table {
+    font-size: 0.75em;
+  }
+}
+
+/* Custom checkbox styling for checklists */
+.md-typeset .task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+.md-typeset .task-list-item input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.status-badge.draft {
+  background-color: #FF9800;
+  color: white;
+}
+
+.status-badge.deprecated {
+  background-color: #F44336;
+  color: white;
+}
+
+/* Version selector — white text to read against red header */
+.md-version__current {
+  font-weight: 600;
+  color: white;
+}
+
+.md-version__list {
+  color: var(--atl-black);
+}
+
+/* Footer customization */
+.md-footer-meta {
+  background-color: var(--atl-dark);
+}
+
+/* Search result highlighting */
+.md-search-result__article--document {
+  border-left: 3px solid var(--atl-blue);
+}
+
+/* Announcement bar customization */
+.md-banner {
+  background-color: var(--atl-light-blue);
+  color: white;
+}
+
+/* Icon enhancements */
+.md-typeset .twemoji {
+  vertical-align: text-bottom;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid var(--atl-blue);
+  outline-offset: 2px;
+}
+
+/* Standard and Template Cards */
+.standard-card,
+.template-card {
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: var(--md-code-bg-color);
+  transition: box-shadow 0.2s ease;
+}
+
+.standard-card:hover,
+.template-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.standard-card h3,
+.template-card h3 {
+  margin-top: 0;
+  color: var(--atl-blue);
+}
+
+.standard-card p:last-child,
+.template-card p:last-child {
+  margin-bottom: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Community Links Section */
+.community-links {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.community-links h3 {
+  margin-top: 0;
+  color: var(--atl-blue);
+}
+
+.community-links .button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+/* Release Widget */
+.release-widget {
+  background: linear-gradient(135deg, var(--md-code-bg-color) 0%, var(--md-default-bg-color) 100%);
+  border: 2px solid var(--atl-blue);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.release-widget h3 {
+  margin-top: 0;
+  color: var(--atl-blue);
+}
+
+.release-widget p:last-child {
+  margin-bottom: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Content max width optimization */
+.md-content {
+  max-width: 100%;
+}
+
+.md-content__inner {
+  margin: 0 0.8rem;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-content__inner {
+    margin: 0 1.6rem;
+  }
+}
