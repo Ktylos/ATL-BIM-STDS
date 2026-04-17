@@ -554,6 +554,8 @@ The alpha character in the identification number, as shown in sequence 1 in Figu
 | North Deicing | ND |
 | TSOD | TD |
 | Fire Station Number XX (ex: Fire Station 32) | FSXX (ex: FS32) |
+| South Deck | SD |
+| Technical Campus | TC |
 
 __Region Identification__
 
