@@ -65,6 +65,7 @@ Here are the disciplines you can apply to your project:
 | PL | Plumbing |
 | ST | Structural |
 | TR | Traffic |
+| TE | Communication |
 | RS | Resilience and Sustainable Design |
 | VT | Vertical Transportation |
 | GN | General/Organizational Information |
