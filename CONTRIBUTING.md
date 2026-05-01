@@ -57,22 +57,25 @@ Verified errors are treated as high priority and may be patched in an out-of-cyc
 | Amendment decision | Next quarterly review cycle |
 | Published in a release | On next version tag |
 
-For urgent project-blocking issues, contact the BIM Team directly via the [Support & Contact](https://bim.atlstandards.com/resources/support/) page rather than filing a GitHub Issue.
+For urgent project-blocking issues, contact the BIM Team directly via the [Support & Contact](https://bim.atlstandards.com/latest/resources/support/) page rather than filing a GitHub Issue.
 
 ---
 
 ## Accessing Historical Versions
 
+The site maintains two types of published content — a rolling **Latest** version and permanently frozen numbered snapshots. Every page shows a banner identifying which version you are viewing.
+
 If your contract references a specific version of the standards, you can access that exact version at any time:
 
 1. Visit [bim.atlstandards.com](https://bim.atlstandards.com)
-2. Use the version selector in the top navigation bar
-3. Select the version number referenced in your contract (e.g., `1.0`)
+2. Use the **version selector dropdown** in the top navigation bar
+3. Select the version number referenced in your contract (e.g. `1.0`)
+4. Bookmark the resulting URL (e.g. `bim.atlstandards.com/1.0/`) for your project records
 
-All released versions are permanently available.
+All released versions are permanently available and will never be overwritten or removed.
 
 ---
 
 ## For ATL BIM Team Members
 
-See the [README](README.md) for local development setup, the branch strategy, and the release process.
+See the [README](README.md) for local development setup, the branch strategy, commit conventions, and the full release process.

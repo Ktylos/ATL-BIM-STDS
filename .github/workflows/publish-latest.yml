@@ -1,15 +1,20 @@
-name: Deploy to bim.atlstandards.com
+name: Publish to Latest
+
+# Triggers on every push to main that is NOT a version tag.
+# Version tags (v1.0, v1.1, etc.) are handled by deploy.yml which
+# creates a numbered snapshot. This workflow updates the rolling
+# "latest" build — resources, training, layout fixes — without
+# creating a new version entry in the selector.
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [main]
 
 permissions:
   contents: write
 
 jobs:
-  deploy:
+  publish-latest:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,16 +36,13 @@ jobs:
           git config user.name "ATL BIM Team"
           git config user.email "dev@ktylos.com"
 
-      - name: Extract version from tag
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
-
       - name: Generate changelog
         run: python generate_changelog.py
 
-      - name: Deploy version with Mike
-        run: mike deploy --push ${{ env.VERSION }}
+      - name: Update latest with Mike
+        run: mike deploy --push --update-aliases --title "Latest" latest
 
-      - name: Set default version
+      - name: Set latest as default
         run: mike set-default --push latest
 
       - name: Checkout gh-pages for FTP deploy
@@ -60,6 +62,6 @@ jobs:
           port: 21
           protocol: ftp
 
-      - name: Deployment complete
+      - name: Done
         if: success()
-        run: echo "✓ Deployed version ${{ env.VERSION }} to https://bim.atlstandards.com"
+        run: echo "Latest updated at https://bim.atlstandards.com/latest/"

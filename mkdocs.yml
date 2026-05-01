@@ -3,7 +3,7 @@ site_url: https://bim.atlstandards.com
 site_description: Atlanta BIM Standards and Templates for Consultants
 site_author: ATL P&D BIM Team
 
-copyright: Copyright &copy; 2026 ATL - All Rights Reserved
+copyright: Copyright &copy; 2026 City of Atlanta - All Rights Reserved
 
 extra:
   version:
@@ -13,26 +13,18 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/version-banner.js
+
 theme:
   name: material
   language: en
   logo: assets/images/HJ_plane_White-300.png
   favicon: assets/images/HJ_plane_Red-100.png
   palette:
-    - media: '(prefers-color-scheme: light)'
-      scheme: default
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: '(prefers-color-scheme: dark)'
-      scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    scheme: default
+    primary: custom
+    accent: custom
   
   font:
     text: Roboto
