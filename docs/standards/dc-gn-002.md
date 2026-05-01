@@ -88,8 +88,6 @@ This graphic represents the process of creating, utilizing, and maintaining the 
 
 ![A screen shot of a diagram](../assets/images/dc-gn-002-image-22.png) 
 
-Figure 2 - Documents and Files Lifecycle
-
 __BEP (BIM Execution Plan):__ document that outlines how Building Information Modeling (BIM) will be implemented and managed throughout design and/or construction project. It defines the roles, responsibilities, processes, and technologies that project stakeholders will use to collaborate effectively using BIM. The BEP ensures that project goals are aligned with BIM deliverables, and that data is shared consistently across all phases — from design to construction and facility management.
 
 __IDP (Information Delivery Plan):__ structured/tabular document that outlines what project information is needed, who is responsible for creating it, when it should be delivered, and in what format. It aligns with the project timeline and ensures that the right data is delivered to the right people at the right time to support decision-making. The IDP is an important appendix of the BIM Execution Plan and helps coordinate information flow across project stages, supporting efficient collaboration and lifecycle management.
@@ -124,7 +122,6 @@ P&D offers Revit templates designed to ensure consistency in the development of 
 
  ![A document with text on it](../assets/images/dc-gn-002-image-15.png)
 
-Figure 3 - Starting View from the Template
 
 ### 4.3 Revit Library
 
