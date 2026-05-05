@@ -139,41 +139,41 @@ Project templates come preloaded with title blocks, view templates, parameters, 
  
 1. Start Revit and select **New**.
 
-<p style="text-align: center; margin-bottom: 24px;">
-  <img src="../assets/images/dc-gn-004-image-01.png" alt="Revit New Project" />
-  <br />
-  <em>Figure 1 - Revit New Project dialog</em>
-</p>
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Revit New Project](../assets/images/dc-gn-004-image-01.png)
+
+    *Figure 1 - Revit New Project dialog*
+    </div>
 
 2. From the pop-up window, select **Browse**.
 3. Navigate to the templates location and pick the correct discipline template (e.g., Architectural / Structural / Mechanical / Electrical).
 
-<p style="text-align: center; margin-bottom: 24px;">
-  <img src="../assets/images/dc-gn-004-image-02.png" alt="Choosing templates with desktop connector" />
-  <br />
-  <em>Figure 2 - Choosing templates with desktop connector</em>
-</p>
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Choosing templates with desktop connector](../assets/images/dc-gn-004-image-02.png)
 
-<p style="text-align: center; margin-bottom: 24px;">
-  <img src="../assets/images/dc-gn-004-image-03.png" alt="Choose Template" />
-  <br />
-  <em>Figure 3 - Choosing template</em>
-</p>
+    *Figure 2 - Choosing templates with desktop connector*
+    </div>
+
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Choose Template](../assets/images/dc-gn-004-image-03.png)
+
+    *Figure 3 - Choose Template*
+    </div>
 
 
 4. **Collaborate in the Cloud:** Use **Collaborate > In Cloud** to publish to the designated ACC project folder.
-<p style="text-align: center; margin-bottom: 24px;">
-  <img src="../assets/images/dc-gn-004-image-04.png" alt="Enabling worksharing" />
-  <br />
-  <em>Figure 4 - Enabling Worksharing</em>
-</p>
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Enabling Worksharing](../assets/images/dc-gn-004-image-04.png)
+
+    *Figure 4 - Enabling Worksharing*
+    </div>
 
 5. **Project Information:** Populate the "Project Information" parameters required by the template.
-<p style="text-align: center; margin-bottom: 24px;">
-  <img src="../assets/images/dc-gn-004-image-05.png" alt="Project Information" />
-  <br />
-  <em>Figure 5 - Project Information</em>
-</p>
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Project Information](../assets/images/dc-gn-004-image-05.png)
+
+    *Figure 5 - Project Information*
+    </div>
 
 6. **Content Verification:** Confirm title blocks, view templates, line weights, text styles, and sheet naming match the standards.
 
@@ -187,17 +187,17 @@ Worksets manage visibility, performance, and ownership across teams. A clean, co
  
 1. Open the cloud model and enable Worksharing if not already enabled. (See Figure 4)
 2. Create Core Worksets following the Naming Convention for Worksets:
-    - "Workset 1" (Created by default — do not delete or rename)
-    - "Shared_Levels_Grids" (read-only by default)
-    - "Links_Revit_[Discipline]" (e.g., "Links_Revit_Arch_001")
-    - "Links_CAD_[Discipline]" (e.g., "Links_CAD_Civil")
-    - "Scope_Boxes"
+    - *Workset 1* (Created by default — do not delete or rename)
+    - *Shared_Levels_Grids* (read-only by default)
+    - *Links_Revit_[Discipline]* (e.g., *Links_Revit_Arch_001*)
+    - *Links_CAD_[Discipline]* (e.g., *Links_CAD_Civil*)
+    - *Scope_Boxes*
 3. Set the appropriate active workset for each modeling task; avoid placing elements on link or shared-control worksets.
-<p style="text-align: center; margin-bottom: 24px;">
-  <img src="../assets/images/dc-gn-004-image-05.png" alt="Worksets Selection" />
-  <br />
-  <em>Figure 6 - Worksets Selection</em>
-</p>
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Worksets Selection](../assets/images/dc-gn-004-image-06.png)
+
+    *Figure 6 - Worksets Selection*
+    </div>
 
 #### 4.3.2 Workset Standards
  
@@ -235,22 +235,33 @@ NOTE: Changes to the format of the Revit Model can be made on a project-by-proje
 2. Add the Shared Parameters to the Revit file. ([5.4](#54-shared-parameters))
 3. Fill out the necessary information on the Title Sheet.
 4. Save the file according to the BIM naming conventions.
-5. Workshare the file to Autodesk Construction Cloud. ([5.2](#52-work-sharing-a-central-revit-file))
+5. Workshare the file to Autodesk Forma. ([5.2](#52-work-sharing-a-central-revit-file))
 6. Link in the site model and acquire coordinates. ([5.3](#53-linking-in-a-site-model--acquiring-coordinates))
 7. Add Levels & Grids. ([5.5](#55-levels--grids))
 ### 5.2 Work-Sharing a Central Revit File
  
-All Revit model files should be workshared to Autodesk Construction Cloud. This ensures the BIM and project teams can properly coordinate, mark up, and edit files as a project progresses.
+All Revit model files should be workshared to Autodesk Forma. This ensures the BIM and project teams can properly coordinate, mark up, and edit files as a project progresses.
  
-NOTE: **No active project files should be saved locally.** Every file should be workshared to Autodesk Construction Cloud.
+NOTE: **No active project files should be saved locally.** Every file should be workshared to Autodesk Forma.
  
 **Steps to workshare a Revit file:**
  
-1. Save the file locally with the proper naming convention. Make sure to save the file as a central model.
-2. In the **Collaborate** tab, select **Collaborate in Cloud**.
-3. If prompted, select **Share to Cloud** — not on a local network.
+1. Save the file locally with the proper naming convention. (If you don't give it a proper name, you can do it in step 4, before saving the file)
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Save As](../assets/images/dc-gn-004-image-07.png)
+
+    *Figure 7 - Save As*
+    </div>
+
+2. In the **Collaborate** tab, select **Collaborate in Cloud**. ([4.2.1] (#Procedure - Create the Project from template)
+3. Select **Share to Cloud** — not on a local network.
 4. Select the project's ACC site and the folder location for the file.
 5. Click **Save**.
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Save to Cloud](../assets/images/dc-gn-004-image-08.png)
+
+    *Figure 8 - Save to Cloud*
+    </div>
 6. The file is now workshared to the cloud and can be edited. When finished, synchronize the file and relinquish elements.
 7. Publish the edited model.
 
@@ -263,23 +274,58 @@ NOTE: Each team **must** verify the coordinates, position, rotation, and elevati
 **Steps to link a Site Model:**
  
 1. Create a Floor Plan at the Foundation or Apron level and name it **"ACC – Grid Reference"**.
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Create a Floor](../assets/images/dc-gn-004-image-09.png)
+
+    *Figure 9 - Create a Floor*
+    </div>
 2. In the Ribbon, select **Insert**, then **Link Revit**.
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Link Revit](../assets/images/dc-gn-004-image-10.png)
+
+    *Figure 10 - Link Revit*
+    </div>
 3. In the **03 ATL Campus** folder, go to the **Site Models** subfolder and select the desired Facility Site Model.
 4. Select **Origin-to-Origin** and load the link.
 5. In **Visibility/Graphics**, ensure the Project Base Point, Origin, and Survey Point are visible. Turn off visibility for all other model elements.
+     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Site Visibility](../assets/images/dc-gn-004-image-11.png)
+
+    *Figure 11 - Site Visibility*
+    </div>
 6. Check that the origin point for the linked site model loads at the same location as the file's origin point. If using grids from a previous model, verify that the site model grids are aligned with the model grids.
 7. In **Visibility/Graphics**, set the linked view to the site view.
 8. Create a section view and name it **"ACC – Elevation Reference"**. Ensure that the section box extends to the grids and survey points.
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Create a Section View](../assets/images/dc-gn-004-image-12.png)
+
+    *Figure 12 - Create a Section View*
+    </div>
 9. Make sure the site model's apron/foundation level is aligned with the first level for your model. Pin the Site Model.
 10. In the Ribbon **Manage** tab, reset the shared coordinates.
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Reset Shared Coordinates](../assets/images/dc-gn-004-image-13.png)
+
+    *Figure 13 - Reset Shared Coordinates*
+    </div>
 11. Click **Acquire Coordinates** and select the site model.
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Acquire Coordinates](../assets/images/dc-gn-004-image-14.png)
+
+    *Figure 14 - Acquire Coordinates*
+    </div>
 12. Move the survey point of the model to sea level (x=0, y=0, z=0). Pin it in place.
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Survey Point](../assets/images/dc-gn-004-image-15.png)
+
+    *Figure 15 - Survey Point*
+    </div>
 
 ### 5.4 Shared Parameters
 
 Shared parameters are used by the BIM team to manage and collect data on model elements. All discipline models should apply the ATL Shared Parameters to their models.
  
-**WARNING:** Edits to the ATL Shared Parameters may **only** be made by the ATL P&D BIM Team and are subject to review.
+NOTE: Edits to the ATL Shared Parameters may **only** be made by the ATL P&D BIM Team and are subject to review.
  
 **How to add the shared parameters:**
  
@@ -290,7 +336,23 @@ Shared parameters are used by the BIM team to manage and collect data on model e
 5. Once the file has loaded, go to **Project Parameters**.
 6. Add all necessary parameters to the Revit file.
 **How to create shared parameters:**
- 
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Edit Shared Parameter](../assets/images/dc-gn-004-image-16.png)
+
+    *Figure 16 - Edit Shared Parameter*
+    </div>
+
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Parameter Properties](../assets/images/dc-gn-004-image-17.png)
+
+    *Figure 17 - Parameter Properties*
+    </div>
+
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Properties Window](../assets/images/dc-gn-004-image-18.png)
+
+    *Figure 18 - Properties Window*
+    </div>
 1. In an open Revit file, select **Shared Parameters**.
 2. If adding to ATL's shared parameters, browse and select the ATL Shared Parameter `.txt` file. If creating a new file, select **Create** and add a blank `.txt` to Revit.
 3. Select **New Group** and name it according to the type of data being collected.

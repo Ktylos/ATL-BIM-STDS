@@ -106,6 +106,7 @@ nav:
     - DC-GN-001 File Naming: standards/dc-gn-001.md
     - DC-GN-002 P&D BIM Standards: standards/dc-gn-002.md
     - DC-GN-003 Revit Project Setup: standards/dc-gn-003.md
+    - DC-GN-004 SOP Revit: standards/dc-gn-004.md
   - Templates:
     - template-docs/index.md
     - BIM Execution Plan: template-docs/tp-gn-001.md
