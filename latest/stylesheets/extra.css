@@ -354,3 +354,8 @@ button:focus {
     margin: 0 1.6rem;
   }
 }
+
+.img-center {
+  display: block;
+  margin: 0 auto 24px;
+}
