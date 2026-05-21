@@ -39,6 +39,8 @@ def get_content_commits(from_ref=None, to_ref=None):
         range_spec = f'{from_ref}..{to_ref}'
     elif from_ref:
         range_spec = f'{from_ref}..HEAD'
+    elif to_ref:
+        range_spec = to_ref
     else:
         range_spec = 'HEAD'
 
