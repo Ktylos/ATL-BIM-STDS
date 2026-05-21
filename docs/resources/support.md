@@ -20,15 +20,6 @@ Not sure which to use? See the [Contributing Guide](https://github.com/Ktylos/AT
 
 ---
 
-## Contact Information
-
-!!! info 'BIM Standards Team'
-    **Email:** {{ contact.email }}  
-    **Phone:** {{ contact.phone }}  
-    **Hours:** Monday-Friday, 8:00 AM - 5:00 PM EST
-
----
-
 ## Getting Help
 
 ### 1. Check the Documentation
@@ -41,18 +32,7 @@ Most questions are answered in the documentation:
 
 ### 2. Email the BIM Team
 
-For technical support or questions:
-
-1. Email {{ contact.email }}
-2. Include:
-    - Which standard or template you're working with
-    - Description of your question or issue
-    - Screenshots if helpful
-3. We typically respond within 1 business day
-
-### 3. Phone Support
-
-For urgent issues, call {{ contact.phone }} during business hours.
+For technical support or questions please follow the guidelines in our [Contributing](https://github.com/Ktylos/ATL-BIM-STDS/blob/main/CONTRIBUTING.md) section on GitHub.
 
 ---
 
