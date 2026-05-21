@@ -60,6 +60,11 @@ jobs:
           port: 21
           protocol: ftp
 
+      - name: Attach shared parameter file to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: docs/assets/downloads/ATL_DOA_SharedParameters.txt
+
       - name: Deployment complete
         if: success()
         run: echo "✓ Deployed version ${{ env.VERSION }} to https://bim.atlstandards.com"

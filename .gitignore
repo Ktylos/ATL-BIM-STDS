@@ -27,6 +27,10 @@ wheels/
 site/
 .cache/
 
+# Unignore hosted download assets (overrides the Python `downloads/` rule above)
+!docs/assets/downloads/
+!docs/assets/downloads/**
+
 # IDEs and AI tools
 .vscode/
 .idea/
