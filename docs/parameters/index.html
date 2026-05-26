@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ATL DOA — Asset Parameter Registry</title>
+<title>ATL P&D — Asset Parameter Registry</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -114,6 +114,24 @@
   }
   .nav-btn:hover { background: var(--surface2); color: var(--text2); }
   .nav-btn.active { background: var(--blue-md); color: var(--blue); }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text3);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: background .15s, color .15s, border-color .15s;
+    white-space: nowrap;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+  .back-btn:hover { background: var(--surface2); color: var(--text2); border-color: var(--border2); }
   .header-stats {
     margin-left: auto;
     display: flex;
@@ -630,7 +648,7 @@
     <div class="logo">
       <img src="data:image/png;base64,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" alt="Hartsfield-Jackson" style="height:36px;width:auto;display:block">
       <div>
-        <div class="logo-name">DOA Parameters</div>
+        <div class="logo-name">P&D Parameters</div>
         <div class="logo-sub">Asset Data Standard Registry</div>
       </div>
     </div>
@@ -655,6 +673,10 @@
         <div class="hstat-lbl">Unique Attrs</div>
       </div>
     </div>
+    <a href="https://bim.atlstandards.com" class="back-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      ATL BIM Standards
+    </a>
   </div>
 </header>
 
@@ -1159,8 +1181,8 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-text">ATL DOA · Hartsfield–Jackson Atlanta International Airport · Asset Data Standard v2.0</div>
-    <div class="footer-text">DOA Parameters Registry</div>
+    <div class="footer-text">ATL P&D · Hartsfield–Jackson Atlanta International Airport · Asset Data Standard v2.0</div>
+    <div class="footer-text">P&D Parameters Registry</div>
   </div>
 </footer>
 

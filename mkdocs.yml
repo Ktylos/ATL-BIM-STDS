@@ -15,6 +15,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/version-banner.js
+  - javascripts/nav-enhancements.js
 
 theme:
   name: material
@@ -31,7 +32,6 @@ theme:
     code: Roboto Mono
   
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -114,4 +114,4 @@ nav:
   - Resources:
     - Support & Contact: resources/support.md
     - Recent Updates: resources/changelog.md
-    - Shared Parameters: parameters/index.html
+    - Shared Parameters: https://bim.atlstandards.com/parameters/
