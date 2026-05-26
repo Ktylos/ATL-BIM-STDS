@@ -30,7 +30,7 @@ document$.subscribe(function () {
                 <p><strong>This version is currently under BIM team review and has not been officially released.</strong>
                 It may contain updates that differ from the version referenced in your contract or project documents.</p>
                 <p>To view the current official release, open the <strong>version selector</strong> at the top of the page and choose a numbered version (e.g. 1.0).
-                <a href="/resources/support/">Learn more about our release process.</a></p>`;
+                <a href="https://bim.atlstandards.com/latest/resources/support/">Learn more about our release process.</a></p>`;
         } else {
             banner.classList.add('note');
             banner.innerHTML = `
@@ -38,7 +38,7 @@ document$.subscribe(function () {
                 <p>This is a frozen snapshot of the ATL BIM Standards as published for Version ${version}.
                 Newer versions may be available. Use the <strong>version selector</strong> at the top
                 of the page to view the latest release or other versions.
-                <a href="/resources/support/">Learn more about our GitDocs workflow.</a></p>`;
+                <a href="https://bim.atlstandards.com/latest/resources/support/">Learn more about our release process.</a></p>`;
         }
 
         article.prepend(banner);
