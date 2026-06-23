@@ -121,12 +121,13 @@ This procedure defines how all project teams create and configure Revit project 
  
 - **Software/Services:** Use the approved Revit and ACC/Desktop Connector versions communicated for the program.
 
-NOTE: Revit files are not backward compatible. A model created or saved in a newer Revit version (e.g., 2026) cannot be opened in an older version such as Revit 2025. All project teams must verify and align to the required Revit version prior to starting any modeling activities.
+!!!note
+    Revit files are not backward compatible. A model created or saved in a newer Revit version (e.g., 2026) cannot be opened in an older version such as Revit 2025. All project teams must verify and align to the required Revit version prior to starting any modeling activities.
  
 | Software | Version |
 |----------|---------|
-| Revit 2026 | 26.4.0.32 |
-| Desktop Connector | 17.0.1.3021 |
+| Revit 2026 | 26.4.1 |
+| Desktop Connector | 17.1.0.16 |
  
 - **Access:** Confirm project access to the ACC site and to the Standards/Templates folders.
 - **Standards:** Please refer to the BIM Standards document.
@@ -227,7 +228,8 @@ Worksets must be established at the start of each project to organize model elem
  
 Once a project has kicked off, a central Revit file will be created for each discipline involved. Each model should adhere to the Atlanta BIM Standards and template format. Refer to [4.2 Using Revit Templates](#42-using-the-revit-templates-mandatory) to add the necessary template to a Revit file.
  
-NOTE: Changes to the format of the Revit Model can be made on a project-by-project basis and are subject to BIM approval.
+!!!note
+    Changes to the format of the Revit Model can be made on a project-by-project basis and are subject to BIM approval.
  
 **Steps to create a new Revit file:**
  
@@ -242,7 +244,8 @@ NOTE: Changes to the format of the Revit Model can be made on a project-by-proje
  
 All Revit model files should be workshared to Autodesk Forma. This ensures the BIM and project teams can properly coordinate, mark up, and edit files as a project progresses.
  
-NOTE: **No active project files should be saved locally.** Every file should be workshared to Autodesk Forma.
+!!!note
+    **No active project files should be saved locally.** Every file should be workshared to Autodesk Forma.
  
 **Steps to workshare a Revit file:**
  
@@ -269,7 +272,8 @@ NOTE: **No active project files should be saved locally.** Every file should be 
  
 All Revit models should be geolocated according to the Atlanta Airport's official coordinate system as required in the BIM Standards document. The Site Models in the ATL Campus contain the ATL02 "Airport Grid Coordinates."
  
-NOTE: Each team **must** verify the coordinates, position, rotation, and elevation as a new model is set up.
+!!!note
+    Each team **must** verify the coordinates, position, rotation, and elevation as a new model is set up.
  
 **Steps to link a Site Model:**
  
@@ -325,7 +329,8 @@ NOTE: Each team **must** verify the coordinates, position, rotation, and elevati
 
 Shared parameters are used by the BIM team to manage and collect data on model elements. All discipline models should apply the ATL Shared Parameters to their models.
  
-NOTE: Edits to the ATL Shared Parameters may **only** be made by the ATL P&D BIM Team and are subject to review.
+!!!note
+    Edits to the ATL Shared Parameters may **only** be made by the ATL P&D BIM Team and are subject to review.
  
 **How to add the shared parameters:**
  
@@ -335,7 +340,7 @@ NOTE: Edits to the ATL Shared Parameters may **only** be made by the ATL P&D BIM
 4. Browse and select the ATL Shared Parameters file.
 5. Once the file has loaded, go to **Project Parameters**.
 6. Add all necessary parameters to the Revit file.
-**How to create shared parameters:**
+
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
     ![Edit Shared Parameter](../assets/images/dc-gn-004-image-16.png)
 
@@ -353,14 +358,15 @@ NOTE: Edits to the ATL Shared Parameters may **only** be made by the ATL P&D BIM
 
     *Figure 18 - Properties Window*
     </div>
-1. In an open Revit file, select **Shared Parameters**.
-2. If adding to ATL's shared parameters, browse and select the ATL Shared Parameter `.txt` file. If creating a new file, select **Create** and add a blank `.txt` to Revit.
-3. Select **New Group** and name it according to the type of data being collected.
-4. Once the group has been created, select **New Parameter** and add the desired parameters.
-5. Click **OK** to save the new parameters.
-6. Open the `.txt` file separately and verify that all parameters have been properly added.
-7. Save the file locally.
-8. Once all new parameters have been added and checked, upload the updated shared parameter file to the ATL Campus. Archive/consume the older `.txt` file.
+**How to create shared parameters:**
+7. In an open Revit file, select **Shared Parameters**.
+8. If adding to ATL's shared parameters, browse and select the ATL Shared Parameter `.txt` file. If creating a new file, select **Create** and add a blank `.txt` to Revit.
+9. Select **New Group** and name it according to the type of data being collected.
+10. Once the group has been created, select **New Parameter** and add the desired parameters.
+11. Click **OK** to save the new parameters.
+12. Open the `.txt` file separately and verify that all parameters have been properly added.
+13. Save the file locally.
+14. Once all new parameters have been added and checked, upload the updated shared parameter file to the ATL Campus. Archive/consume the older `.txt` file.
 ### 5.5 Levels & Grids
  
 Levels and grids form the primary datum system for all disciplines and must be established early and remain consistent throughout the project. The BIM Coordinator/Manager is responsible for creating and maintaining the master set based on approved project geometry. No other discipline should modify them without formal approval.
@@ -374,30 +380,32 @@ To ensure alignment, Copy/Monitor can be used to bring levels and grids into dis
 **Procedure to use Copy/Monitor:**
  
 1. Link in the model with elements that need to be copied. Apply the steps from [5.3 Linking in a Site Model & Acquiring Coordinates](#53-linking-in-a-site-model--acquiring-coordinates). Only link and align — do not reacquire coordinates.
-    *Add Picture*
 2. Use **Copy/Monitor → Select Link** to copy all required levels and grids into your file.
-    *Add Picture*
-    *Fig. 8 – Copy/Monitor grids*
+    <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    ![Copy/Monitor](../assets/images/dc-gn-004-image-19.png)
+
+    *Figure 19 - Copy/Monitor*
+    </div>
 !!! note
     Review and resolve Copy/Monitor warnings right away and notify the BIM Lead if something doesn't match.
+
  
-**How to resolve Copy/Monitor warnings:**
- 
-- When Architecture updates levels or grids later in the project, reload the link, run **Coordination Review** again, and accept or reject changes as instructed.
+
 !!! warning
     Do not use multisegment grids. Multisegment grids do not support Copy/Monitor, which means other disciplines will not receive notifications when grids move.
  
 ### 5.7 Linked Models
  
-**Why:** Linked models are used to coordinate multiple disciplines while keeping each team's work separate and manageable. At the start of each project, each team must link the master Architectural model into their file, followed by Structural and MEP models as they become available. All links must be inserted from the approved shared ACC folder, placed on their dedicated workset, and use shared coordinates.
+Linked models are used to coordinate multiple disciplines while keeping each team's work separate and manageable. At the start of each project, each team must link the master Architectural model into their file, followed by Structural and MEP models as they become available. All links must be inserted from the approved shared ACC folder, placed on their dedicated workset, and use shared coordinates.
  
 !!! warning
-    Teams must never link models from local paths or edit coordinates on their own. When updates occur, links must be reloaded, checked for alignment, and verified through coordination review to ensure consistent spatial accuracy across the project. If there is a need to use an outdated model, use the **Consumed** linking method.
+    Teams must never link models from local paths or edit coordinates on their own. When updates occur, links must be reloaded, checked for alignment, and verified through coordination review to ensure consistent spatial accuracy across the project. 
  
 **Procedure to Live Link:**
  
 1. Go to **Links**.
 2. Select the link from the **WIP** folder for the discipline you wish to link.
+
 **Procedure to Shared Folder Link:**
  
 1. Go to **Links**.
@@ -407,36 +415,22 @@ To ensure alignment, Copy/Monitor can be used to bring levels and grids into dis
 5. Place all links on their designated **LINKS** workset before pinning them.
 6. Reload links only after models are officially published to the Shared folder — not from local or outdated sources.
 7. When new disciplines join the project, follow the same linking process to maintain consistent alignment.
+
 **Procedure to Consumed Folder Link:**
  
 1. Go to **Design Collaboration** and select your discipline/model.
 2. In Design Collaboration, consume the latest packages from each discipline.
 3. In Revit, go to **Links**.
 4. Select the link from your consumed folder for the discipline you wish to link.
-### 5.8 Discipline Model Segregation
+
  
-*[Content to be added]*
- 
-### 5.9 View Organization Structure
+### 5.8 View Organization Structure
  
 ATL Templates come with the recommended project browser structure. You may edit it as needed for your project.
  
-### 5.10 Model Phasing and Design Options
+### 5.9 Model Phasing and Design Options
  
-Use phasing; avoid using design options. You should have at least three phases:
- 
-- Existing / Legacy
-- Demolished
-- New
-**Steps to apply phases:**
- 
-*[Content to be added]*
- 
-**Steps to apply design options:**
- 
-*[Content to be added]*
- 
----
+See [DC-GN-002 (10.6.8) - Phases of the Project](dc-gn-002.md#dc-gn-002-10-6-8) for model phasing recommended for the project. Avoid using design options and including them in your submissions.
  
 ## 6 MODELING STANDARDS
  
@@ -447,31 +441,51 @@ Use phasing; avoid using design options. You should have at least three phases:
 !!! note
     Do not use generic models or in-place families without prior approval from the BIM Coordinator.
  
-**Steps to assign a category to a generic model:**
- 
-*[Content to be added]*
  
 ### 6.2 Geometry Standards
  
 **Detail Level Usage (Coarse / Medium / Fine):**
  
 Depending on the LOD for the specific model, select the appropriate view detail level.
+
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Detail Level Tool](../assets/images/dc-gn-004-image-20.png)
+
+*Figure 20 - Detail Level*
+</div>
  
-*Add a picture*
- 
+
 **Basic Clearance and Maintenance Space Modeling:**
  
 Geometry within the model shall be developed to support design intent, coordination accuracy, and overall model performance. Excessive or unnecessary geometric complexity shall be avoided to ensure stable performance, visibility, and consistent behavior across all views and project phases.
  
 - Utilize view templates and filters to manage object visibility rather than hiding elements individually in each view.
+
 **CAD File Use:**
  
 - Remove imported CAD files after use; place only in required working views and never explode them.
-    *Picture showing the "Show Only on This View" checkbox*
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Show only on this view](../assets/images/dc-gn-004-image-21.png)
+
+*Figure 21 - Show only on this view*
+</div>
+
 - Never explode a CAD file.
-    *Add a picture of the explode tool with a warning*
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Explode](../assets/images/dc-gn-004-image-22.png)
+
+*Figure 22 - Explode tool*
+</div>
+
 - Regularly use the **Purge Unused** command to remove unnecessary families and types, reducing file size.
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Purge](../assets/images/dc-gn-004-image-23.png)
+
+*Figure 23 - Purge*
+</div>
+
 - Replace complex, modeled details with Drafting Views.
+
 **Etransmit Process:**
  
 1. Select the model.
