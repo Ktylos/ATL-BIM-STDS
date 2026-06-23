@@ -487,7 +487,9 @@ Geometry within the model shall be developed to support design intent, coordinat
 - Replace complex, modeled details with Drafting Views.
 
 **Etransmit Process:**
-This section outlines the standard procedure for generating a clean and coordinated Revit eTransmite package for workshared projects. The purpose of this workflow is to ensure model integrity, detach and clean central files properly, consolidate all required linked resources, and deliver a consistent, reliable package to clients, consultants, or internal teams. Following this process helps avoid missing links, file corruption, version conflicts and other issues common in multidisciplinary BIM coordination. 
+
+This section outlines the standard procedure for generating a clean and coordinated Revit eTransmite package for workshared projects. The purpose of this workflow is to ensure model integrity, detach and clean central files properly, consolidate all required linked resources, and deliver a consistent, reliable package to clients, consultants, or internal teams. Following this process helps avoid missing links, file corruption, version conflicts and other issues common in multidisciplinary BIM coordination.
+
 1. Prepare the Workshared Model.
     - Ensure all team members synchronize and exit the model.
     - Open the central file using detach from central.
@@ -500,9 +502,9 @@ This section outlines the standard procedure for generating a clean and coordina
     - Verify that all links load correctly before proceeding.
 3. Prepare All Linked Revit Models (Workshared or Non-Workshared)
     - For each linked Revit file:
-        a. Open with Detach from Central when applicable.
-        b. Audit and purge unused.
-        c. Save a new cleaned version.
+        1. Open with Detach from Central when applicable.
+        2. Audit and purge unused.
+        3. Save a new cleaned version.
     - Confirm all links are using relative paths wherever feasible.
     - Ensure nested links are accounted for.
 4. Run eTransmit
@@ -511,22 +513,22 @@ This section outlines the standard procedure for generating a clean and coordina
     - Select the primary model.
     - Verify all linked Revit, CAD, point cloud, and image files are included.
     - Configure recommended settings:
-        a. Clean and compact the model
-        b. Open and detach from central
-        c. Include linked Revit models.
-        d. Include CAD and point cloud links (if relevant)
-        e. Remove third-party add-ins (optional)
+        1. Clean and compact the model
+        2. Open and detach from central
+        3. Include linked Revit models.
+        4. Include CAD and point cloud links (if relevant)
+        5. Remove third-party add-ins (optional)
     - Choose an empty output folder for the transmitted package.
 5. Check the Etransmited Output
     - Open the transmitted version of the model (as a standalone file) to verify:
-        a. It is detached form central
-        b. All Revit links load
-        c. No missing CAD, point cloud, or image references
+        1. It is detached form central
+        2. All Revit links load
+        3. No missing CAD, point cloud, or image references
     - Confirm file paths are stored locally within the package
 6. Deliver the Package
-    - Upload the files to Autodesk Forma and select the central. 
+    - Upload the files to Autodesk Forma to the assigned ACC site and select the central model.
     - Create a transmital indicating which files are to be reviewed and which files are just for reference.
-    
+
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
 ![Revit Etransmit](../assets/images/dc-gn-004-image-24.png)
 
