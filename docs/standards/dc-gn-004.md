@@ -487,10 +487,52 @@ Geometry within the model shall be developed to support design intent, coordinat
 - Replace complex, modeled details with Drafting Views.
 
 **Etransmit Process:**
- 
-1. Select the model.
-2. Select the folder where you want the final cleaned-up model to go.
-3. *[Additional steps to be added]*
+This section outlines the standard procedure for generating a clean and coordinated Revit eTransmite package for workshared projects. The purpose of this workflow is to ensure model integrity, detach and clean central files properly, consolidate all required linked resources, and deliver a consistent, reliable package to clients, consultants, or internal teams. Following this process helps avoid missing links, file corruption, version conflicts and other issues common in multidisciplinary BIM coordination. 
+1. Prepare the Workshared Model.
+    - Ensure all team members synchronize and exit the model.
+    - Open the central file using detach from central.
+    - Enable Audit during opening to repair model health.
+    - Review and resolve major warnings that affect performance or integrity.
+    - Purge unused itmes (perform multiple passes).
+2. Save a Clean Local Copy
+    - Save the detached file to a temporary working folder.
+    - Use our ATL BIM Naming Convention to name the files.
+    - Verify that all links load correctly before proceeding.
+3. Prepare All Linked Revit Models (Workshared or Non-Workshared)
+    - For each linked Revit file:
+        a. Open with Detach from Central when applicable.
+        b. Audit and purge unused.
+        c. Save a new cleaned version.
+    - Confirm all links are using relative paths wherever feasible.
+    - Ensure nested links are accounted for.
+4. Run eTransmit
+    - Revit should not have any projects loaded.
+    - Launch: Add-Ins>eTransmit for Autodesk Revit.
+    - Select the primary model.
+    - Verify all linked Revit, CAD, point cloud, and image files are included.
+    - Configure recommended settings:
+        a. Clean and compact the model
+        b. Open and detach from central
+        c. Include linked Revit models.
+        d. Include CAD and point cloud links (if relevant)
+        e. Remove third-party add-ins (optional)
+    - Choose an empty output folder for the transmitted package.
+5. Check the Etransmited Output
+    - Open the transmitted version of the model (as a standalone file) to verify:
+        a. It is detached form central
+        b. All Revit links load
+        c. No missing CAD, point cloud, or image references
+    - Confirm file paths are stored locally within the package
+6. Deliver the Package
+    - Upload the files to Autodesk Forma and select the central. 
+    - Create a transmital indicating which files are to be reviewed and which files are just for reference.
+    
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Revit Etransmit](../assets/images/dc-gn-004-image-24.png)
+
+*Figure 24 - Revit Etransmit*
+</div>
+
 ### 6.3 Family Usage Standards
  
 Families must be created and managed in a consistent, controlled manner to maintain model stability, accurate coordination, and predictable graphical behavior. The correct family type should be used based on the required function, level of detail, and modeling purpose. Unnecessary or overly complex families can degrade performance — especially nested families, which can cause visibility issues and lead to coordination errors. The use of approved standards and disciplined modeling practices is therefore essential.
