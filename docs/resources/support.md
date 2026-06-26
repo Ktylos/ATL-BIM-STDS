@@ -34,6 +34,10 @@ Most questions are answered in the documentation:
 
 For technical support or questions please follow the guidelines in our [Contributing](https://github.com/Ktylos/ATL-BIM-STDS/blob/main/CONTRIBUTING.md) section on GitHub.
 
+### 3. Request a New ACC Project
+
+Need a new Autodesk Construction Cloud project set up for your team? Submit a request via the [Request ACC Project](request-acc-project.md) form.
+
 ---
 
 ## Frequently Asked Questions
