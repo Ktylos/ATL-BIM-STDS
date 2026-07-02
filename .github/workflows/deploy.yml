@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*'
 
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -49,6 +53,17 @@ jobs:
           ref: gh-pages
           path: versioned-site
 
+      - name: Copy parameters page to site root
+        run: |
+          if [ -f versioned-site/latest/parameters/index.html ]; then
+            mkdir -p versioned-site/parameters
+            cp versioned-site/latest/parameters/index.html versioned-site/parameters/
+          fi
+          if [ -f versioned-site/latest/assets/downloads/ATL_DOA_SharedParameters.txt ]; then
+            mkdir -p versioned-site/assets/downloads
+            cp versioned-site/latest/assets/downloads/ATL_DOA_SharedParameters.txt versioned-site/assets/downloads/
+          fi
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -59,6 +74,11 @@ jobs:
           server-dir: ./
           port: 21
           protocol: ftp
+
+      - name: Attach shared parameter file to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: docs/assets/downloads/ATL_DOA_SharedParameters.txt
 
       - name: Deployment complete
         if: success()

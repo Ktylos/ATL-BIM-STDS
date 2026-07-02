@@ -10,6 +10,10 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -40,7 +44,7 @@ jobs:
         run: python generate_changelog.py
 
       - name: Update latest with Mike
-        run: mike deploy --push --update-aliases --title "Latest" latest
+        run: mike deploy --push --update-aliases --title "In Review" latest
 
       - name: Set latest as default
         run: mike set-default --push latest
@@ -50,6 +54,17 @@ jobs:
         with:
           ref: gh-pages
           path: versioned-site
+
+      - name: Copy parameters page to site root
+        run: |
+          if [ -f versioned-site/latest/parameters/index.html ]; then
+            mkdir -p versioned-site/parameters
+            cp versioned-site/latest/parameters/index.html versioned-site/parameters/
+          fi
+          if [ -f versioned-site/latest/assets/downloads/ATL_DOA_SharedParameters.txt ]; then
+            mkdir -p versioned-site/assets/downloads
+            cp versioned-site/latest/assets/downloads/ATL_DOA_SharedParameters.txt versioned-site/assets/downloads/
+          fi
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5

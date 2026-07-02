@@ -24,14 +24,13 @@ document$.subscribe(function () {
         banner.className = 'admonition version-banner';
 
         if (version === 'latest') {
-            banner.classList.add('info');
+            banner.classList.add('warning');
             banner.innerHTML = `
-                <p class="admonition-title">You are viewing the Latest version of these Standards</p>
-                <p>This version reflects the most recent updates and may include changes not yet
-                incorporated into an official numbered release. If your contract references a specific
-                version, use the <strong>version selector</strong> at the top of the page to navigate
-                to that version.
-                <a href="/latest/resources/support/">Learn more about our GitDocs workflow.</a></p>`;
+                <p class="admonition-title">In Review — Content Not Yet Officially Released</p>
+                <p><strong>This version is currently under BIM team review and has not been officially released.</strong>
+                It may contain updates that differ from the version referenced in your contract or project documents.</p>
+                <p>To view the current official release, open the <strong>version selector</strong> at the top of the page and choose a numbered version (e.g. 1.0).
+                <a href="https://bim.atlstandards.com/latest/resources/support/">Learn more about our release process.</a></p>`;
         } else {
             banner.classList.add('note');
             banner.innerHTML = `
@@ -39,7 +38,7 @@ document$.subscribe(function () {
                 <p>This is a frozen snapshot of the ATL BIM Standards as published for Version ${version}.
                 Newer versions may be available. Use the <strong>version selector</strong> at the top
                 of the page to view the latest release or other versions.
-                <a href="/latest/resources/support/">Learn more about our GitDocs workflow.</a></p>`;
+                <a href="https://bim.atlstandards.com/latest/resources/support/">Learn more about our release process.</a></p>`;
         }
 
         article.prepend(banner);
@@ -58,7 +57,7 @@ document$.subscribe(function () {
                 const textNode = el.nextSibling;
                 if (textNode && textNode.nodeType === Node.TEXT_NODE) {
                     if (version === 'latest') {
-                        textNode.textContent = ': Latest';
+                        textNode.textContent = ': In Review';
                     } else {
                         textNode.textContent = ': ' + version;
                     }
