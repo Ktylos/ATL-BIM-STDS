@@ -25,7 +25,7 @@ The purpose of this document is to outline the procedures and requirements for s
 | Plumbing | ATL-TP-RVT-P.rte |
 | Structural | ATL-TP-RVT-S.rte |
 
-1. Revit template files are provided by the ATL BIM Team at project kickoff. Contact the BIM Team if you have not received your templates.
+3. Revit template files are provided by the ATL BIM Team at project kickoff. Contact the BIM Team if you have not received your templates. If your discipline template is not listed, please either use one that is closest to your discipline and/or request one to the BIM Team.
 2. Click New> Browse> 2026 BIM Program>BIM Content> Template File (e.g. - ATL-TP-RVT-A-2025-v1.rte) > OK (Fig:1)
 3. If you have the file in any other folder of your device Browse>navigate to that file and click OK
 
@@ -33,13 +33,13 @@ The purpose of this document is to outline the procedures and requirements for s
 
 Fig 1: Revit Interface with New Project Dialog Box
 
-1. The "New Project" dialog box is open, with the template file "ATL-TP-RVT-A.rte" selected. Click the option to create a new project (Fig:2)
+6. The "New Project" dialog box is open, with the template file "ATL-TP-RVT-A.rte" selected. Click the option to create a new project (Fig:2)
 
 ![](../assets/images/dc-gn-003-image-31.png)
 
 Fig 2: The "New Project" dialog box is open, with the template file "ATL-TP-RVT-A-2025-v1.rte" selected
 
-1. Project will be created
+7. An empty Project will be created
 
 ![A screenshot of a project dashboard
 ](../assets/images/dc-gn-003-image-32.png)
@@ -54,14 +54,14 @@ Fig 3: Autodesk Revit software interface with a project template for Hartsfield-
 
 Fig 4: The interface of Revit software with the "FP-SITE PLAN" selected and toolbar with the ‘Link Revit’ option
 
-1. Now click on ‘Link Revit’ option in the toolbar highlighted in fig: 4 - 3  
+4. Now click on ‘Link Revit’ option in the toolbar highlighted in fig: 4 - 3  
   
 
 ![](../assets/images/dc-gn-003-image-34.png)Link the Site Model
 
-Fig 5: Linking the ATL-SITE-CONCOURSE-A.rvt file in Revit using the 'Origin to Origin' positioning
+Fig 5: Linking the Site Model file in Revit using the 'Origin to Origin' positioning
 
-1. Navigate to the designated site model for the selected concourse:
+5. Navigate to the site model
 2. Click Insert > Link Revit, then select the desired file (e.g., ATL-SITE-CONCOURSE-A.rvt) (Fig: 5 -1)
 3. Link the file into your project using Origin to Origin (recommended if setups are consistent) (Fig: 5 -2)
 4. Place the model in Site Plan view to verify placement. 
