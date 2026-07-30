@@ -2642,61 +2642,108 @@ Figure 5 - Title Sheets</p>
 <p>The ATL BIM Manager coordinates and integrates processes into the BIM execution plan for projects with external consultants. The BIM Coordinator handles clash detection, creating a Clash Report one month before 100% submissions using Model Coordination withing ACC or Autodesk Navisworks. Task Leaders must generate Navisworks files (.nwc) from their Revit Models. After testing clashes, the BIM Coordinator shares the Clash Report with the P&amp;D BIM Manager.</p>
 <h4 id="1071-inter-discipline-color-scheme">10.7.1 Inter-discipline Color Scheme<a class="headerlink" href="#1071-inter-discipline-color-scheme" title="Permanent link">¶</a></h4>
 <p>The following color scheme is implemented to ensure consistency and facilitate easy identification for all users during project coordination and the generation of Clash Reports.</p>
+<p>The HEX and RGB values below are the authoritative definitions. Color names are descriptive only — always enter the HEX/RGB value so that Revit, Navisworks, and Autodesk Tandem render the same color.</p>
 <table>
 <thead>
 <tr>
 <th>DISCIPLINE</th>
 <th>COLOR</th>
+<th>HEX</th>
+<th>RGB</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Architectural</td>
 <td>Cyan</td>
+<td><code>#00FFFF</code></td>
+<td>0, 255, 255</td>
 </tr>
 <tr>
 <td>Normal Power</td>
 <td>Royal Blue</td>
+<td><code>#4169E1</code></td>
+<td>65, 105, 225</td>
 </tr>
 <tr>
 <td>Miscellaneous Communication</td>
 <td>Brown</td>
+<td><code>#A52A2A</code></td>
+<td>165, 42, 42</td>
 </tr>
 <tr>
 <td>Fire Alarm</td>
 <td>Red</td>
+<td><code>#FF0000</code></td>
+<td>255, 0, 0</td>
 </tr>
 <tr>
 <td>Telephone / Computer</td>
 <td>Black</td>
+<td><code>#1A1A1A</code></td>
+<td>26, 26, 26</td>
 </tr>
 <tr>
 <td>Life Safety</td>
 <td>Yellow</td>
+<td><code>#FFFF00</code></td>
+<td>255, 255, 0</td>
 </tr>
 <tr>
 <td>Vertical Circulation</td>
 <td>Orange</td>
+<td><code>#FFA500</code></td>
+<td>255, 165, 0</td>
 </tr>
 <tr>
 <td>HVAC</td>
 <td>Green</td>
+<td><code>#008000</code></td>
+<td>0, 128, 0</td>
 </tr>
 <tr>
 <td>Plumbing</td>
 <td>Magenta</td>
+<td><code>#FF00FF</code></td>
+<td>255, 0, 255</td>
 </tr>
 <tr>
 <td>Fire Protection</td>
 <td>Red</td>
+<td><code>#FF0000</code></td>
+<td>255, 0, 0</td>
 </tr>
 <tr>
 <td>Structural</td>
 <td>Grey</td>
+<td><code>#808080</code></td>
+<td>128, 128, 128</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Note:</strong> Based on project requirements, further breakdowns can be established either by level or by system.</p>
+<p><strong>Note:</strong> Fire Alarm and Fire Protection currently share the same value (<code>#FF0000</code>). Where both systems are present in the same coordination model, assign one of them a distinct value in the BEP so that filters remain unambiguous.</p>
+<h5 id="applying-the-scheme-in-revit">Applying the Scheme in Revit<a class="headerlink" href="#applying-the-scheme-in-revit" title="Permanent link">¶</a></h5>
+<p>Revit's color picker does not accept HEX directly — enter the <strong>RGB</strong> values in the Red / Green / Blue fields of the Color dialog.</p>
+<ol>
+<li><strong>View &gt; Visibility/Graphics</strong> (or edit the View Template) <strong>&gt; Filters &gt; Add / Edit-New</strong>.</li>
+<li>Create a rule-based filter per discipline (typically filtering on <strong>ATL-Discipline</strong>, System Classification, or Workset).</li>
+<li>In the <strong>Overrides</strong> column, set both <strong>Lines</strong> and <strong>Surfaces &gt; Foreground Pattern Color</strong> to the RGB value above so the discipline reads consistently in wireframe, hidden line, and shaded views.</li>
+<li>Save the filter set into the coordination View Templates so the scheme is not re-created per view.</li>
+</ol>
+<h5 id="applying-the-scheme-in-autodesk-tandem">Applying the Scheme in Autodesk Tandem<a class="headerlink" href="#applying-the-scheme-in-autodesk-tandem" title="Permanent link">¶</a></h5>
+<p>The same values carry into Tandem, which uses HEX color codes for its color-by rules:</p>
+<ul>
+<li>Colors are driven by <strong>model data</strong>, not by Revit graphic overrides. View filter overrides do <strong>not</strong> transfer through the Revit/IFC upload — the discipline must exist as a <strong>property value</strong> on the elements (e.g., the <strong>ATL-Discipline</strong> shared parameter or the element's Classification) for Tandem to color by it.</li>
+<li>Map each discipline to the HEX value above in Tandem's color-by / palette settings for the chosen property or classification. Because the property values match the Revit filter rules, the Tandem facility and the Revit coordination views stay visually aligned.</li>
+<li>Ensure the discipline parameter is included in the Tandem parameter/classification mapping at upload; unmapped elements fall back to the default model color.</li>
+</ul>
+<p><strong>Tandem display considerations:</strong></p>
+<ul>
+<li>Pure black (<code>#000000</code>) is avoided for Telephone / Computer — it reads as unlit geometry in a shaded 3D view. <code>#1A1A1A</code> is used instead, which still prints and plots as black in Revit documentation.</li>
+<li>Colors are applied to shaded 3D geometry in Tandem, so they appear darker than the flat swatch. Verify legibility against the default grey model before publishing a facility view.</li>
+<li>Use the full 6-digit HEX form with the leading <code>#</code>; Tandem does not interpret color names.</li>
+</ul>
 <h4 id="1072-interference-check-clash-detection">10.7.2 Interference Check / Clash Detection<a class="headerlink" href="#1072-interference-check-clash-detection" title="Permanent link">¶</a></h4>
 <p>The use of Clash Detection tools within our BIM practice can result in three outcomes:</p>
 <ul>
@@ -2989,7 +3036,7 @@ Figure 5 - Title Sheets</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="May 1, 2026 19:30:13 UTC"><span class="timeago" datetime="2026-05-01T19:30:13+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 1, 2026 19:30:13 UTC">2026-05-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 30, 2026 19:53:17 UTC"><span class="timeago" datetime="2026-07-30T19:53:17+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 30, 2026 19:53:17 UTC">2026-07-30</span>
   </span>
 
     
