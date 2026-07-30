@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://bim.atlstandards.com/latest/standards/dc-gn-004/">
       
       
-        <link rel="prev" href="../dc-gn-003/">
+        <link rel="prev" href="../dc-gn-002/">
       
       
         <link rel="next" href="../../template-docs/">
@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/HJ_plane_Red-100.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -365,8 +365,6 @@
       
         
       
-        
-      
     
     
     
@@ -458,34 +456,6 @@
     
   
     DC-GN-002 P&amp;D BIM Standards
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dc-gn-003/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DC-GN-003 Revit Project Setup
   
 
     
@@ -816,10 +786,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#58-discipline-model-segregation" class="md-nav__link">
+  <a href="#58-view-organization-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.8 Discipline Model Segregation
+        5.8 View Organization Structure
       
     </span>
   </a>
@@ -827,21 +797,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#59-view-organization-structure" class="md-nav__link">
+  <a href="#59-model-phasing-and-design-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.9 View Organization Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#510-model-phasing-and-design-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.10 Model Phasing and Design Options
+        5.9 Model Phasing and Design Options
       
     </span>
   </a>
@@ -1344,14 +1303,14 @@
   
   
     <li class="md-nav__item">
-      <a href="https://bim.atlstandards.com/parameters/" class="md-nav__link">
+      <a href="https://ustni-digital-aps-hub.azurewebsites.net/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Shared Parameters
+    ACC Apps
   
 
     
@@ -1649,10 +1608,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#58-discipline-model-segregation" class="md-nav__link">
+  <a href="#58-view-organization-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.8 Discipline Model Segregation
+        5.8 View Organization Structure
       
     </span>
   </a>
@@ -1660,21 +1619,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#59-view-organization-structure" class="md-nav__link">
+  <a href="#59-model-phasing-and-design-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.9 View Organization Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#510-model-phasing-and-design-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.10 Model Phasing and Design Options
+        5.9 Model Phasing and Design Options
       
     </span>
   </a>
@@ -2001,7 +1949,10 @@ This SOP serves as a reference for all team members involved in model authoring,
 <ul>
 <li><strong>Software/Services:</strong> Use the approved Revit and ACC/Desktop Connector versions communicated for the program.</li>
 </ul>
-<p>NOTE: Revit files are not backward compatible. A model created or saved in a newer Revit version (e.g., 2026) cannot be opened in an older version such as Revit 2025. All project teams must verify and align to the required Revit version prior to starting any modeling activities.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Revit files are not backward compatible. A model created or saved in a newer Revit version (e.g., 2026) cannot be opened in an older version such as Revit 2025. All project teams must verify and align to the required Revit version prior to starting any modeling activities.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2012,11 +1963,11 @@ This SOP serves as a reference for all team members involved in model authoring,
 <tbody>
 <tr>
 <td>Revit 2026</td>
-<td>26.4.0.32</td>
+<td>26.4.1</td>
 </tr>
 <tr>
 <td>Desktop Connector</td>
-<td>17.0.1.3021</td>
+<td>17.1.0.16</td>
 </tr>
 </tbody>
 </table>
@@ -2114,7 +2065,10 @@ This SOP serves as a reference for all team members involved in model authoring,
 <h2 id="5-model-setup">5 MODEL SETUP<a class="headerlink" href="#5-model-setup" title="Permanent link">¶</a></h2>
 <h3 id="51-creating-a-central-revit-file">5.1 Creating a Central Revit File<a class="headerlink" href="#51-creating-a-central-revit-file" title="Permanent link">¶</a></h3>
 <p>Once a project has kicked off, a central Revit file will be created for each discipline involved. Each model should adhere to the Atlanta BIM Standards and template format. Refer to <a href="#42-using-the-revit-templates-mandatory">4.2 Using Revit Templates</a> to add the necessary template to a Revit file.</p>
-<p>NOTE: Changes to the format of the Revit Model can be made on a project-by-project basis and are subject to BIM approval.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changes to the format of the Revit Model can be made on a project-by-project basis and are subject to BIM approval.</p>
+</div>
 <p><strong>Steps to create a new Revit file:</strong></p>
 <ol>
 <li>Open a new Revit file and add the desired template. (<a href="#42-using-the-revit-templates-mandatory">4.2</a>)</li>
@@ -2127,7 +2081,10 @@ This SOP serves as a reference for all team members involved in model authoring,
 </ol>
 <h3 id="52-work-sharing-a-central-revit-file">5.2 Work-Sharing a Central Revit File<a class="headerlink" href="#52-work-sharing-a-central-revit-file" title="Permanent link">¶</a></h3>
 <p>All Revit model files should be workshared to Autodesk Forma. This ensures the BIM and project teams can properly coordinate, mark up, and edit files as a project progresses.</p>
-<p>NOTE: <strong>No active project files should be saved locally.</strong> Every file should be workshared to Autodesk Forma.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>No active project files should be saved locally.</strong> Every file should be workshared to Autodesk Forma.</p>
+</div>
 <p><strong>Steps to workshare a Revit file:</strong></p>
 <ol>
 <li>
@@ -2154,7 +2111,10 @@ This SOP serves as a reference for all team members involved in model authoring,
 </ol>
 <h3 id="53-linking-in-a-site-model-acquiring-coordinates">5.3 Linking in a Site Model &amp; Acquiring Coordinates<a class="headerlink" href="#53-linking-in-a-site-model-acquiring-coordinates" title="Permanent link">¶</a></h3>
 <p>All Revit models should be geolocated according to the Atlanta Airport's official coordinate system as required in the BIM Standards document. The Site Models in the ATL Campus contain the ATL02 "Airport Grid Coordinates."</p>
-<p>NOTE: Each team <strong>must</strong> verify the coordinates, position, rotation, and elevation as a new model is set up.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each team <strong>must</strong> verify the coordinates, position, rotation, and elevation as a new model is set up.</p>
+</div>
 <p><strong>Steps to link a Site Model:</strong></p>
 <ol>
 <li>
@@ -2202,7 +2162,10 @@ This SOP serves as a reference for all team members involved in model authoring,
 </ol>
 <h3 id="54-shared-parameters">5.4 Shared Parameters<a class="headerlink" href="#54-shared-parameters" title="Permanent link">¶</a></h3>
 <p>Shared parameters are used by the BIM team to manage and collect data on model elements. All discipline models should apply the ATL Shared Parameters to their models.</p>
-<p>NOTE: Edits to the ATL Shared Parameters may <strong>only</strong> be made by the ATL P&amp;D BIM Team and are subject to review.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Edits to the ATL Shared Parameters may <strong>only</strong> be made by the ATL P&amp;D BIM Team and are subject to review.</p>
+</div>
 <p><strong>How to add the shared parameters:</strong></p>
 <ol>
 <li>Download the shared parameters from the ATL Campus.</li>
@@ -2211,10 +2174,9 @@ This SOP serves as a reference for all team members involved in model authoring,
 <li>Browse and select the ATL Shared Parameters file.</li>
 <li>Once the file has loaded, go to <strong>Project Parameters</strong>.</li>
 <li>
-<p>Add all necessary parameters to the Revit file.
-<strong>How to create shared parameters:</strong>
-    </p><div style="text-align: center; margin-bottom: 24px;" markdown="1">
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-16.png" data-desc-position="bottom"><img alt="Edit Shared Parameter" src="../../assets/images/dc-gn-004-image-16.png"></a><p></p>
+<p>Add all necessary parameters to the Revit file.</p>
+<p></p><div style="text-align: center; margin-bottom: 24px;" markdown="1">
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-16.png" data-desc-position="bottom"><img alt="Edit Shared Parameter" src="../../assets/images/dc-gn-004-image-16.png"></a><p></p>
 <p><em>Figure 16 - Edit Shared Parameter</em>
 </p></div><p></p>
 <p></p><div style="text-align: center; margin-bottom: 24px;" markdown="1">
@@ -2225,14 +2187,15 @@ This SOP serves as a reference for all team members involved in model authoring,
 <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-18.png" data-desc-position="bottom"><img alt="Properties Window" src="../../assets/images/dc-gn-004-image-18.png"></a><p></p>
 <p><em>Figure 18 - Properties Window</em>
 </p></div>
-1. In an open Revit file, select <strong>Shared Parameters</strong>.
-2. If adding to ATL's shared parameters, browse and select the ATL Shared Parameter <code>.txt</code> file. If creating a new file, select <strong>Create</strong> and add a blank <code>.txt</code> to Revit.
-3. Select <strong>New Group</strong> and name it according to the type of data being collected.
-4. Once the group has been created, select <strong>New Parameter</strong> and add the desired parameters.
-5. Click <strong>OK</strong> to save the new parameters.
-6. Open the <code>.txt</code> file separately and verify that all parameters have been properly added.
-7. Save the file locally.
-8. Once all new parameters have been added and checked, upload the updated shared parameter file to the ATL Campus. Archive/consume the older <code>.txt</code> file.<p></p>
+<strong>How to create shared parameters:</strong>
+7. In an open Revit file, select <strong>Shared Parameters</strong>.
+8. If adding to ATL's shared parameters, browse and select the ATL Shared Parameter <code>.txt</code> file. If creating a new file, select <strong>Create</strong> and add a blank <code>.txt</code> to Revit.
+9. Select <strong>New Group</strong> and name it according to the type of data being collected.
+10. Once the group has been created, select <strong>New Parameter</strong> and add the desired parameters.
+11. Click <strong>OK</strong> to save the new parameters.
+12. Open the <code>.txt</code> file separately and verify that all parameters have been properly added.
+13. Save the file locally.
+14. Once all new parameters have been added and checked, upload the updated shared parameter file to the ATL Campus. Archive/consume the older <code>.txt</code> file.<p></p>
 <h3 id="55-levels-grids">5.5 Levels &amp; Grids<a class="headerlink" href="#55-levels-grids" title="Permanent link">¶</a></h3>
 </li>
 </ol>
@@ -2242,72 +2205,55 @@ This SOP serves as a reference for all team members involved in model authoring,
 <p>To ensure alignment, Copy/Monitor can be used to bring levels and grids into discipline models. Any resulting inconsistencies or warnings must be resolved promptly in coordination with the BIM Lead.</p>
 <p><strong>Procedure to use Copy/Monitor:</strong></p>
 <ol>
-<li>Link in the model with elements that need to be copied. Apply the steps from <a href="#53-linking-in-a-site-model--acquiring-coordinates">5.3 Linking in a Site Model &amp; Acquiring Coordinates</a>. Only link and align — do not reacquire coordinates.
-    <em>Add Picture</em></li>
-<li>Use <strong>Copy/Monitor → Select Link</strong> to copy all required levels and grids into your file.
-    <em>Add Picture</em>
-    <em>Fig. 8 – Copy/Monitor grids</em></li>
+<li>Link in the model with elements that need to be copied. Apply the steps from <a href="#53-linking-in-a-site-model--acquiring-coordinates">5.3 Linking in a Site Model &amp; Acquiring Coordinates</a>. Only link and align — do not reacquire coordinates.</li>
+<li>
+<p>Use <strong>Copy/Monitor → Select Link</strong> to copy all required levels and grids into your file.
+    </p><div style="text-align: center; margin-bottom: 24px;" markdown="1">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-19.png" data-desc-position="bottom"><img alt="Copy/Monitor" src="../../assets/images/dc-gn-004-image-19.png"></a><p></p>
+<p><em>Figure 19 - Copy/Monitor</em>
+</p></div><p></p>
+</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Review and resolve Copy/Monitor warnings right away and notify the BIM Lead if something doesn't match.</p>
 </div>
-<p><strong>How to resolve Copy/Monitor warnings:</strong></p>
-<ul>
-<li>When Architecture updates levels or grids later in the project, reload the link, run <strong>Coordination Review</strong> again, and accept or reject changes as instructed.</li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use multisegment grids. Multisegment grids do not support Copy/Monitor, which means other disciplines will not receive notifications when grids move.</p>
 </div>
 <h3 id="57-linked-models">5.7 Linked Models<a class="headerlink" href="#57-linked-models" title="Permanent link">¶</a></h3>
-<p><strong>Why:</strong> Linked models are used to coordinate multiple disciplines while keeping each team's work separate and manageable. At the start of each project, each team must link the master Architectural model into their file, followed by Structural and MEP models as they become available. All links must be inserted from the approved shared ACC folder, placed on their dedicated workset, and use shared coordinates.</p>
+<p>Linked models are used to coordinate multiple disciplines while keeping each team's work separate and manageable. At the start of each project, each team must link the master Architectural model into their file, followed by Structural and MEP models as they become available. All links must be inserted from the approved shared ACC folder, placed on their dedicated workset, and use shared coordinates.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Teams must never link models from local paths or edit coordinates on their own. When updates occur, links must be reloaded, checked for alignment, and verified through coordination review to ensure consistent spatial accuracy across the project. If there is a need to use an outdated model, use the <strong>Consumed</strong> linking method.</p>
+<p>Teams must never link models from local paths or edit coordinates on their own. When updates occur, links must be reloaded, checked for alignment, and verified through coordination review to ensure consistent spatial accuracy across the project. </p>
 </div>
 <p><strong>Procedure to Live Link:</strong></p>
 <ol>
 <li>Go to <strong>Links</strong>.</li>
-<li>
-<p>Select the link from the <strong>WIP</strong> folder for the discipline you wish to link.
-<strong>Procedure to Shared Folder Link:</strong></p>
-</li>
-<li>
-<p>Go to <strong>Links</strong>.</p>
-</li>
+<li>Select the link from the <strong>WIP</strong> folder for the discipline you wish to link.</li>
+</ol>
+<p><strong>Procedure to Shared Folder Link:</strong></p>
+<ol>
+<li>Go to <strong>Links</strong>.</li>
 <li>Select the link from the <strong>Shared</strong> folder for the discipline you wish to link.</li>
 <li>Navigate to <strong>Insert → Link Revit</strong> and select the required model from the approved ACC Shared folder.</li>
 <li>Link the model through shared coordinates once the BIM Coordinator establishes the coordinate system.</li>
 <li>Place all links on their designated <strong>LINKS</strong> workset before pinning them.</li>
 <li>Reload links only after models are officially published to the Shared folder — not from local or outdated sources.</li>
-<li>
-<p>When new disciplines join the project, follow the same linking process to maintain consistent alignment.
-<strong>Procedure to Consumed Folder Link:</strong></p>
-</li>
-<li>
-<p>Go to <strong>Design Collaboration</strong> and select your discipline/model.</p>
-</li>
+<li>When new disciplines join the project, follow the same linking process to maintain consistent alignment.</li>
+</ol>
+<p><strong>Procedure to Consumed Folder Link:</strong></p>
+<ol>
+<li>Go to <strong>Design Collaboration</strong> and select your discipline/model.</li>
 <li>In Design Collaboration, consume the latest packages from each discipline.</li>
 <li>In Revit, go to <strong>Links</strong>.</li>
 <li>Select the link from your consumed folder for the discipline you wish to link.</li>
 </ol>
-<h3 id="58-discipline-model-segregation">5.8 Discipline Model Segregation<a class="headerlink" href="#58-discipline-model-segregation" title="Permanent link">¶</a></h3>
-<p><em>[Content to be added]</em></p>
-<h3 id="59-view-organization-structure">5.9 View Organization Structure<a class="headerlink" href="#59-view-organization-structure" title="Permanent link">¶</a></h3>
+<h3 id="58-view-organization-structure">5.8 View Organization Structure<a class="headerlink" href="#58-view-organization-structure" title="Permanent link">¶</a></h3>
 <p>ATL Templates come with the recommended project browser structure. You may edit it as needed for your project.</p>
-<h3 id="510-model-phasing-and-design-options">5.10 Model Phasing and Design Options<a class="headerlink" href="#510-model-phasing-and-design-options" title="Permanent link">¶</a></h3>
-<p>Use phasing; avoid using design options. You should have at least three phases:</p>
-<ul>
-<li>Existing / Legacy</li>
-<li>Demolished</li>
-<li>New
-<strong>Steps to apply phases:</strong></li>
-</ul>
-<p><em>[Content to be added]</em></p>
-<p><strong>Steps to apply design options:</strong></p>
-<p><em>[Content to be added]</em></p>
-<hr>
+<h3 id="59-model-phasing-and-design-options">5.9 Model Phasing and Design Options<a class="headerlink" href="#59-model-phasing-and-design-options" title="Permanent link">¶</a></h3>
+<p>See <a href="../dc-gn-002/#dc-gn-002-10-6-8">DC-GN-002 (10.6.8) - Phases of the Project</a> for model phasing recommended for the project. Avoid using design options and including them in your submissions.</p>
 <h2 id="6-modeling-standards">6 MODELING STANDARDS<a class="headerlink" href="#6-modeling-standards" title="Permanent link">¶</a></h2>
 <h3 id="61-category-based-modeling-rules">6.1 Category-Based Modeling Rules<a class="headerlink" href="#61-category-based-modeling-rules" title="Permanent link">¶</a></h3>
 <p><strong>Why:</strong> Using correct categories ensures that all elements behave as expected in schedules, tags, filters, and coordination views. Elements must maintain modeling tolerances without unnecessary manual offsets to maintain consistency and alignment across all models.</p>
@@ -2315,36 +2261,107 @@ This SOP serves as a reference for all team members involved in model authoring,
 <p class="admonition-title">Note</p>
 <p>Do not use generic models or in-place families without prior approval from the BIM Coordinator.</p>
 </div>
-<p><strong>Steps to assign a category to a generic model:</strong></p>
-<p><em>[Content to be added]</em></p>
 <h3 id="62-geometry-standards">6.2 Geometry Standards<a class="headerlink" href="#62-geometry-standards" title="Permanent link">¶</a></h3>
 <p><strong>Detail Level Usage (Coarse / Medium / Fine):</strong></p>
 <p>Depending on the LOD for the specific model, select the appropriate view detail level.</p>
-<p><em>Add a picture</em></p>
+<div style="text-align: center; margin-bottom: 24px;">
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-20.png" data-desc-position="bottom"><img alt="Detail Level Tool" src="../../assets/images/dc-gn-004-image-20.png"></a></p>
+<p><em>Figure 20 - Detail Level</em></p>
+</div>
 <p><strong>Basic Clearance and Maintenance Space Modeling:</strong></p>
 <p>Geometry within the model shall be developed to support design intent, coordination accuracy, and overall model performance. Excessive or unnecessary geometric complexity shall be avoided to ensure stable performance, visibility, and consistent behavior across all views and project phases.</p>
 <ul>
-<li>
-<p>Utilize view templates and filters to manage object visibility rather than hiding elements individually in each view.
-<strong>CAD File Use:</strong></p>
-</li>
-<li>
-<p>Remove imported CAD files after use; place only in required working views and never explode them.
-    <em>Picture showing the "Show Only on This View" checkbox</em></p>
-</li>
-<li>Never explode a CAD file.
-    <em>Add a picture of the explode tool with a warning</em></li>
-<li>Regularly use the <strong>Purge Unused</strong> command to remove unnecessary families and types, reducing file size.</li>
-<li>
-<p>Replace complex, modeled details with Drafting Views.
-<strong>Etransmit Process:</strong></p>
-</li>
-<li>
-<p>Select the model.</p>
-</li>
-<li>Select the folder where you want the final cleaned-up model to go.</li>
-<li><em>[Additional steps to be added]</em></li>
+<li>Utilize view templates and filters to manage object visibility rather than hiding elements individually in each view.</li>
 </ul>
+<p><strong>CAD File Use:</strong></p>
+<ul>
+<li>Remove imported CAD files after use; place only in required working views and never explode them.</li>
+</ul>
+<div style="text-align: center; margin-bottom: 24px;">
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-21.png" data-desc-position="bottom"><img alt="Show only on this view" src="../../assets/images/dc-gn-004-image-21.png"></a></p>
+<p><em>Figure 21 - Show only on this view</em></p>
+</div>
+<ul>
+<li>Never explode a CAD file.</li>
+</ul>
+<div style="text-align: center; margin-bottom: 24px;">
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-22.png" data-desc-position="bottom"><img alt="Explode" src="../../assets/images/dc-gn-004-image-22.png"></a></p>
+<p><em>Figure 22 - Explode tool</em></p>
+</div>
+<ul>
+<li>Regularly use the <strong>Purge Unused</strong> command to remove unnecessary families and types, reducing file size.</li>
+</ul>
+<div style="text-align: center; margin-bottom: 24px;">
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-23.png" data-desc-position="bottom"><img alt="Purge" src="../../assets/images/dc-gn-004-image-23.png"></a></p>
+<p><em>Figure 23 - Purge</em></p>
+</div>
+<ul>
+<li>Replace complex, modeled details with Drafting Views.</li>
+</ul>
+<p><strong>Etransmit Process:</strong></p>
+<p>This section outlines the standard procedure for generating a clean and coordinated Revit eTransmite package for workshared projects. The purpose of this workflow is to ensure model integrity, detach and clean central files properly, consolidate all required linked resources, and deliver a consistent, reliable package to clients, consultants, or internal teams. Following this process helps avoid missing links, file corruption, version conflicts and other issues common in multidisciplinary BIM coordination.</p>
+<ol>
+<li>Prepare the Workshared Model.<ul>
+<li>Ensure all team members synchronize and exit the model.</li>
+<li>Open the central file using detach from central.</li>
+<li>Enable Audit during opening to repair model health.</li>
+<li>Review and resolve major warnings that affect performance or integrity.</li>
+<li>Purge unused itmes (perform multiple passes).</li>
+</ul>
+</li>
+<li>Save a Clean Local Copy<ul>
+<li>Save the detached file to a temporary working folder.</li>
+<li>Use our ATL BIM Naming Convention to name the files.</li>
+<li>Verify that all links load correctly before proceeding.</li>
+</ul>
+</li>
+<li>Prepare All Linked Revit Models (Workshared or Non-Workshared)<ul>
+<li>For each linked Revit file:<ol>
+<li>Open with Detach from Central when applicable.</li>
+<li>Audit and purge unused.</li>
+<li>Save a new cleaned version.</li>
+</ol>
+</li>
+<li>Confirm all links are using relative paths wherever feasible.</li>
+<li>Ensure nested links are accounted for.</li>
+</ul>
+</li>
+<li>Run eTransmit<ul>
+<li>Revit should not have any projects loaded.</li>
+<li>Launch: Add-Ins&gt;eTransmit for Autodesk Revit.</li>
+<li>Select the primary model.</li>
+<li>Verify all linked Revit, CAD, point cloud, and image files are included.</li>
+<li>Configure recommended settings:<ol>
+<li>Clean and compact the model</li>
+<li>Open and detach from central</li>
+<li>Include linked Revit models.</li>
+<li>Include CAD and point cloud links (if relevant)</li>
+<li>Remove third-party add-ins (optional)</li>
+</ol>
+</li>
+<li>Choose an empty output folder for the transmitted package.</li>
+</ul>
+</li>
+<li>Check the Etransmited Output<ul>
+<li>Open the transmitted version of the model (as a standalone file) to verify:<ol>
+<li>It is detached form central</li>
+<li>All Revit links load</li>
+<li>No missing CAD, point cloud, or image references</li>
+</ol>
+</li>
+<li>Confirm file paths are stored locally within the package</li>
+</ul>
+</li>
+<li>Deliver the Package<ul>
+<li>Upload the files to Autodesk Forma to the assigned ACC site and select the central model.</li>
+<li>Create a transmital indicating which files are to be reviewed and which files are just for reference.</li>
+</ul>
+</li>
+</ol>
+<div style="text-align: center; margin-bottom: 24px;">
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/dc-gn-004-image-24.png" data-desc-position="bottom"><img alt="Revit Etransmit" src="../../assets/images/dc-gn-004-image-24.png"></a></p>
+<p><em>Figure 24 - Revit Etransmit</em></p>
+</div>
 <h3 id="63-family-usage-standards">6.3 Family Usage Standards<a class="headerlink" href="#63-family-usage-standards" title="Permanent link">¶</a></h3>
 <p>Families must be created and managed in a consistent, controlled manner to maintain model stability, accurate coordination, and predictable graphical behavior. The correct family type should be used based on the required function, level of detail, and modeling purpose. Unnecessary or overly complex families can degrade performance — especially nested families, which can cause visibility issues and lead to coordination errors. The use of approved standards and disciplined modeling practices is therefore essential.</p>
 <h4 id="631-general-modeling-guidelines">6.3.1 General Modeling Guidelines<a class="headerlink" href="#631-general-modeling-guidelines" title="Permanent link">¶</a></h4>
@@ -2580,7 +2597,7 @@ Using both correctly ensures teams are coordinating with the latest data while a
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="May 5, 2026 16:54:14 UTC"><span class="timeago" datetime="2026-05-05T16:54:14+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 5, 2026 16:54:14 UTC">2026-05-05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="June 23, 2026 18:26:02 UTC"><span class="timeago" datetime="2026-06-23T18:26:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 23, 2026 18:26:02 UTC">2026-06-23</span>
   </span>
 
     
@@ -2625,7 +2642,7 @@ Using both correctly ensures teams are coordinating with the latest data while a
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../dc-gn-003/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DC-GN-003 Revit Project Setup">
+          <a href="../dc-gn-002/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DC-GN-002 P&amp;D BIM Standards">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2635,7 +2652,7 @@ Using both correctly ensures teams are coordinating with the latest data while a
                 Previous
               </span>
               <div class="md-ellipsis">
-                DC-GN-003 Revit Project Setup
+                DC-GN-002 P&amp;D BIM Standards
               </div>
             </div>
           </a>
@@ -2692,7 +2709,7 @@ Using both correctly ensures teams are coordinating with the latest data while a
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
