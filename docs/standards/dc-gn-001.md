@@ -331,7 +331,7 @@ The views should be formatted as follows: __TC-LEVEL/LOCATION/SEQUENCE-DESCRIPTI
 
 ### 3.10 Level Naming Convention
 
-At the start of each project, the Architecture team or lead discipline will determine the master level to be used consistently across all disciplines. These levels should follow the format: "DESCRIPTION-LEVEL".
+At the start of each project, the Architecture team or lead discipline will determine the master level to be used consistently across all disciplines. These levels should follow the format: "FACILITY-DESCRIPTION-LEVEL".
 
 Once master levels are established, all disciplines need to copy/monitor them, particularly those essential to their models. Architecture usually defines TOFF (Top of Finish Floor) levels, while Structure sets TOS (Top of Slab) levels; these should be copied/monitored by other disciplines as required. Additional discipline-specific levels can be created in individual Revit models after primary levels are successfully copied and monitored.
 
@@ -556,6 +556,7 @@ The alpha character in the identification number, as shown in sequence 1 in Figu
 | TSOD | TD |
 | Fire Station Number XX (ex: Fire Station 32) | FSXX (ex: FS32) |
 | South Deck | SD |
+| West Deck | WD |
 | Technical Campus | TC |
 
 __Region Identification__
