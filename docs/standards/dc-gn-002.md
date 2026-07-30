@@ -571,21 +571,48 @@ The ATL BIM Manager coordinates and integrates processes into the BIM execution 
 
 The following color scheme is implemented to ensure consistency and facilitate easy identification for all users during project coordination and the generation of Clash Reports.
 
-|DISCIPLINE|COLOR|
-|----------|-----|
-|Architectural|Cyan|
-|Normal Power|Royal Blue|
-|Miscellaneous Communication|Brown|
-|Fire Alarm|Red|
-|Telephone / Computer|Black|
-|Life Safety|Yellow|
-|Vertical Circulation|Orange|
-|HVAC|Green|
-|Plumbing|Magenta|
-|Fire Protection|Red|
-|Structural|Grey|
+The HEX and RGB values below are the authoritative definitions. Color names are descriptive only — always enter the HEX/RGB value so that Revit, Navisworks, and Autodesk Tandem render the same color.
+
+|DISCIPLINE|COLOR|HEX|RGB|
+|----------|-----|---|---|
+|Architectural|Cyan|`#00FFFF`|0, 255, 255|
+|Normal Power|Royal Blue|`#4169E1`|65, 105, 225|
+|Miscellaneous Communication|Brown|`#A52A2A`|165, 42, 42|
+|Fire Alarm|Red|`#FF0000`|255, 0, 0|
+|Telephone / Computer|Black|`#1A1A1A`|26, 26, 26|
+|Life Safety|Yellow|`#FFFF00`|255, 255, 0|
+|Vertical Circulation|Orange|`#FFA500`|255, 165, 0|
+|HVAC|Green|`#008000`|0, 128, 0|
+|Plumbing|Magenta|`#FF00FF`|255, 0, 255|
+|Fire Protection|Red|`#FF0000`|255, 0, 0|
+|Structural|Grey|`#808080`|128, 128, 128|
 
 __Note:__ Based on project requirements, further breakdowns can be established either by level or by system.
+
+__Note:__ Fire Alarm and Fire Protection currently share the same value (`#FF0000`). Where both systems are present in the same coordination model, assign one of them a distinct value in the BEP so that filters remain unambiguous.
+
+##### Applying the Scheme in Revit
+
+Revit's color picker does not accept HEX directly — enter the __RGB__ values in the Red / Green / Blue fields of the Color dialog.
+
+1. __View > Visibility/Graphics__ (or edit the View Template) __> Filters > Add / Edit-New__.
+2. Create a rule-based filter per discipline (typically filtering on __ATL-Discipline__, System Classification, or Workset).
+3. In the __Overrides__ column, set both __Lines__ and __Surfaces > Foreground Pattern Color__ to the RGB value above so the discipline reads consistently in wireframe, hidden line, and shaded views.
+4. Save the filter set into the coordination View Templates so the scheme is not re-created per view.
+
+##### Applying the Scheme in Autodesk Tandem
+
+The same values carry into Tandem, which uses HEX color codes for its color-by rules:
+
+- Colors are driven by __model data__, not by Revit graphic overrides. View filter overrides do __not__ transfer through the Revit/IFC upload — the discipline must exist as a __property value__ on the elements (e.g., the __ATL-Discipline__ shared parameter or the element's Classification) for Tandem to color by it.
+- Map each discipline to the HEX value above in Tandem's color-by / palette settings for the chosen property or classification. Because the property values match the Revit filter rules, the Tandem facility and the Revit coordination views stay visually aligned.
+- Ensure the discipline parameter is included in the Tandem parameter/classification mapping at upload; unmapped elements fall back to the default model color.
+
+__Tandem display considerations:__
+
+- Pure black (`#000000`) is avoided for Telephone / Computer — it reads as unlit geometry in a shaded 3D view. `#1A1A1A` is used instead, which still prints and plots as black in Revit documentation.
+- Colors are applied to shaded 3D geometry in Tandem, so they appear darker than the flat swatch. Verify legibility against the default grey model before publishing a facility view.
+- Use the full 6-digit HEX form with the leading `#`; Tandem does not interpret color names.
 
 #### 10.7.2 Interference Check / Clash Detection
 
