@@ -591,7 +591,7 @@ __Note:__ Based on project requirements, further breakdowns can be established e
 
 __Note:__ Fire Alarm and Fire Protection currently share the same value (`#FF0000`). Where both systems are present in the same coordination model, assign one of them a distinct value in the BEP so that filters remain unambiguous.
 
-##### 10.7.1.1 Applying the Scheme in Revit
+#### 10.7.2 Applying the Scheme in Revit
 
 Revit's color picker does not accept HEX directly — enter the __RGB__ values in the Red / Green / Blue fields of the Color dialog.
 
@@ -600,7 +600,7 @@ Revit's color picker does not accept HEX directly — enter the __RGB__ values i
 3. In the __Overrides__ column, set both __Lines__ and __Surfaces > Foreground Pattern Color__ to the RGB value above so the discipline reads consistently in wireframe, hidden line, and shaded views.
 4. Save the filter set into the coordination View Templates so the scheme is not re-created per view.
 
-##### 10.7.1.2 Applying the Scheme in Autodesk Tandem
+#### 10.7.3 Applying the Scheme in Autodesk Tandem
 
 The same values carry into Tandem, which uses HEX color codes for its color-by rules:
 
@@ -614,7 +614,7 @@ __Tandem display considerations:__
 - Colors are applied to shaded 3D geometry in Tandem, so they appear darker than the flat swatch. Verify legibility against the default grey model before publishing a facility view.
 - Use the full 6-digit HEX form with the leading `#`; Tandem does not interpret color names.
 
-#### 10.7.2 Interference Check / Clash Detection
+#### 10.7.4 Interference Check / Clash Detection
 
 The use of Clash Detection tools within our BIM practice can result in three outcomes:
 
@@ -624,15 +624,15 @@ The use of Clash Detection tools within our BIM practice can result in three out
 
 __NOTE:__ The Clash Detection tool should be used during the design process to coordinate major building elements and systems, facilitating the early identification of interferences.
 
-#### 10.7.3 Single-Discipline Clash Detection
+#### 10.7.5 Single-Discipline Clash Detection
 
 Each Discipline’s Leader will perform single-discipline clash detection using the Interference Check tool in Revit or Clash Detective in Navisworks.
 
-#### 10.7.4 Cross-Discipline Clash Detection
+#### 10.7.6 Cross-Discipline Clash Detection
 
 The BIM Coordinator will conduct cross-disciplinary clash detection sessions as required by the project, usually defined in the BEP (BIM Execution Plan). Design Projects require at least two sessions: one a month before the 50% progress submission and one a month before the final 100% submission. The BIM Coordinator will use Autodesk Navisworks or ACC for these sessions. Each Discipline Leader is responsible for creating a Navisworks file from their Revit Models (.nwc) or preparing the ACC views for coordination.
 
-#### 10.7.5 Navisworks Clash Report
+#### 10.7.7 Navisworks Clash Report
 
 The BIM Manager Engineer compiles all discipline-specific Navisworks Cache files (.nwc) into a single Master Navisworks file (.nwf). A Navisworks Template is used for coordination purposes. After each clash detection session, a Federated Model (.nwd) file with saved viewpoints of all new or existing clashes will be distributed to all Discipline Leaders. The BIM Coordinator will also create a report listing analyzed clashes, issues, and agreed actions. Following the BIM Kick-off Meeting, the BIM Coordinator will provide a 3D Coordination Meeting Report template, which includes:
 
