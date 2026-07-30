@@ -591,7 +591,7 @@ __Note:__ Based on project requirements, further breakdowns can be established e
 
 __Note:__ Fire Alarm and Fire Protection currently share the same value (`#FF0000`). Where both systems are present in the same coordination model, assign one of them a distinct value in the BEP so that filters remain unambiguous.
 
-##### Applying the Scheme in Revit
+##### 10.7.1.1 Applying the Scheme in Revit
 
 Revit's color picker does not accept HEX directly — enter the __RGB__ values in the Red / Green / Blue fields of the Color dialog.
 
@@ -600,7 +600,7 @@ Revit's color picker does not accept HEX directly — enter the __RGB__ values i
 3. In the __Overrides__ column, set both __Lines__ and __Surfaces > Foreground Pattern Color__ to the RGB value above so the discipline reads consistently in wireframe, hidden line, and shaded views.
 4. Save the filter set into the coordination View Templates so the scheme is not re-created per view.
 
-##### Applying the Scheme in Autodesk Tandem
+##### 10.7.1.2 Applying the Scheme in Autodesk Tandem
 
 The same values carry into Tandem, which uses HEX color codes for its color-by rules:
 
