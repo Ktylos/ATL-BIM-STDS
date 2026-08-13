@@ -14,7 +14,7 @@
 
 The purpose of these standards is to provide Designers of Record with procedures for submitting a project to the Department of Aviation’s Planning & Development (P&D) for technical review and acceptance. All new construction and modifications to any airport’s facilities at Hartsfield-Jackson Atlanta International Airport (ATL) shall follow these standards. 
 
-This BIM Standard outlines the information requirements, project workflows, and technical guidelines for BIM implementation for P&D. It covers the requirements specified by a range of airport stakeholders across the entire project lifecycle—from planning and design to construction, commissioning, and operations—while promoting collaboration, data consistency, and asset management.
+This BIM Standard outlines the information requirements, project workflows, and technical guidelines for BIM implementation for P&D. It covers the requirements specified by a range of airport stakeholders across the entire project lifecycle, from planning and design to construction, commissioning, and operations, while promoting collaboration, data consistency, and asset management.
 
 ### 2.2 Roles and Responsibilities 
 
