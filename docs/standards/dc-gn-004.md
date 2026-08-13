@@ -593,15 +593,36 @@ A **publish set** in Revit is a saved selection of sheets and views intended to 
 **Procedure:**
  
 1. Open the required cloud workshared Revit model and navigate to **Publish Settings**.
-    *Screenshot*
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Publish Settings](../assets/images/dc-gn-004-image-25.png)
+
+*Figure 25 - Publish Settings*
+</div>
 2. Create a **New Set**.
-    *Screenshot*
-3. Select the sheets and views intended to be published. Click **Save & Close**.
-    *Screenshot*
-4. **Synchronize with Central**.
-    *Screenshot*
-5. On the Revit Home Screen, select the model and click **Publish Latest**.
-    *Screenshot*
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![New Set](../assets/images/dc-gn-004-image-26.png)
+
+*Figure 26 - New Set*
+</div>
+3. Under "Edit Set", select the pull down to select "Sheets in the Model" to select drawings and "3D Views in the Model" to select 3D Views.
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Show in List](../assets/images/dc-gn-004-image-27.png)
+
+*Figure 27 - Show in List*
+</div>
+4. Select the sheets and views intended to be published. Click **Save & Close**.
+5. **Synchronize with Central**.
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Synchronize](../assets/images/dc-gn-004-image-28.png)
+
+*Figure 28 - Synchronize*
+</div>
+6. On the Revit Home Screen, select the model and click **Publish Latest**.
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Publish](../assets/images/dc-gn-004-image-29.png)
+
+*Figure 29 - Publish*
+</div>
 #### 7.2.1 Requirements and Controls
  
 - Only approved and coordinated content shall be included in the publish set.
