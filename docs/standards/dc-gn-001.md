@@ -56,6 +56,7 @@ Here are the disciplines you can apply to your project:
 | CODE | DISCIPLINE NAME |
 |------|------------------|
 | AR | Architectural |
+| AC | Acustic |
 | CV | Civil |
 | EL | Electrical |
 | NV | Environmental |
