@@ -141,6 +141,7 @@ Project templates come preloaded with title blocks, view templates, parameters, 
 1. Start Revit and select **New**.
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Revit New Project](../assets/images/dc-gn-004-image-01.png)
 
     *Figure 1 - Revit New Project dialog*
@@ -150,12 +151,14 @@ Project templates come preloaded with title blocks, view templates, parameters, 
 3. Navigate to the templates location and pick the correct discipline template (e.g., Architectural / Structural / Mechanical / Electrical).
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Choosing templates with desktop connector](../assets/images/dc-gn-004-image-02.png)
 
     *Figure 2 - Choosing templates with desktop connector*
     </div>
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Choose Template](../assets/images/dc-gn-004-image-03.png)
 
     *Figure 3 - Choose Template*
@@ -164,6 +167,7 @@ Project templates come preloaded with title blocks, view templates, parameters, 
 
 4. **Collaborate in the Cloud:** Use **Collaborate > In Cloud** to publish to the designated Autodesk Forma project folder.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Enabling Worksharing](../assets/images/dc-gn-004-image-04.png)
 
     *Figure 4 - Enabling Worksharing*
@@ -171,6 +175,7 @@ Project templates come preloaded with title blocks, view templates, parameters, 
 
 5. **Project Information:** Populate the "Project Information" parameters required by the template.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Project Information](../assets/images/dc-gn-004-image-05.png)
 
     *Figure 5 - Project Information*
@@ -195,6 +200,7 @@ Worksets manage visibility, performance, and ownership across teams. A clean, co
     - *Scope_Boxes*
 3. Set the appropriate active workset for each modeling task; avoid placing elements on link or shared-control worksets.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Worksets Selection](../assets/images/dc-gn-004-image-06.png)
 
     *Figure 6 - Worksets Selection*
@@ -251,6 +257,7 @@ All Revit model files should be workshared to Autodesk Forma. This ensures the B
  
 1. Save the file locally with the proper naming convention. (If you don't give it a proper name, you can do it in step 4, before saving the file)
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Save As](../assets/images/dc-gn-004-image-07.png)
 
     *Figure 7 - Save As*
@@ -261,6 +268,7 @@ All Revit model files should be workshared to Autodesk Forma. This ensures the B
 4. Select the project's Autodesk Forma site and the folder location for the file.
 5. Click **Save**.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Save to Cloud](../assets/images/dc-gn-004-image-08.png)
 
     *Figure 8 - Save to Cloud*
@@ -279,12 +287,14 @@ All Revit models should be geolocated according to the Atlanta Airport's officia
  
 1. Create a Floor Plan at the Foundation or Apron level and name it **"ACC – Grid Reference"**.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Create a Floor](../assets/images/dc-gn-004-image-09.png)
 
     *Figure 9 - Create a Floor*
     </div>
 2. In the Ribbon, select **Insert**, then **Link Revit**.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Link Revit](../assets/images/dc-gn-004-image-10.png)
 
     *Figure 10 - Link Revit*
@@ -293,6 +303,7 @@ All Revit models should be geolocated according to the Atlanta Airport's officia
 4. Select **Origin-to-Origin** and load the link.
 5. In **Visibility/Graphics**, ensure the Project Base Point, Origin, and Survey Point are visible. Turn off visibility for all other model elements.
      <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Site Visibility](../assets/images/dc-gn-004-image-11.png)
 
     *Figure 11 - Site Visibility*
@@ -301,6 +312,7 @@ All Revit models should be geolocated according to the Atlanta Airport's officia
 7. In **Visibility/Graphics**, set the linked view to the site view.
 8. Create a section view and name it **"ACC – Elevation Reference"**. Ensure that the section box extends to the grids and survey points.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Create a Section View](../assets/images/dc-gn-004-image-12.png)
 
     *Figure 12 - Create a Section View*
@@ -308,18 +320,21 @@ All Revit models should be geolocated according to the Atlanta Airport's officia
 9. Make sure the site model's apron/foundation level is aligned with the first level for your model. Pin the Site Model.
 10. In the Ribbon **Manage** tab, reset the shared coordinates.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Reset Shared Coordinates](../assets/images/dc-gn-004-image-13.png)
 
     *Figure 13 - Reset Shared Coordinates*
     </div>
 11. Click **Acquire Coordinates** and select the site model.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Acquire Coordinates](../assets/images/dc-gn-004-image-14.png)
 
     *Figure 14 - Acquire Coordinates*
     </div>
 12. Move the survey point of the model to sea level (x=0, y=0, z=0). Pin it in place.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Survey Point](../assets/images/dc-gn-004-image-15.png)
 
     *Figure 15 - Survey Point*
@@ -342,18 +357,21 @@ Shared parameters are used by the BIM team to manage and collect data on model e
 6. Add all necessary parameters to the Revit file.
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Edit Shared Parameter](../assets/images/dc-gn-004-image-16.png)
 
     *Figure 16 - Edit Shared Parameter*
     </div>
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Parameter Properties](../assets/images/dc-gn-004-image-17.png)
 
     *Figure 17 - Parameter Properties*
     </div>
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Properties Window](../assets/images/dc-gn-004-image-18.png)
 
     *Figure 18 - Properties Window*
@@ -382,6 +400,7 @@ To ensure alignment, Copy/Monitor can be used to bring levels and grids into dis
 1. Link in the model with elements that need to be copied. Apply the steps from [5.3 Linking in a Site Model & Acquiring Coordinates](#53-linking-in-a-site-model--acquiring-coordinates). Only link and align — do not reacquire coordinates.
 2. Use **Copy/Monitor → Select Link** to copy all required levels and grids into your file.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Copy/Monitor](../assets/images/dc-gn-004-image-19.png)
 
     *Figure 19 - Copy/Monitor*
@@ -449,6 +468,7 @@ See [DC-GN-002 (10.6.8) - Phases of the Project](dc-gn-002.md#dc-gn-002-10-6-8) 
 Depending on the LOD for the specific model, select the appropriate view detail level.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Detail Level Tool](../assets/images/dc-gn-004-image-20.png)
 
 *Figure 20 - Detail Level*
@@ -465,6 +485,7 @@ Geometry within the model shall be developed to support design intent, coordinat
  
 - Remove imported CAD files after use; place only in required working views and never explode them.
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Show only on this view](../assets/images/dc-gn-004-image-21.png)
 
 *Figure 21 - Show only on this view*
@@ -472,6 +493,7 @@ Geometry within the model shall be developed to support design intent, coordinat
 
 - Never explode a CAD file.
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Explode](../assets/images/dc-gn-004-image-22.png)
 
 *Figure 22 - Explode tool*
@@ -479,6 +501,7 @@ Geometry within the model shall be developed to support design intent, coordinat
 
 - Regularly use the **Purge Unused** command to remove unnecessary families and types, reducing file size.
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Purge](../assets/images/dc-gn-004-image-23.png)
 
 *Figure 23 - Purge*
@@ -530,6 +553,7 @@ This section outlines the standard procedure for generating a clean and coordina
     - Create a transmital indicating which files are to be reviewed and which files are just for reference.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Revit Etransmit](../assets/images/dc-gn-004-image-24.png)
 
 *Figure 24 - Revit Etransmit*
@@ -595,6 +619,7 @@ A **publish set** in Revit is a saved selection of sheets and views intended to 
 1. Open the required cloud workshared Revit model and navigate to **Publish Settings**.
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Publish Settings](../assets/images/dc-gn-004-image-25.png)
 
     *Figure 25 - Publish Settings*
@@ -603,6 +628,7 @@ A **publish set** in Revit is a saved selection of sheets and views intended to 
 2. Create a **New Set**.
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![New Set](../assets/images/dc-gn-004-image-26.png)
 
     *Figure 26 - New Set*
@@ -611,6 +637,7 @@ A **publish set** in Revit is a saved selection of sheets and views intended to 
 3. Under "Edit Set", select the pull down to select "Sheets in the Model" to select drawings and "3D Views in the Model" to select 3D Views.
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Show in List](../assets/images/dc-gn-004-image-27.png)
 
     *Figure 27 - Show in List*
@@ -620,6 +647,7 @@ A **publish set** in Revit is a saved selection of sheets and views intended to 
 5. **Synchronize with Central**.
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Synchronize](../assets/images/dc-gn-004-image-28.png)
 
     *Figure 28 - Synchronize*
@@ -628,6 +656,7 @@ A **publish set** in Revit is a saved selection of sheets and views intended to 
 6. On the Revit Home Screen, select the model and click **Publish Latest**.
 
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
     ![Publish](../assets/images/dc-gn-004-image-29.png)
 
     *Figure 29 - Publish*

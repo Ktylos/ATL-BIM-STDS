@@ -32,6 +32,7 @@ The BIM P&D program will directly assume the following BIM roles:
 - __BIM Program Coordinator__: Provide essential support to the Contractor/Consultant for the development of accurate and compliant BIM models. Review BIM submissions from the Contractor/Consultant to ensure accuracy and adherence to established standards. Offer technical guidance and support to the Contractor/Consultant regarding BIM-related issues. Ensure that models meet the required level of detail (LOD) and information requirements. Participate in Coordination and clash detection meetings to coordinate resolutions. Monitor the progress of BIM model development and identify potential issues. Document and track BIM-related issues and their resolutions. Assist in the creation of BIM training materials. Contribute to the ongoing improvement of BIM standards and workflows.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![P&D BIM Program organization structure](../assets/images/dc-gn-002-image-18.png)
 
 *Figure 1 - P&D BIM Program organization structure*
@@ -47,6 +48,7 @@ Roles assigned to the Designer of Record must be clearly outlined in the BIM Exe
 - __BIM Project Manager:__ Ensure that BIM models are updated, precise, and comply with established standards. Oversee the development and maintenance of BIM models by the Contractor/Consultant's team. Implement and enforce BIM standards and procedures within the team. Conduct quality control checks on BIM models. Provide technical guidance and support to the modeling team. Coordinate with other disciplines to ensure model integration. Manage the BIM model version control process. Identify and resolve modeling issues. Contribute to the development of BIM content and libraries. Stay informed about industry best practices in BIM modeling.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Designer of Record BIM organization structure](../assets/images/dc-gn-002-image-10.png)
 
 *Figure 2 - Designer of Record BIM organization structure*
@@ -83,6 +85,7 @@ P&D’s strategic objectives for BIM implementation include:
 This section outlines how P&D will utilize BIM across design, construction, and asset management. 
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![BIM Integration Workflow](../assets/images/dc-gn-002-image-01.png)
 
 *Figure 3 - BIM Integration Workflow*
@@ -109,6 +112,7 @@ The BIM process coordinates with both P&D project types (DB / DBB) during their 
 This graphic represents the process of creating, utilizing, and maintaining the building information. There are three major phases throughout the life of a built asset: Design, Construction, and Operations and Maintenance. All of them supported by a series of documents throughout the life cycle of a Project.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![BIM Lifecycle](../assets/images/dc-gn-002-image-22.png)
 
 *Figure 4 - BIM Lifecycle*
@@ -169,6 +173,7 @@ The P&D Revit templates are a starting point, not a complete project setup. They
 Project teams may rename the P&D templates and create their own derived templates from them to develop further. Save these team templates in the team's assigned Autodesk Forma site.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Revit Template Starting View](../assets/images/dc-gn-002-image-15.png)
 
 *Figure 5 - Revit Template Starting View*
@@ -190,12 +195,14 @@ Project teams developing their projects in the P&D Autodesk Forma hub have acces
 All project sheets must use the provided Title-Sheet and Contract Border from the shared content. Official P&D Title Sheets and Contract images are included. Available sizes: 22x34; 24x36; 30x42.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Title Block Family](../assets/images/dc-gn-002-image-27.png)
 
 *Figure 6 - Title Block Family*
 </div>
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Cover Page](../assets/images/dc-gn-002-image-08.png)
 
 *Figure 7 - Cover Page*
@@ -204,6 +211,7 @@ All project sheets must use the provided Title-Sheet and Contract Border from th
 The location of the Title Block families within the Browser in the Revit Template.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Title Sheets and Contract Borders](../assets/images/dc-gn-002-image-02.png)
 
 *Figure 8 - Title Sheets and Contract Borders*
@@ -275,6 +283,7 @@ External parties, such as consultants and contractors, are permitted temporary u
 The coordinate system is delineated by a basemap with the “Airport Grid” custom coordinates referred to as ATL02. Please adhere to [DC-GN-004 Revit SOP](dc-gn-004.md), Section 5.3 Linking in a Site Model & Acquiring Coordinates, utilizing our template and the Concourse file in Revit to acquire these coordinates for your project. To verify their accuracy, export a 3D model and import it into the Civil 3D basemap to confirm the location.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![New Revit Model Workflow](../assets/images/dc-gn-002-image-05.png)
 
 *Figure 9 - New Revit Model Workflow*
@@ -323,6 +332,7 @@ Construction Model: Builds upon the Design Model by incorporating detailed infor
 Project parameters required for each modelled element by stage are established in the Information Delivery Plan. Certain parameters apply to all assets, while others are specific to asset types. For additional details, please refer to the document: ATL-TP-EXC-IDP.xlsx.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Parameters in the Information Delivery Plan](../assets/images/dc-gn-002-image-11.png)
 
 *Figure 10 - Parameters in the Information Delivery Plan*
@@ -450,6 +460,7 @@ Goals for the site model include providing a comprehensive, accurate representat
 Once projects are completed consultants/contractors should provide an updated set of models as part of the final deliverables. Those models will provide P&D with an improved starting set of information for the next project. 
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![The Projects Concourse enables you to initiate your site configuration](../assets/images/dc-gn-002-image-28.png)
 
 *Figure 11 - The Projects Concourse enables you to initiate your site configuration*
@@ -490,6 +501,7 @@ __NOTE:__ It is recommended to use the Link CAD Tool rather than the Import CAD 
 Revit-based applications support the creation of custom fields that can be shared between project and family files, allowing them to be scheduled and called out correctly. This functionality is known as "Shared Parameters." A list of Shared Parameters, which includes those needed for schedules, has been provided by P&D and can be expanded as required.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Shared Parameter File](../assets/images/dc-gn-002-image-03.png)
 
 *Figure 12 - Shared Parameter File*
@@ -502,6 +514,7 @@ Refer to the Information Delivery Plan spreadsheet for common and detailed param
 Each Project Template includes a Legend View that displays key Project Information upon opening the project. This default starting View is also used for synchronizing with the Central model.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Example of Starting View](../assets/images/dc-gn-002-image-15.png)
 
 *Figure 13 - Example of Starting View*
@@ -514,6 +527,7 @@ Within the view you will find basic information and different references to othe
 The project information needs to be completed at the start of the project.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Project Information](../assets/images/dc-gn-002-image-16.png)
 
 *Figure 14 - Project Information*
@@ -530,6 +544,7 @@ The Customized Revit Project Browser has been integrated within various Discipli
 |WORKING|These views are provided solely for working purposes and are not intended for inclusion in the Contract Set. They are temporary and should be removed prior to the final submission.|
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![General Project Browser](../assets/images/dc-gn-002-image-09.png)
 
 *Figure 15 - General Project Browser*
@@ -538,6 +553,7 @@ The Customized Revit Project Browser has been integrated within various Discipli
 The Project Browser scheme should be set to “ATL–CATEGORYSERIES.” Do not modify the Filter settings of this scheme. Although it is permissible to add other browser schemes temporarily, ensure that the scheme is reverted to “ATL–CATEGORYSERIES” before the submission preparation process. Each view must be associated with its corresponding category by assigning the appropriate View Template. Once assigned, the associated category will be displayed in the corresponding parameters under Identity Data.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Highlighted ATL-VIEW CATEGORY and ATL-VIEWSERIES parameters](../assets/images/dc-gn-002-image-24.png)
 
 *Figure 16 - Highlighted ATL-VIEW CATEGORY and ATL-VIEWSERIES parameters*
@@ -548,6 +564,7 @@ The Project Browser scheme should be set to “ATL–CATEGORYSERIES.” Do not m
 Templates have several text styles options defined in the Text Style Legend:
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Text Style Legend in ATL-Template](../assets/images/dc-gn-002-image-20.png)
 
 *Figure 17 - Text Style Legend in ATL-Template*
@@ -557,6 +574,7 @@ Templates have several text styles options defined in the Text Style Legend:
 - Only ARIAL font style is allowed in Dimension Styles.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Text Style and the rest of Drafting Standards Legends in Project Browser](../assets/images/dc-gn-002-image-12.png)
 
 *Figure 18 - Text Style and the rest of Drafting Standards Legends in Project Browser*
@@ -567,6 +585,7 @@ Templates have several text styles options defined in the Text Style Legend:
 Line weights are provided for Model, Annotation, and Perspective Objects. Sixteen line-weights are available for these objects and are defined at a 1/8” = 1’ scale.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Line Style Legend in ATL-Template](../assets/images/dc-gn-002-image-29.png)
 
 *Figure 19 - Line Style Legend in ATL-Template*
@@ -581,6 +600,7 @@ __Note:__ The annotation symbols are loaded under the Project Browser within the
 “ORIGINATOR-SYM-DESCRIPTION1-DESCRIPTION2”
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Symbol Legend Library in ATL-Template](../assets/images/dc-gn-002-image-06.png)
 
 *Figure 20 - Symbol Legend Library in ATL-Template*
@@ -594,6 +614,7 @@ The following fill regions have been provided:
 - Drafting Filled Pattern and Model Filled Pattern (2D and 3D)
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Filled Region Legend in ATL-Template (small sample shown)](../assets/images/dc-gn-002-image-25.png)
 
 *Figure 21 - Filled Region Legend in ATL-Template (small sample shown)*
@@ -611,6 +632,7 @@ A general list schedule is included for reference.
 __Note__: Duplicate schedules in Revit using Filter and Sorting/Grouping Categories. Do not delete or modify the "Admin" schedules created for QC: "ATL-Admin-Multi-Category" and "ATL-Admin-ViewList".
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Schedules in the templates](../assets/images/dc-gn-002-image-17.png)
 
 *Figure 22 - Schedules in the templates*
@@ -621,12 +643,14 @@ __Note__: Duplicate schedules in Revit using Filter and Sorting/Grouping Categor
 Phases should match the Project Construction Phases, as determined by the Lead Discipline. The image shows phase settings for Existing, Demolished, New, and Temporary. Do not alter Phase Filters and Graphic Overrides.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Phase Filter Settings](../assets/images/dc-gn-002-image-13.png)
 
 *Figure 23 - Phase Filter Settings*
 </div>
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Phase Graphic Overrides Settings](../assets/images/dc-gn-002-image-30.png)
 
 *Figure 24 - Phase Graphic Overrides Settings*
@@ -637,6 +661,7 @@ Phases should match the Project Construction Phases, as determined by the Lead D
 Rooms are important Revit elements that should be created within the Architecture model. These elements are defined by other components in the model, such as walls and ceilings. It is necessary that all rooms have enclosed spaces. Within the project, room properties, including room number and room name, must be accurately populated. Completing this information is essential for subsequent steps, such as model analysis and quantity takeoff. Room computation has been enabled to account for both area and volume, and it has been set at wall finish, as illustrated in the image below.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Area and Volume Computation](../assets/images/dc-gn-002-image-04.png)
 
 *Figure 25 - Area and Volume Computation*
@@ -652,6 +677,7 @@ View Templates in Revit are predefined sets of rules and settings applied to vie
 - __Discipline-Specific Customization__: Customize views for architecture, structure, or MEP purposes.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![View Templates List](../assets/images/dc-gn-002-image-14.png)
 
 *Figure 26 - View Templates List*
@@ -664,6 +690,7 @@ The Quantity Take-off (QTO) process facilitates the estimation of material quant
 The Design team must assign the correct P&D Spec Number to each 3D model element so that these elements are included in the QTO schedules and automatic QTO calculations are generated. To accomplish this, verify that the “UniformatClassification.txt” file is loaded in Revit by navigating to Manage > Additional Setting > Assembly Code.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
+
 ![Assembly Code Settings with UniformatClassifications.txt loaded](../assets/images/dc-gn-002-image-32.png)
 
 *Figure 27 - Assembly Code Settings with UniformatClassifications.txt loaded*
