@@ -167,6 +167,10 @@ BIM Revit Templates include System Families, such as Columns, Beams, Walls, Roof
 
 The Content folder comprises 2D detail components, tags, symbols, and 3D families. The library contains multi-discipline families designed to streamline the modeling process and enhance the efficiency of drawing development.
 
+__AUTODESK CONTENT CATALOG:__
+
+Project teams developing their projects in the P&D Autodesk Forma hub have access to the Autodesk Content Catalog. The Content Catalog contains all P&D-approved families that are not included in the default Revit library. Check the Content Catalog before creating a new family.
+
 All project sheets must use the provided Title-Sheet and Contract Border from the shared content. Official P&D Title Sheets and Contract images are included. Available sizes: 22x34; 24x36; 30x42.
 
 ![](../assets/images/dc-gn-002-image-27.png)!
