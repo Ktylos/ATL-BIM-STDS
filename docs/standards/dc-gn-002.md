@@ -114,17 +114,35 @@ We recommend reviewing all files included in the P&D BIM package to thoroughly u
 
 ### 4.1 BIM Execution Plan (BEP)
 
-At the start of a BIM project, submit a BEP to the P&D BIM Engineer. Refer to Appendix B for BEP Template. Once approved, the BEP will serve as the comprehensive guide on BIM requirements, methodologies, and workflow for the project. 
+At the start of the project, submit a BEP to the P&D BIM Engineer. Refer to Appendix B for the BEP Template. Once approved, the BEP will serve as the comprehensive guide on BIM requirements, methodologies, and workflow for the project.
 
 [ATL-STD-XX-TP-GN-001](../template-docs/tp-gn-001.md)
 
-The BEP is a "living" document, updated throughout the project lifecycle. Revisions may occur due to:
+The approved BEP is not a one-time submittal. It must be kept current from the start of design through construction and closeout.
 
-- Staff changes affecting BIM processes or deliverables.
+__Responsibility:__ The Contractor/Consultant's BIM Project Coordinator (see Section 2.1) owns the BEP and is responsible for maintaining it. The P&D BIM Engineer reviews and approves each revision.
+
+__Scheduled review:__ The BIM Project Coordinator must review the BEP at each milestone submission and at the transition from design to construction. If no changes are needed, confirm this in writing to the P&D BIM Engineer with the submission.
+
+__Required updates:__ Submit a revised BEP to the P&D BIM Engineer within 10 business days of any of the following:
+
+- Staff changes affecting BIM roles, processes, or deliverables
 - Process changes
 - Requirement changes
-- BIM Schedule changes (e.g., Coordination sign-off dates, LOD milestones)
-- Any other requirement specified by  P&D.
+- BIM schedule changes (e.g., coordination sign-off dates, LOD milestones)
+- Any other change requested by P&D
+
+__Revision record:__ Each revision must show a revision number, date, and a short summary of what changed, recorded in the BEP Revision History. Submit each revision with the changes marked up against the last approved version. Until a revision is approved, the last approved BEP remains in effect.
+
+__Precedence:__ The BEP defines how the project team will meet P&D requirements. It cannot reduce them. The contract, the project scope, and these BIM Standards take precedence over the BEP. Where the BEP conflicts with any of them, the more stringent requirement applies.
+
+__Deviations:__ Any revision that removes or lowers a requirement, such as a deliverable, LOD, BIM use, coordination meeting, or submission frequency, is a deviation. Each deviation must be:
+
+- Listed in the BEP Deviations table with the reason and its impact on the project
+- Approved in writing by both the P&D BIM Engineer and the P&D Project Manager
+- Processed as a contract change where it affects contracted scope
+
+Approval of a BEP revision does not waive any requirement unless that requirement is listed as an approved deviation. At each milestone, P&D will check submissions against the contract scope, these BIM Standards, and the approved deviations, not only against the current BEP.
 
 ### 4.2 Revit Templates
 
