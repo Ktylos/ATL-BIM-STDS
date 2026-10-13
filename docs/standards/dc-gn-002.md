@@ -58,7 +58,7 @@ P&D’s strategic objectives for BIM implementation include:
 2. __Promoting interoperability__ and structured data exchange to ensure consistency across all phases and disciplines.
 3. __Increasing project efficiency__ through clash detection, coordination, and cost tracking (5D).
 4. __Ensuring long-term asset value__ through the delivery of clean, validated, and structured model data for seamless integration into P&D's Asset Management (AM) and facilities systems.
-5. __Driving innovation__ by encouraging the use of emerging technologies such as digital twins, laser scanning, and real-time collaboration platforms (ACC).
+5. __Driving innovation__ by encouraging the use of emerging technologies such as digital twins, laser scanning, and real-time collaboration platforms such as Autodesk Forma (previously known as ACC or Autodesk Construction Cloud).
 6. __Minimizing operational disruption__ through 4D construction sequencing and phasing simulations that keep active terminals, concourses, and airside operations running during construction.
 7. __Reducing risk and rework__ by resolving design conflicts virtually, which cuts RFIs, change orders, and field rework.
 8. __Improving decision making__ through 3D visualization and model based design reviews that help stakeholders, including non-technical ones, understand design intent early.
@@ -106,7 +106,7 @@ __Site Model:__ digital 3D representation of the physical characteristics of a p
 
 __Laser Scanning:__ This instrument offers comprehensive support at each stage of the renovation process, facilitating the development of current conditions and serving as a reference to ensure that the construction aligns with the as-built model.
 
-__Design-Construction-As Built Models:__ When BIM is adopted throughout the lifecycle of a project, the design phase will produce a model that serves as a reference for the development of the construction model. Upon completion of construction, this model can then be updated with precise data to serve two purposes: first, to contribute to the federated model in the master ACC environment; second, to be utilized for maintenance purposes.
+__Design-Construction-As Built Models:__ When BIM is adopted throughout the lifecycle of a project, the design phase will produce a model that serves as a reference for the development of the construction model. Upon completion of construction, this model can then be updated with precise data to serve two purposes: first, to contribute to the federated model in the master Autodesk Forma environment; second, to be utilized for maintenance purposes.
 
 ## 4 BIM DOCUMENTS AND SUPPORT FILES
 
@@ -203,11 +203,11 @@ When creating Revit content, adhere to these guidelines:
 
 To work in a collaborative environment, P&D requires the use of a platform where the project is developed and shared with all parties participating in the project.
 
-### 5.1 Autodesk Construction Cloud
+### 5.1 Autodesk Forma
 
-Under the supervision of the P&D BIM Group, BIM files will be hosted on Autodesk Construction Cloud for the duration of the project. A designated project site or folder will be established within the P&D Autodesk Construction Cloud environment by the BIM Group.
+Under the supervision of the P&D BIM Group, BIM files will be hosted on Autodesk Forma for the duration of the project. A designated project site or folder will be established within the P&D Autodesk Forma environment by the BIM Group.
 
-All official BIM submissions shall be processed through ACC or another approved platform. All active BIM file types (.rvt, .dwg, .nwc, etc.) are to remain within the Autodesk Construction Cloud environment.
+All official BIM submissions shall be processed through Autodesk Forma or another approved platform. All active BIM file types (.rvt, .dwg, .nwc, etc.) are to remain within the Autodesk Forma environment.
 
 ### 5.2 Folder Structure  
 
@@ -235,7 +235,7 @@ The current version utilized for all Autodesk products is 2026.
 | CATEGORY | SOFTWARES |
 |----------|------------|
 | Data Authoring | Autodesk Revit, Autodesk Civil 3D, Autodesk AutoCAD |
-| Data Exchange | Autodesk Construction Cloud |
+| Data Exchange | Autodesk Forma |
 | Data Analysis | Autodesk Navisworks Manage, Primavera P6 |
 | Data Visualization | Microsoft Power BI |
 | Asset Information Management | Autodesk Tandem, Cityworks |
@@ -338,7 +338,7 @@ __Deliverables:__
 
 - BIM Execution Plan (BEP)
 - Coordination schedule and specified software environments
-- ACC folder structures with defined permission protocols
+- Autodesk Forma folder structures with defined permission protocols
 - Shared parameters and standardized project templates
 - Linking strategies and version control guidelines
 
@@ -350,16 +350,16 @@ __Frequency:__ Biweekly (or weekly during critical phases)
 
 __Agenda:__
 
-- Evaluation of recent ACC model uploads
+- Evaluation of recent Autodesk Forma model uploads
 - Review of open and overdue Model Coordination issues
 - Walk-through of coordination topics by trade
 - Schedule status check and upcoming milestone planning
 
 __Tools:__
 
-- ACC Model Coordination module
+- Autodesk Forma Model Coordination module
 - Issues module (organized by trade and location)
-- ACC Meetings module (for minutes and action items)
+- Autodesk Forma Meetings module (for minutes and action items)
 
 ### 9.4 Clash Detection Meetings
 
@@ -369,9 +369,9 @@ __Frequency:__ As required, dictated by project phase and model update intervals
 
 __Workflow:__
 
-- Utilize ACC Model Coordination module for initial clash identification
+- Utilize Autodesk Forma Model Coordination module for initial clash identification
 - Assign issues to respective trade leads with clearly defined responsibilities and deadlines
-- Monitor progress via "Assigned to Me" and "Due Soon" filters in ACC
+- Monitor progress via "Assigned to Me" and "Due Soon" filters in Autodesk Forma
 
 __Outcome:__
 
@@ -389,11 +389,11 @@ __Deliverables:__
 - Exported summary report of clash resolutions
 - Confirmed integration plan for as-built models where applicable
 
-### 9.6 Use of ACC for Meeting Follow-up
+### 9.6 Use of Autodesk Forma for Meeting Follow-up
 
-All meeting documentation—including agendas, attendance records, and action items—must be uploaded to the ACC Meetings Module within 24 hours post-meeting.
+All meeting documentation—including agendas, attendance records, and action items—must be uploaded to the Autodesk Forma Meetings Module within 24 hours post-meeting.
 
-Issue tracking, clash resolution, and version control processes are to be managed exclusively within designated ACC tools:
+Issue tracking, clash resolution, and version control processes are to be managed exclusively within designated Autodesk Forma tools:
 
 - __Model Coordination:__ For clash detection, issue tracking, and spatial filtering
 - __Issues:__ To manage task assignments, comments, approvals, and records
@@ -605,7 +605,7 @@ The Design team must assign the correct P&D Spec Number to each 3D model element
 
 ### 10.7 BIM Coordination Model 
 
-The ATL BIM Manager coordinates and integrates processes into the BIM execution plan for projects with external consultants. The BIM Coordinator handles clash detection, creating a Clash Report one month before 100% submissions using Model Coordination withing ACC or Autodesk Navisworks. Task Leaders must generate Navisworks files (.nwc) from their Revit Models. After testing clashes, the BIM Coordinator shares the Clash Report with the P&D BIM Manager.
+The ATL BIM Manager coordinates and integrates processes into the BIM execution plan for projects with external consultants. The BIM Coordinator handles clash detection, creating a Clash Report one month before 100% submissions using Model Coordination withing Autodesk Forma or Autodesk Navisworks. Task Leaders must generate Navisworks files (.nwc) from their Revit Models. After testing clashes, the BIM Coordinator shares the Clash Report with the P&D BIM Manager.
 
 #### 10.7.1 Inter-discipline Color Scheme
 
@@ -670,7 +670,7 @@ Each Discipline’s Leader will perform single-discipline clash detection using 
 
 #### 10.7.6 Cross-Discipline Clash Detection
 
-The BIM Coordinator will conduct cross-disciplinary clash detection sessions as required by the project, usually defined in the BEP (BIM Execution Plan). Design Projects require at least two sessions: one a month before the 50% progress submission and one a month before the final 100% submission. The BIM Coordinator will use Autodesk Navisworks or ACC for these sessions. Each Discipline Leader is responsible for creating a Navisworks file from their Revit Models (.nwc) or preparing the ACC views for coordination.
+The BIM Coordinator will conduct cross-disciplinary clash detection sessions as required by the project, usually defined in the BEP (BIM Execution Plan). Design Projects require at least two sessions: one a month before the 50% progress submission and one a month before the final 100% submission. The BIM Coordinator will use Autodesk Navisworks or Autodesk Forma for these sessions. Each Discipline Leader is responsible for creating a Navisworks file from their Revit Models (.nwc) or preparing the Autodesk Forma views for coordination.
 
 #### 10.7.7 Navisworks Clash Report
 
@@ -700,7 +700,7 @@ All project submittals must be submitted and reviewed electronically, following 
 
 Each submittal must include the source electronic data, BIM models, and drawing files, as well as all electronic files and data referenced or used in preparing those files. This requirement covers CAD and Revit files (DWG and RVT) along with PDFs, images, point clouds, Excel/CSV files, databases, and any other material needed to reproduce the plans and specifications from the original files.
 
-Electronic files and source data are to be submitted through Autodesk Construction Cloud. Project teams will receive access to Autodesk Construction Cloud at the project’s outset or by submitting a request to the P&D BIM Program Team.
+Electronic files and source data are to be submitted through Autodesk Forma. Project teams will receive access to Autodesk Forma at the project’s outset or by submitting a request to the P&D BIM Program Team.
 
 Reviews can be conducted at the reviewer’s desktop or in the P&D Review Room. External reviewers can also work remotely. To access the system, visit http://www.sagesgov.com/atlnext-ga. External users need to register on the website; internal users should contact the Review Coordinator for account setup.
 
@@ -717,22 +717,22 @@ Design review submittals are to be prepared and provided for the following revie
 
 |PHASE|PERCERNTAGE|REVIEW|SUBMISSION|
 |-----|-----------|------|----------|
-|Schematic Design|30%|Naming Convention|Appropriate Templates, Coordinate system, Model breakdown, Levels and Grids|ACC|
-|Design Development|60%| + LOD, Shared Parameters, Phases Setup|ACC|
-|Construction Documents|90%| +Room / Doors Naming, + Asset Data, + Coordinated model|ACC|
-|Issue for Construction|100%| +Set of Drawings, + Design Asset Data|ACC, Hard Copy|
-|As-Built|Final| +Construction Asset Data|ACC, and as below|
+|Schematic Design|30%|Naming Convention|Appropriate Templates, Coordinate system, Model breakdown, Levels and Grids|Autodesk Forma|
+|Design Development|60%| + LOD, Shared Parameters, Phases Setup|Autodesk Forma|
+|Construction Documents|90%| +Room / Doors Naming, + Asset Data, + Coordinated model|Autodesk Forma|
+|Issue for Construction|100%| +Set of Drawings, + Design Asset Data|Autodesk Forma, Hard Copy|
+|As-Built|Final| +Construction Asset Data|Autodesk Forma, and as below|
 
 Exact handover requirements can vary from project to project but as a rule this is the minimum requirement expected from final submittals:
 
 - Issue for Construction (Final Conformed/Permitting): 	__Drawings sealed by a State of Georgia Architect/Engineer of Record are required for this submittal.__
 
 1. Six (6) full-size sets of plans and specifications are needed for P&D/AFD stamp acceptance.
-2. Submit all final plans, specifications, and related electronic files (including CAD, Revit, PDFs, images, point clouds, Excel/CSV, and databases) via upload to Autodesk Construction Cloud. Include any data needed to reproduce the plans and specifications from source files.
+2. Submit all final plans, specifications, and related electronic files (including CAD, Revit, PDFs, images, point clouds, Excel/CSV, and databases) via upload to Autodesk Forma. Include any data needed to reproduce the plans and specifications from source files.
 3. P&D’s Review Coordinator will coordinate the review and stamp acceptance of the plans by the P&D’s Director of Architecture/Engineering and AFD.
 4. P&D’s Review Coordinator will coordinate the preparation of the Request for Permit letter by P&D’s Director of Architecture/Engineering. 
 
-### 11.2 ACC Model Transmittal Process
+### 11.2 Autodesk Forma Model Transmittal Process
 
 This section delineates the standardized protocol for transmitting Revit models as part of formal submissions to stakeholders at Hartsfield-Jackson Atlanta International Airport (ATL). The step-by-step procedure outlined below is designed to ensure data integrity, clear coordination, and comprehensive audit traceability throughout the model delivery process.
 
@@ -763,17 +763,17 @@ Within the eTransmit dialog, ensure the following options are selected:
 - Remove unused families and purge, provided this aligns with QA/QC recommendations.
 - Upgrade the model to the current version, if necessary.
 
-__Step 4: Submission via ACC Transmittal Workflow:__ Upload the finalized ZIP package to the designated Autodesk Construction Cloud (ACC) folder specified in the BEP (Section 11).
+__Step 4: Submission via Autodesk Forma Transmittal Workflow:__ Upload the finalized ZIP package to the designated Autodesk Forma folder specified in the BEP (Section 11).
 
-Initiate a formal transmittal in ACC using the "Transmittals" module:
+Initiate a formal transmittal in Autodesk Forma using the "Transmittals" module:
 
 - Add relevant recipients (including P&D reviewers and consultants).
 - Apply consistent naming conventions: \[Transmittal *Milestone*\]\_\[Date\].
 - Provide a summary of contents and the intended purpose of the model.
 - Attach the zipped eTransmit package.
-- Dispatch the transmittal and record the ACC transmittal ID for project documentation.
+- Dispatch the transmittal and record the Autodesk Forma transmittal ID for project documentation.
 
-The ACC platform will automatically log the submission’s date, time, and recipient details.
+The Autodesk Forma platform will automatically log the submission’s date, time, and recipient details.
 
 __Submission Timing:__ Revit model transmittals must follow project schedule milestones and BEP submission dates. Submissions outside these deadlines require written approval from P&D BIM Management.
 

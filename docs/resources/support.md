@@ -34,9 +34,9 @@ Most questions are answered in the documentation:
 
 For technical support or questions please follow the guidelines in our [Contributing](https://github.com/Ktylos/ATL-BIM-STDS/blob/main/CONTRIBUTING.md) section on GitHub.
 
-### 3. Request a New ACC Project
+### 3. Request a New Autodesk Forma Project
 
-Need a new Autodesk Construction Cloud project set up for your team? Submit a request via the [Request ACC Project](request-acc-project.md) form.
+Need a new Autodesk Forma (previously known as ACC or Autodesk Construction Cloud) project set up for your team? Submit a request via the [Request Autodesk Forma Project](request-acc-project.md) form.
 
 ---
 

@@ -80,7 +80,7 @@ Creates discipline-specific Revit models that are accurate, coordinated, and com
 - Assist with setup and maintenance of Revit models, including linking, worksharing, and template usage.
 **Qualifications:**
  
-- Revit and ACC/BIM360 proficiency.
+- Revit and Autodesk Forma (previously known as ACC or Autodesk Construction Cloud) or BIM 360 proficiency.
 - Understanding of discipline-specific design requirements and workflows.
 - Familiarity with ATL templates, families, and shared parameters.
 ### 3.4 Engineers (Discipline Engineers)
@@ -105,7 +105,7 @@ Supports project delivery through consistent, responsible Revit use.
 **Key Responsibilities:**
  
 - Follow all approved BIM and Revit standards, including templates, content libraries, and file handling rules.
-- Collaborate using ACC (e.g., correct uploading, versioning, and permissions).
+- Collaborate using Autodesk Forma (e.g., correct uploading, versioning, and permissions).
 - Use shared coordinates and linking protocols as defined by BIM leads.
 - Seek support from BIM Coordinators and/or BIM Leads when procedural or technical issues arise.
 - Participate in reviews, quality checks, and model coordinator workflows as needed.
@@ -119,7 +119,7 @@ This procedure defines how all project teams create and configure Revit project 
  
 ### 4.1 Pre-Requisites
  
-- **Software/Services:** Use the approved Revit and ACC/Desktop Connector versions communicated for the program.
+- **Software/Services:** Use the approved Revit and Autodesk Forma and Desktop Connector versions communicated for the program.
 
 !!!note
     Revit files are not backward compatible. A model created or saved in a newer Revit version (e.g., 2026) cannot be opened in an older version such as Revit 2025. All project teams must verify and align to the required Revit version prior to starting any modeling activities.
@@ -129,7 +129,7 @@ This procedure defines how all project teams create and configure Revit project 
 | Revit 2026 | 26.4.1 |
 | Desktop Connector | 17.1.0.16 |
  
-- **Access:** Confirm project access to the ACC site and to the Standards/Templates folders.
+- **Access:** Confirm project access to the Autodesk Forma site and to the Standards/Templates folders.
 - **Standards:** Please refer to the BIM Standards document.
 - **Plugins:** Discipline teams are allowed to use plugins, add-ins, or scripts that will help them create the models at their own risk.
 ### 4.2 Using the Revit Templates (Mandatory)
@@ -162,7 +162,7 @@ Project templates come preloaded with title blocks, view templates, parameters, 
     </div>
 
 
-4. **Collaborate in the Cloud:** Use **Collaborate > In Cloud** to publish to the designated ACC project folder.
+4. **Collaborate in the Cloud:** Use **Collaborate > In Cloud** to publish to the designated Autodesk Forma project folder.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
     ![Enabling Worksharing](../assets/images/dc-gn-004-image-04.png)
 
@@ -258,7 +258,7 @@ All Revit model files should be workshared to Autodesk Forma. This ensures the B
 
 2. In the **Collaborate** tab, select **Collaborate in Cloud**. ([4.2.1] (#Procedure - Create the Project from template)
 3. Select **Share to Cloud** — not on a local network.
-4. Select the project's ACC site and the folder location for the file.
+4. Select the project's Autodesk Forma site and the folder location for the file.
 5. Click **Save**.
     <div style="text-align: center; margin-bottom: 24px;" markdown="1">
     ![Save to Cloud](../assets/images/dc-gn-004-image-08.png)
@@ -396,7 +396,7 @@ To ensure alignment, Copy/Monitor can be used to bring levels and grids into dis
  
 ### 5.7 Linked Models
  
-Linked models are used to coordinate multiple disciplines while keeping each team's work separate and manageable. At the start of each project, each team must link the master Architectural model into their file, followed by Structural and MEP models as they become available. All links must be inserted from the approved shared ACC folder, placed on their dedicated workset, and use shared coordinates.
+Linked models are used to coordinate multiple disciplines while keeping each team's work separate and manageable. At the start of each project, each team must link the master Architectural model into their file, followed by Structural and MEP models as they become available. All links must be inserted from the approved shared Autodesk Forma folder, placed on their dedicated workset, and use shared coordinates.
  
 !!! warning
     Teams must never link models from local paths or edit coordinates on their own. When updates occur, links must be reloaded, checked for alignment, and verified through coordination review to ensure consistent spatial accuracy across the project. 
@@ -410,7 +410,7 @@ Linked models are used to coordinate multiple disciplines while keeping each tea
  
 1. Go to **Links**.
 2. Select the link from the **Shared** folder for the discipline you wish to link.
-3. Navigate to **Insert → Link Revit** and select the required model from the approved ACC Shared folder.
+3. Navigate to **Insert → Link Revit** and select the required model from the approved Autodesk Forma Shared folder.
 4. Link the model through shared coordinates once the BIM Coordinator establishes the coordinate system.
 5. Place all links on their designated **LINKS** workset before pinning them.
 6. Reload links only after models are officially published to the Shared folder — not from local or outdated sources.
@@ -526,7 +526,7 @@ This section outlines the standard procedure for generating a clean and coordina
         3. No missing CAD, point cloud, or image references
     - Confirm file paths are stored locally within the package
 6. Deliver the Package
-    - Upload the files to Autodesk Forma to the assigned ACC site and select the central model.
+    - Upload the files to the assigned Autodesk Forma site and select the central model.
     - Create a transmital indicating which files are to be reviewed and which files are just for reference.
 
 <div style="text-align: center; margin-bottom: 24px;" markdown="1">
@@ -588,7 +588,7 @@ Model performance must be maintained throughout the project to ensure stability,
  
 ### 7.2 Publishing Sets
  
-A **publish set** in Revit is a saved selection of sheets and views intended to be published to ACC for review. It helps control what gets shared so the team doesn't accidentally publish the full model, miss sheets, or share working views that were not meant for coordination. Once created, the same selection can be reused each time the model is published, keeping the process consistent.
+A **publish set** in Revit is a saved selection of sheets and views intended to be published to Autodesk Forma for review. It helps control what gets shared so the team doesn't accidentally publish the full model, miss sheets, or share working views that were not meant for coordination. Once created, the same selection can be reused each time the model is published, keeping the process consistent.
  
 **Procedure:**
  

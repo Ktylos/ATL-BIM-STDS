@@ -111,11 +111,11 @@ Where:
 
 ATL-STD-XX-DC-GN-001.doc     Information Structure, Naming, and Format Standard
 
-### 3.3 ACC Projects Naming Standard
+### 3.3 Autodesk Forma Projects Naming Standard
 
-Projects created within Autodesk Construction Cloud (ACC) shall follow a consistent and structured naming convention to ensure clarity, searchability, and alignment with ATL BIM Standards and ISO-based information management practices.
+Projects created within Autodesk Forma (previously known as ACC or Autodesk Construction Cloud) shall follow a consistent and structured naming convention to ensure clarity, searchability, and alignment with ATL BIM Standards and ISO-based information management practices.
 
-ACC Project Names must use the following format:
+Autodesk Forma Project Names must use the following format:
 
 __Concourse-ATL-ProjectName__
 

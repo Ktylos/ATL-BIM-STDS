@@ -32,9 +32,9 @@ These standards ensure consistency, quality, and efficiency across all project d
 
     [:octicons-arrow-right-24: Open an Issue](https://github.com/Ktylos/ATL-BIM-STDS/issues/new/choose)
 
-- :material-cloud-upload-outline:{ .lg .middle } **Request ACC Project**
+- :material-cloud-upload-outline:{ .lg .middle } **Request Autodesk Forma Project**
 
-    Request a new Autodesk Construction Cloud project
+    Request a new Autodesk Forma (previously known as ACC or Autodesk Construction Cloud) project
 
     [:octicons-arrow-right-24: Request a Project](resources/request-acc-project.md)
 
