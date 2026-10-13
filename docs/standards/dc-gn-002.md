@@ -59,6 +59,16 @@ P&D’s strategic objectives for BIM implementation include:
 3. __Increasing project efficiency__ through clash detection, coordination, and cost tracking (5D).
 4. __Ensuring long-term asset value__ through the delivery of clean, validated, and structured model data for seamless integration into P&D's Asset Management (AM) and facilities systems.
 5. __Driving innovation__ by encouraging the use of emerging technologies such as digital twins, laser scanning, and real-time collaboration platforms (ACC).
+6. __Minimizing operational disruption__ through 4D construction sequencing and phasing simulations that keep active terminals, concourses, and airside operations running during construction.
+7. __Reducing risk and rework__ by resolving design conflicts virtually, which cuts RFIs, change orders, and field rework.
+8. __Improving decision making__ through 3D visualization and model based design reviews that help stakeholders, including non-technical ones, understand design intent early.
+9. __Improving construction safety__ by using models to plan site logistics, crane placement, and hazard identification before work begins.
+10. __Capturing accurate existing conditions__ through reality capture and verified as-built models, so future projects start from reliable baseline data.
+11. __Integrating BIM with GIS__ to connect building-level data with campus-wide infraestructure, utilities, and airfield systems.
+12. __Supporting sustainability goasl__ through energy, daylighting, and embodied carbon analysis that informs design decisions and long-term operating costs.
+13. __Stardardizing deliverables and quality__ through consistent modeling standards, naming conventions, LOD/LOIN requirements, and automated model validation across all consultants and contractors.
+14. __Aligning with industry best practice__ by adopting ISO 19650 information managament principles and the National BIM Standard (NBIMS-US).
+15. __Building organizational capability__ through training, documented workflows, and ongoing measurement of BIM maturity across P&D and its partners.
 
 ## 2 BIM INTEGRATION
 
