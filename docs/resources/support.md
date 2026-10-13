@@ -56,7 +56,7 @@ A: Yes, all consultants working on ATL P&D projects must follow these standards.
 ### Technical Questions
 
 **Q: What version of Revit should I use?**  
-A: See [DC-GN-003 Revit Project Setup](../standards/dc-gn-003.md) for supported Revit versions.
+A: See [DC-GN-004 Revit SOP](../standards/dc-gn-004.md), Section 4.1 Pre-Requisites, for supported Revit versions.
 
 **Q: Where do I find the Revit template?**  
 A: Revit templates are available to project teams at project scoping/kickoff.

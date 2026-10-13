@@ -248,7 +248,7 @@ External parties, such as consultants and contractors, are permitted temporary u
 
 ## 7 COORDINATE SYSTEMS 
 
-The coordinate system is delineated by a basemap with the “Airport Grid” custom coordinates referred to as ATL02. Please adhere to the ["Revit Project Setup"](../standards/dc-gn-003.md) document, utilizing our template and the Concourse file in Revit to acquire these coordinates for your project. To verify their accuracy, export a 3D model and import it into the Civil 3D basemap to confirm the location.
+The coordinate system is delineated by a basemap with the “Airport Grid” custom coordinates referred to as ATL02. Please adhere to [DC-GN-004 Revit SOP](dc-gn-004.md), Section 5.3 Linking in a Site Model & Acquiring Coordinates, utilizing our template and the Concourse file in Revit to acquire these coordinates for your project. To verify their accuracy, export a 3D model and import it into the Civil 3D basemap to confirm the location.
 
 ![A screenshot of a computer](../assets/images/dc-gn-002-image-05.png)
 

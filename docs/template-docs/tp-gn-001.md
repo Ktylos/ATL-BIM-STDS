@@ -88,7 +88,8 @@ BIM Execution Plan Submission|Submit and approve the BIM Execution Plan outlinin
 
 ## 10 Modeling Standards
 
-- File Naming Convention, Revit Templates, Coordinate System, Model Setup, and Object Naming documented in the [Revit Project Setup](../standards/dc-gn-003.md) Standard
+- File Naming Convention documented in the [DC-GN-001 File Naming](../standards/dc-gn-001.md) Standard
+- Revit Templates, Coordinate System, Model Setup, and Object Naming documented in the [DC-GN-004 Revit SOP](../standards/dc-gn-004.md)
 
 ## 11 Model Exchange and Collaboration
 
