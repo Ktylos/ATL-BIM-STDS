@@ -11,7 +11,7 @@
 ## 2 Purpose
 The BIM Execution Plan (BEP) details how the BIM Group, Design Division, and Consultants will collaborate for effective BIM use. It specifies processes for information exchange, coordination, and collaborative design, while highlighting BIM’s value in data reuse throughout the project lifecycle. The BEP clarifies workflows for compliance and consistent digital delivery, ensuring reliable BIM data during each Stage. 
 
-__Refer to the ATL BIM Standard for unaddressed issues; this BEP notes any project-specific changes.__
+__Refer to the ATL BIM Standard for unaddressed issues. This BEP cannot reduce the requirements of the contract, the project scope, or the ATL BIM Standards. Any reduction must be listed and approved in Section 15, Deviations from P&D Requirements.__
 
 ## 3 Project Overview
 
@@ -152,4 +152,20 @@ __Autodesk Construction Cloud (ACC) folder for Milestone Submissions__
 - Navisworks Clash Reports: Distributed weekly
 - Design Review Protocol: Based on Design Collaboration Packages in ACC
 - Validation Tool Autodesk Doc
+
+## 15 Deviations from P&D Requirements
+
+List every requirement this BEP removes or lowers compared with the contract, the project scope, or the ATL BIM Standards (e.g., a deliverable, LOD, BIM use, coordination meeting, or submission frequency). A deviation is valid only when approved in writing by both the P&D BIM Engineer and the P&D Project Manager. Any requirement not listed here as approved remains in full effect.
+
+|No.|Requirement and Source|Proposed Change|Reason|Impact (Scope, Cost, Schedule)|Approved By (BIM Engineer / PM)|Date|
+|---|----------------------|---------------|------|------------------------------|-------------------------------|----|
+|_1_|_LOD 350 for MEP at 90% (IDP)_|_LOD 300_|_[Insert here]_|_[Insert here]_|_[Insert here]_|_[Insert here]_|
+
+## 16 Revision History
+
+Submit each revision with changes marked up against the last approved version.
+
+|Revision|Date|Summary of Changes|Deviations Added (Section 15 No.)|Prepared By|Approved By|
+|--------|----|------------------|---------------------------------|-----------|-----------|
+|_0_|_[Insert here]_|_Initial submission_|_None_|_[Insert here]_|_[Insert here]_|
 
