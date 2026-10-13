@@ -148,7 +148,15 @@ Approval of a BEP revision does not waive any requirement unless that requiremen
 
 P&D offers Revit templates designed to ensure consistency in the development of Revit models. These templates include a variety of predefined elements, such as supporting legends, an initial view, a customized project browser, shared parameters, loaded families, view templates, and set parameters for units, fill patterns, line styles, line weights, scales, text, and dimensions, among others.
 
- ![A document with text on it](../assets/images/dc-gn-002-image-15.png)
+The P&D Revit templates are a starting point, not a complete project setup. They do not contain every family, parameter, view, or sheet a project will need. The project team is responsible for adding the content its project requires. Any added content must follow the requirements in [DC-GN-004 Revit SOP](dc-gn-004.md), Section 4.2 Using the Revit Templates.
+
+Project teams may rename the P&D templates and create their own derived templates from them to develop further. Save these team templates in the team's assigned Autodesk Forma site.
+
+<div style="text-align: center; margin-bottom: 24px;" markdown="1">
+![Revit Template Starting View](../assets/images/dc-gn-002-image-15.png)
+
+*Figure 5 - Revit Template Starting View*
+</div>
 
 
 ### 4.3 Revit Library
