@@ -21,13 +21,21 @@ def define_env(env):
             'description': 'Best practices for creating accurate, coordinated, and efficient BIM models.',
             'url': 'standards/dc-gn-002/'
         },
-        'GN-003': {
-            'title': 'Revit Project Setup with Custom Coordinates',
-            'code': 'ATL-STD-XX-DC-GN-003',
+        'GN-004': {
+            'title': 'Revit SOP',
+            'code': 'ATL-STD-XX-DC-GN-004',
             'version': '1.0',
-            'date': 'February 2026',
-            'description': 'Workflows and procedures for Revit project setup with custom coordinates.',
-            'url': 'standards/dc-gn-003/'
+            'date': 'March 2026',
+            'description': 'Standard operating procedure for Revit project setup, modeling, coordination, and deliverables.',
+            'url': 'standards/dc-gn-004/'
+        },
+        'GN-005': {
+            'title': 'Civil 3D SOP',
+            'code': 'ATL-STD-XX-DC-GN-005',
+            'version': '0.1',
+            'date': 'November 2026',
+            'description': 'Standard operating procedure for Civil 3D and AutoCAD setup, modeling, plan production, and deliverables per the ATL CAD Standards.',
+            'url': 'standards/dc-gn-005/'
         }
     }
 

@@ -12,7 +12,8 @@ These standards ensure consistency, quality, and efficiency across all project d
 |----------|-------|-------------|
 | [{{ standards['GN-001'].code }}]({{ standards['GN-001'].url }}) | {{ standards['GN-001'].title }} | {{ standards['GN-001'].description }} |
 | [{{ standards['GN-002'].code }}]({{ standards['GN-002'].url }}) | {{ standards['GN-002'].title }} | {{ standards['GN-002'].description }} |
-| [{{ standards['GN-003'].code }}]({{ standards['GN-003'].url }}) | {{ standards['GN-003'].title }} | {{ standards['GN-003'].description }} |
+| [{{ standards['GN-004'].code }}]({{ standards['GN-004'].url }}) | {{ standards['GN-004'].title }} | {{ standards['GN-004'].description }} |
+| [{{ standards['GN-005'].code }}]({{ standards['GN-005'].url }}) | {{ standards['GN-005'].title }} | {{ standards['GN-005'].description }} |
 
 ---
 
