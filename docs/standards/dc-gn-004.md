@@ -2,8 +2,8 @@
  
 !!! info "Document Information"
     **Standard ID**: DC-GN-004  
-    **Version**: 1.0  
-    **Last Updated**: 2026-03-27  
+    **Version**: 1.1  
+    **Last Updated**: 2026-11-09  
     **Status**: Active
  
 ---
@@ -508,6 +508,7 @@ Geometry within the model shall be developed to support design intent, coordinat
 </div>
 
 - Replace complex, modeled details with Drafting Views.
+- To convert standard CAD details into Revit, follow [10.1 Converting Standard CAD Details to Revit Drafting Views](#101-converting-standard-cad-details-to-revit-drafting-views).
 
 **Etransmit Process:**
 
@@ -746,7 +747,104 @@ Please refer to the BIM Standards for the LOD definition and the specific requir
  
 ## 10 VIEW CREATION AND DOCUMENTATION
  
-*[To be developed]*
+### 10.1 Converting Standard CAD Details to Revit Drafting Views
+
+Rebuild each standard CAD detail once as a native Revit drafting view. Then publish it to the Autodesk Content Catalog so every project inserts it instead of redrawing it.
+
+**Scope:**
+
+This workflow covers 2D standard details that repeat from project to project, such as typical sections, wall and roof assemblies, door and window head/jamb/sill details, curbs, slabs, joints, and signage mounts.
+
+Two rules apply throughout:
+
+- **Do not explode the CAD.** Exploding brings in hundreds of line styles, text types, and fill patterns. It bloats the file and breaks graphic standards (see [6.2 Geometry Standards](#62-geometry-standards)).
+- **Do not use a Revit model as the background.** Standard details are not tied to a model location. Draw them in drafting views with detail components, not as callouts over model geometry.
+
+!!! note
+    Project-specific details that must stay live with the model are out of scope. For those, use callouts with detail items over the model.
+
+#### 10.1.1 Guiding Principles
+
+- **CAD is a tracing reference, never the deliverable.** Link it temporarily, trace over it, then remove it.
+- **Build once, reuse everywhere.** Publish each standard detail once to the Content Catalog and insert it into projects. Do not redraw it.
+- **Use intelligent elements before lines.** Use detail components, repeating details, and filled regions first. Plain detail lines are the last resort.
+- **Use template styles only.** Use the line styles, fill patterns, text types, and dimension types already in the ATL template. Do not create new ones for a detail.
+- **Improve, don't copy.** Fix errors, outdated references, and inconsistent annotation while tracing. The Revit version becomes the new standard.
+- **Draw at full size, annotate for the scale.** Geometry is real-world size. Text and tags are sized by the view scale.
+
+#### 10.1.2 Procedure
+
+1. **Triage the request.**
+    - Search the Content Catalog first, by name or tag. If the detail exists, click **Insert** from the Content Catalog panel in Revit and stop here.
+    - If the detail is new, confirm it is truly standard (used on 2 or more projects). Draw one-off details in the project and do not publish them to the Content Catalog.
+2. **Clean the DWG in AutoCAD.** Work on a copy, not the original.
+    - Run **PURGE** and **AUDIT**, delete everything outside the detail, and set the units to match.
+    - Move the detail near 0,0 so it lands close to the Revit origin.
+3. **Create the drafting view.**
+    - Go to **View > Drafting View**, set the scale (for example, 1 1/2" = 1'-0"), and apply the detail view template.
+    - Name the view per the convention in [10.1.3](#1013-storing-details-in-the-autodesk-content-catalog).
+4. **Link the CAD into that view only.**
+    - Go to **Insert > Link CAD**. Check **Current view only**, set colors to **Black and White**, set the correct import units, and set positioning to **Auto - Origin to Origin**.
+    - Link rather than import, so nothing gets embedded. Pin the link and set it to halftone or underlay through **Visibility/Graphics**.
+5. **Trace with Revit elements, in this order:**
+    1. **Detail components** for real products (studs, CMU, steel shapes, blocking, fasteners, sealant, and backer rod).
+    2. **Repeating details** for repeating items (brick coursing, CMU, batt insulation, shims).
+    3. **Filled regions** for materials in section (concrete, earth, gravel, gypsum), using template patterns only.
+    4. **Insulation tool** for batt insulation, and **masking regions** to hide overlaps.
+    5. **Detail lines** only for what is left, using template line styles.
+6. **Annotate.**
+    - Use keynotes or material tags where the project uses them. Otherwise, use template text types.
+    - Use template dimension types. Take break lines and section cut marks from the library.
+    - Rewrite notes in ATL standard terms. Do not copy CAD text verbatim.
+7. **Remove the CAD link.**
+    - Go to **Manage Links > Remove**. Confirm under **Visibility/Graphics > Imported Categories** that nothing is left, then **Purge Unused**.
+8. **Run QA and a peer check** using the checklist in [10.1.5](#1015-qa-checklist-before-publishing-a-detail).
+9. **Publish to the Content Catalog.** Save the detail in the authoring file, batch export it to the Standard Details collection with its tags and notes, and notify the team.
+
+#### 10.1.3 Storing Details in the Autodesk Content Catalog
+
+Build details in one controlled authoring .rvt file created from the current project template, then publish them to the Content Catalog as drafting views. Projects insert details from the Content Catalog and never edit the published version directly.
+
+| Item | Standard | Why |
+|------|----------|-----|
+| Authoring file | One .rvt per discipline, from the current template. This is the only place details are edited. | Same styles as projects, so inserting brings no duplicates. |
+| Collection | A small number of collections (for example, *Standard Details – Architectural*), not one per division. | The Content Catalog works best with few collections; tags do the sorting. |
+| Tags | CSI division (*07 Thermal & Moisture*), assembly type (*Roof Curb*), discipline. | Fast search and filtering inside Revit. |
+| View name | *[Division]-[Number] [Description]*, e.g., *07-0412 Roof Curb at Mechanical Unit*. | Sorts and searches the same way in Revit and in the Content Catalog. |
+| Notes | Source DWG name, owner, and what changed in this revision. | Gives every version a reason. |
+| Upload | Batch export from the authoring file; review items, add notes and tags, then upload. | Keeps the export repeatable and complete. |
+| Permissions | Autodesk Forma user groups: library managers upload and edit; project teams search and insert. | Prevents silent changes to standards. |
+| Versions | The Content Catalog keeps the change history and older versions. | Lets a project roll back or match an older standard. |
+| Detail components | ATL family naming; parametric types (one stud family with types, not 10 families). | They travel with each inserted detail, so fewer families means cleaner projects. |
+
+!!! note
+    An inserted detail brings its detail components, filled region types, and text types with it. Keep the authoring file in sync with the project template so those types match what the project already has.
+
+#### 10.1.4 Do / Don't Quick Reference
+
+| Do | Don't |
+|----|-------|
+| Link the DWG to the current view only, then remove it. | Import or explode the DWG. |
+| Draw in a drafting view. | Draw over a model section or callout as background. |
+| Use detail components and repeating details. | Trace every product with detail lines. |
+| Use template line styles, fills, and text types. | Accept the CAD layers, fonts, and hatches as new styles. |
+| Search the Content Catalog before starting. | Redraw a detail that already exists. |
+| Rewrite notes in ATL standard language. | Copy CAD text as-is, typos and outdated specs included. |
+| Group related elements into detail groups only when they repeat inside the detail. | Use groups as a replacement for detail components. |
+| Purge unused after removing the link. | Leave hidden CAD or imported line patterns in the file. |
+
+#### 10.1.5 QA Checklist Before Publishing a Detail
+
+- [ ] CAD link removed; no entries left under Imported Categories.
+- [ ] No new line styles, fill patterns, text types, or dimension types were created (check **Manage > Object Styles** and **Purge Unused**).
+- [ ] Products drawn with detail components, not lines.
+- [ ] Repeating items use repeating details or the insulation tool.
+- [ ] Geometry is real-world size; dimensions verified against the source.
+- [ ] Text, tags, and keynotes are legible at the view scale and use template types.
+- [ ] Notes reviewed for current standards and spec references.
+- [ ] View named per convention and placed in the right division.
+- [ ] Content Catalog tags and notes filled in (division, assembly, owner, revision).
+- [ ] Peer check by a second team member.
  
 ---
  
@@ -781,3 +879,4 @@ This section outlines the document's history and key events.
 |----------|------|-------------|--------|
 | Rev 0 | 08/01/2025 | Document Creation | Chris Harman |
 | Rev 1.0 | 02/20/2026 | Adding ACC, Site Model, and Asset Model Naming Standards | Miguel Henriquez |
+| Rev 1.1 | 11/09/2026 | Added CAD Detail to Revit workflow (Section 10.1) | Miguel Henriquez |
