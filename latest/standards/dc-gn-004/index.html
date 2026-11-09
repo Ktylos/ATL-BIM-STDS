@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/HJ_plane_Red-100.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -967,6 +967,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="10 VIEW CREATION AND DOCUMENTATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-converting-standard-cad-details-to-revit-drafting-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Converting Standard CAD Details to Revit Drafting Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1817,6 +1834,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="10 VIEW CREATION AND DOCUMENTATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-converting-standard-cad-details-to-revit-drafting-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Converting Standard CAD Details to Revit Drafting Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1873,8 +1907,8 @@
 <div class="admonition info">
 <p class="admonition-title">Document Information</p>
 <p><strong>Standard ID</strong>: DC-GN-004<br>
-<strong>Version</strong>: 1.0<br>
-<strong>Last Updated</strong>: 2026-03-27<br>
+<strong>Version</strong>: 1.1<br>
+<strong>Last Updated</strong>: 2026-11-09<br>
 <strong>Status</strong>: Active</p>
 </div>
 <hr>
@@ -2327,6 +2361,7 @@ This SOP serves as a reference for all team members involved in model authoring,
 </div>
 <ul>
 <li>Replace complex, modeled details with Drafting Views.</li>
+<li>To convert standard CAD details into Revit, follow <a href="#101-converting-standard-cad-details-to-revit-drafting-views">10.1 Converting Standard CAD Details to Revit Drafting Views</a>.</li>
 </ul>
 <p><strong>Etransmit Process:</strong></p>
 <p>This section outlines the standard procedure for generating a clean and coordinated Revit eTransmite package for workshared projects. The purpose of this workflow is to ensure model integrity, detach and clean central files properly, consolidate all required linked resources, and deliver a consistent, reliable package to clients, consultants, or internal teams. Following this process helps avoid missing links, file corruption, version conflicts and other issues common in multidisciplinary BIM coordination.</p>
@@ -2586,7 +2621,189 @@ Using both correctly ensures teams are coordinating with the latest data while a
 </ul>
 <hr>
 <h2 id="10-view-creation-and-documentation">10 VIEW CREATION AND DOCUMENTATION<a class="headerlink" href="#10-view-creation-and-documentation" title="Permanent link">¶</a></h2>
-<p><em>[To be developed]</em></p>
+<h3 id="101-converting-standard-cad-details-to-revit-drafting-views">10.1 Converting Standard CAD Details to Revit Drafting Views<a class="headerlink" href="#101-converting-standard-cad-details-to-revit-drafting-views" title="Permanent link">¶</a></h3>
+<p>Rebuild each standard CAD detail once as a native Revit drafting view. Then publish it to the Autodesk Content Catalog so every project inserts it instead of redrawing it.</p>
+<p><strong>Scope:</strong></p>
+<p>This workflow covers 2D standard details that repeat from project to project, such as typical sections, wall and roof assemblies, door and window head/jamb/sill details, curbs, slabs, joints, and signage mounts.</p>
+<p>Two rules apply throughout:</p>
+<ul>
+<li><strong>Do not explode the CAD.</strong> Exploding brings in hundreds of line styles, text types, and fill patterns. It bloats the file and breaks graphic standards (see <a href="#62-geometry-standards">6.2 Geometry Standards</a>).</li>
+<li><strong>Do not use a Revit model as the background.</strong> Standard details are not tied to a model location. Draw them in drafting views with detail components, not as callouts over model geometry.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Project-specific details that must stay live with the model are out of scope. For those, use callouts with detail items over the model.</p>
+</div>
+<h4 id="1011-guiding-principles">10.1.1 Guiding Principles<a class="headerlink" href="#1011-guiding-principles" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>CAD is a tracing reference, never the deliverable.</strong> Link it temporarily, trace over it, then remove it.</li>
+<li><strong>Build once, reuse everywhere.</strong> Publish each standard detail once to the Content Catalog and insert it into projects. Do not redraw it.</li>
+<li><strong>Use intelligent elements before lines.</strong> Use detail components, repeating details, and filled regions first. Plain detail lines are the last resort.</li>
+<li><strong>Use template styles only.</strong> Use the line styles, fill patterns, text types, and dimension types already in the ATL template. Do not create new ones for a detail.</li>
+<li><strong>Improve, don't copy.</strong> Fix errors, outdated references, and inconsistent annotation while tracing. The Revit version becomes the new standard.</li>
+<li><strong>Draw at full size, annotate for the scale.</strong> Geometry is real-world size. Text and tags are sized by the view scale.</li>
+</ul>
+<h4 id="1012-procedure">10.1.2 Procedure<a class="headerlink" href="#1012-procedure" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Triage the request.</strong><ul>
+<li>Search the Content Catalog first, by name or tag. If the detail exists, click <strong>Insert</strong> from the Content Catalog panel in Revit and stop here.</li>
+<li>If the detail is new, confirm it is truly standard (used on 2 or more projects). Draw one-off details in the project and do not publish them to the Content Catalog.</li>
+</ul>
+</li>
+<li><strong>Clean the DWG in AutoCAD.</strong> Work on a copy, not the original.<ul>
+<li>Run <strong>PURGE</strong> and <strong>AUDIT</strong>, delete everything outside the detail, and set the units to match.</li>
+<li>Move the detail near 0,0 so it lands close to the Revit origin.</li>
+</ul>
+</li>
+<li><strong>Create the drafting view.</strong><ul>
+<li>Go to <strong>View &gt; Drafting View</strong>, set the scale (for example, 1 ½" = 1'-0"), and apply the detail view template.</li>
+<li>Name the view per the convention in <a href="#1013-storing-details-in-the-autodesk-content-catalog">10.1.3</a>.</li>
+</ul>
+</li>
+<li><strong>Link the CAD into that view only.</strong><ul>
+<li>Go to <strong>Insert &gt; Link CAD</strong>. Check <strong>Current view only</strong>, set colors to <strong>Black and White</strong>, set the correct import units, and set positioning to <strong>Auto - Origin to Origin</strong>.</li>
+<li>Link rather than import, so nothing gets embedded. Pin the link and set it to halftone or underlay through <strong>Visibility/Graphics</strong>.</li>
+</ul>
+</li>
+<li><strong>Trace with Revit elements, in this order:</strong><ol>
+<li><strong>Detail components</strong> for real products (studs, CMU, steel shapes, blocking, fasteners, sealant, and backer rod).</li>
+<li><strong>Repeating details</strong> for repeating items (brick coursing, CMU, batt insulation, shims).</li>
+<li><strong>Filled regions</strong> for materials in section (concrete, earth, gravel, gypsum), using template patterns only.</li>
+<li><strong>Insulation tool</strong> for batt insulation, and <strong>masking regions</strong> to hide overlaps.</li>
+<li><strong>Detail lines</strong> only for what is left, using template line styles.</li>
+</ol>
+</li>
+<li><strong>Annotate.</strong><ul>
+<li>Use keynotes or material tags where the project uses them. Otherwise, use template text types.</li>
+<li>Use template dimension types. Take break lines and section cut marks from the library.</li>
+<li>Rewrite notes in ATL standard terms. Do not copy CAD text verbatim.</li>
+</ul>
+</li>
+<li><strong>Remove the CAD link.</strong><ul>
+<li>Go to <strong>Manage Links &gt; Remove</strong>. Confirm under <strong>Visibility/Graphics &gt; Imported Categories</strong> that nothing is left, then <strong>Purge Unused</strong>.</li>
+</ul>
+</li>
+<li><strong>Run QA and a peer check</strong> using the checklist in <a href="#1015-qa-checklist-before-publishing-a-detail">10.1.5</a>.</li>
+<li><strong>Publish to the Content Catalog.</strong> Save the detail in the authoring file, batch export it to the Standard Details collection with its tags and notes, and notify the team.</li>
+</ol>
+<h4 id="1013-storing-details-in-the-autodesk-content-catalog">10.1.3 Storing Details in the Autodesk Content Catalog<a class="headerlink" href="#1013-storing-details-in-the-autodesk-content-catalog" title="Permanent link">¶</a></h4>
+<p>Build details in one controlled authoring .rvt file created from the current project template, then publish them to the Content Catalog as drafting views. Projects insert details from the Content Catalog and never edit the published version directly.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Standard</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authoring file</td>
+<td>One .rvt per discipline, from the current template. This is the only place details are edited.</td>
+<td>Same styles as projects, so inserting brings no duplicates.</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>A small number of collections (for example, <em>Standard Details – Architectural</em>), not one per division.</td>
+<td>The Content Catalog works best with few collections; tags do the sorting.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>CSI division (<em>07 Thermal &amp; Moisture</em>), assembly type (<em>Roof Curb</em>), discipline.</td>
+<td>Fast search and filtering inside Revit.</td>
+</tr>
+<tr>
+<td>View name</td>
+<td><em>[Division]-[Number] [Description]</em>, e.g., <em>07-0412 Roof Curb at Mechanical Unit</em>.</td>
+<td>Sorts and searches the same way in Revit and in the Content Catalog.</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Source DWG name, owner, and what changed in this revision.</td>
+<td>Gives every version a reason.</td>
+</tr>
+<tr>
+<td>Upload</td>
+<td>Batch export from the authoring file; review items, add notes and tags, then upload.</td>
+<td>Keeps the export repeatable and complete.</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Autodesk Forma user groups: library managers upload and edit; project teams search and insert.</td>
+<td>Prevents silent changes to standards.</td>
+</tr>
+<tr>
+<td>Versions</td>
+<td>The Content Catalog keeps the change history and older versions.</td>
+<td>Lets a project roll back or match an older standard.</td>
+</tr>
+<tr>
+<td>Detail components</td>
+<td>ATL family naming; parametric types (one stud family with types, not 10 families).</td>
+<td>They travel with each inserted detail, so fewer families means cleaner projects.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An inserted detail brings its detail components, filled region types, and text types with it. Keep the authoring file in sync with the project template so those types match what the project already has.</p>
+</div>
+<h4 id="1014-do-dont-quick-reference">10.1.4 Do / Don't Quick Reference<a class="headerlink" href="#1014-do-dont-quick-reference" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don't</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Link the DWG to the current view only, then remove it.</td>
+<td>Import or explode the DWG.</td>
+</tr>
+<tr>
+<td>Draw in a drafting view.</td>
+<td>Draw over a model section or callout as background.</td>
+</tr>
+<tr>
+<td>Use detail components and repeating details.</td>
+<td>Trace every product with detail lines.</td>
+</tr>
+<tr>
+<td>Use template line styles, fills, and text types.</td>
+<td>Accept the CAD layers, fonts, and hatches as new styles.</td>
+</tr>
+<tr>
+<td>Search the Content Catalog before starting.</td>
+<td>Redraw a detail that already exists.</td>
+</tr>
+<tr>
+<td>Rewrite notes in ATL standard language.</td>
+<td>Copy CAD text as-is, typos and outdated specs included.</td>
+</tr>
+<tr>
+<td>Group related elements into detail groups only when they repeat inside the detail.</td>
+<td>Use groups as a replacement for detail components.</td>
+</tr>
+<tr>
+<td>Purge unused after removing the link.</td>
+<td>Leave hidden CAD or imported line patterns in the file.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1015-qa-checklist-before-publishing-a-detail">10.1.5 QA Checklist Before Publishing a Detail<a class="headerlink" href="#1015-qa-checklist-before-publishing-a-detail" title="Permanent link">¶</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> CAD link removed; no entries left under Imported Categories.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> No new line styles, fill patterns, text types, or dimension types were created (check <strong>Manage &gt; Object Styles</strong> and <strong>Purge Unused</strong>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Products drawn with detail components, not lines.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Repeating items use repeating details or the insulation tool.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Geometry is real-world size; dimensions verified against the source.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Text, tags, and keynotes are legible at the view scale and use template types.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Notes reviewed for current standards and spec references.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> View named per convention and placed in the right division.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Content Catalog tags and notes filled in (division, assembly, owner, revision).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Peer check by a second team member.</li>
+</ul>
 <hr>
 <h2 id="11-coordination-and-clash-detection">11 COORDINATION AND CLASH DETECTION<a class="headerlink" href="#11-coordination-and-clash-detection" title="Permanent link">¶</a></h2>
 <p><strong>Process to perform clash detection in Revit:</strong></p>
@@ -2631,6 +2848,12 @@ Using both correctly ensures teams are coordinating with the latest data while a
 <td>Adding ACC, Site Model, and Asset Model Naming Standards</td>
 <td>Miguel Henriquez</td>
 </tr>
+<tr>
+<td>Rev 1.1</td>
+<td>11/09/2026</td>
+<td>Added CAD Detail to Revit workflow (Section 10.1)</td>
+<td>Miguel Henriquez</td>
+</tr>
 </tbody>
 </table>
 
@@ -2655,7 +2878,7 @@ Using both correctly ensures teams are coordinating with the latest data while a
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 13, 2026 20:24:10 UTC"><span class="timeago" datetime="2026-10-13T20:24:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 13, 2026 20:24:10 UTC">2026-10-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 9, 2026 17:13:11 UTC"><span class="timeago" datetime="2026-11-09T17:13:11+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 9, 2026 17:13:11 UTC">2026-11-09</span>
   </span>
 
     
@@ -2767,7 +2990,7 @@ Using both correctly ensures teams are coordinating with the latest data while a
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
