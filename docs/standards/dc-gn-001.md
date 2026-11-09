@@ -24,7 +24,7 @@ __WBS – Originator – Level – Type – Role – Number__
 
 Note that there are no special characters, spaces, or decimals in the name and the delineation utilizes hyphen-minus.
 
-__*F1021014-ATL-XX-M3-A-001.rvt*__
+__*F1021014-ATL-XX-M3-AR-001.rvt*__
 
 | Component | Description | Example |
 |-----------|-------------|----------|
@@ -32,17 +32,17 @@ __*F1021014-ATL-XX-M3-A-001.rvt*__
 | Originator | Company or authoring party code | ATL = Atlanta Airport |
 | Level | Floor, level, or vertical location | 00 = ground floor; XX= if not appl.; ZZ= multiple |
 | Type | File/document type code | DR = Drawing, M3 = 3D model |
-| Role | Discipline responsible | A = Architect, S = Structural, etc. |
+| Role | Discipline responsible | AR = Architectural, ST = Structural, etc. (see 3.1.1) |
 | Number | Unique identifier | 001, 002, etc. |
 
 *Examples:*
 
 | FILE NAME | WHAT IT IS |
 |-----------|------------|
-| P12345-ATL-01-DR-S-023.dwg | Exported Drawing from Structural team, Level 01 |
-| P12345-ATL-ZZ-M3-M-005.rvt | 3D Model from Mechanical team, Multiple levels |
-| P12345-ATL-00-DR-A-001.pdf | Architect's Ground Floor Drawing |
-| P12345-ATL-ZZ-DR-C-007.dwg | Civil Drawing with unspecified level (ZZ= multiple levels) |
+| P12345-ATL-01-DR-ST-023.dwg | Exported Drawing from Structural team, Level 01 |
+| P12345-ATL-ZZ-M3-ME-005.rvt | 3D Model from Mechanical team, Multiple levels |
+| P12345-ATL-00-DR-AR-001.pdf | Architect's Ground Floor Drawing |
+| P12345-ATL-ZZ-DR-CV-007.dwg | Civil Drawing with unspecified level (ZZ= multiple levels) |
 
 __NOTE:__
 
@@ -82,7 +82,7 @@ Here are the file types you can apply to your project:
 |------|-------------|
 | M2 | 2D Model |
 | M3 | 3D Model (Revit) |
-| D1 | Drawing |
+| DR | Drawing |
 | S1 | Schedule |
 | M4 | 4D Simulation Model |
 | TP | Template |
@@ -663,3 +663,4 @@ This section outlines the document's history and key events.
 |------|-------------|--------|----------|
 | 08/01/2025 | Initial Release | Chris Harman | Rev 1
 | 01/27/2026 | Updated for 2026, adding ACC, Site Model, and Asset Model naming standards. | Miguel Henriquez |
+| 11/09/2026 | Updated Section 3 file naming examples to use two-letter Role Codes per 3.1.1 and changed the Drawing Type Code from D1 to DR. | Miguel Henriquez |

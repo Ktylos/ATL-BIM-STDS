@@ -701,7 +701,7 @@ All Civil 3D and AutoCAD files follow the [DC-GN-001 File Naming Convention](dc-
 | P1234567-ATL-ZZ-SU-CV-001.dwg | Civil survey drawing (points, figures, existing ground) |
 | P1234567-ATL-ZZ-M3-CV-001.dwg | Civil 3D source drawing (for example design surfaces) |
 | P1234567-ATL-ZZ-M2-CV-001.dwg | 2D reference drawing (for example existing conditions base) |
-| P1234567-ATL-ZZ-D1-CV-001.dwg | Civil sheet drawing |
+| P1234567-ATL-ZZ-DR-CV-001.dwg | Civil sheet drawing |
 
 !!! note
     Use the **Number** field to tell source drawings apart, and keep a drawing list in the BEP that maps each number to its content (for example `M3-CV-001` = Surfaces, `M3-CV-002` = Alignments & Profiles, `M3-CV-003` = Corridors).
@@ -723,3 +723,4 @@ This section outlines the document's history and key events.
 | Revision | Date | Description | Author |
 |----------|------|-------------|--------|
 | Rev 0 | 11/05/2026 | Document Creation | Miguel Henriquez |
+| Rev 1 | 11/09/2026 | Changed the Drawing Type Code in the file naming example from D1 to DR to match DC-GN-001. | Miguel Henriquez |
