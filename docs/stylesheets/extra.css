@@ -259,6 +259,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Sidebar scroll fallback — Material's JS normally sets an inline height on
+   the sidebar scrollwrap. If that JS fails (e.g. a stale/truncated
+   search_index.json cached during an FTP deploy), the long TOC would overflow
+   the viewport with no scrollbar. Constrain it with CSS in that case. */
+.md-sidebar__scrollwrap:not([style]) {
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+}
+
 /* ── Tab dropdown menus ───────────────────────────────────────────────────── */
 .md-tabs__item--has-dropdown {
   position: relative;
